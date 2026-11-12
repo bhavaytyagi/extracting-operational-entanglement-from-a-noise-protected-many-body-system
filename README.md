@@ -2,6 +2,14 @@
 
 This directory is the active review package. The earlier manuscript and research workspace remain preserved separately. Main source: `letter_prl_revision_2.tex`; bibliography: `References_revision_2.bib`; compiled review copy: `letter_prl_revision_2.pdf`. The tiny `letter_Working_doc.tex` wrapper supports the existing Overleaf main-document setting. It loads revision2; it is not a second manuscript.
 
+## Where files belong — author correction, 2026-11-11
+
+This complete research package belongs locally and on GitHub. **Do not upload this whole directory to Overleaf.** Overleaf contains only `letter_prl_revision_2.tex`, `References_revision_2.bib`, the three referenced PDFs in `Figures/`, `latexmkrc`, a short README, and the requested historical manuscript archive `old_project/` (with `old_paper/` inside it). The main Overleaf document is `letter_prl_revision_2.tex`; the author removed its old compatibility wrapper and generated PDF there. The local/GitHub wrapper is only a convenience for older local workflows.
+
+Data, Python, numerical calculations, review/verification records, provenance, duplicate figure derivatives and the compiled reading PDF remain in this full package on GitHub. The Overleaf and GitHub trees intentionally differ. Do not use whole-project synchronization to copy the full GitHub tree back into Overleaf or to propagate Overleaf's research-file removals into GitHub. Transfer manuscript edits and required figures explicitly.
+
+The author's fetched Overleaf acknowledgement and commented End Matter AI/check paragraph were copied verbatim into this source on 2026-11-11. Earlier review receipts describe the source hashes they actually reviewed; this editorial update does not imply a new scientific review.
+
 ## Build and read
 
 Use TeX Live with REVTeX4.2, physics and standard AMS/hyperref packages:

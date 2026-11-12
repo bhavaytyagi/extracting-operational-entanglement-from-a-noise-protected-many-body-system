@@ -41,3 +41,9 @@ A full Step12 abstract rewrite (twelve-spin scope, ideal controls, “average pr
 ## Factual AI attribution follow-up
 
 AI_ATTRIBUTION_REPLACEMENTS.json and AI_ATTRIBUTION_FRAGMENTS.tex give exact acknowledgment/method updates to include the present GPT-6.1 Sol revision/reviews and Codex(GPT-6) coordination alongside earlier GPT-6-Astra assistance. These are actual session/model identities supplied by the coordinator, not hidden deployment/version IDs. No sentence claims that a human reran the calculations or supplied an unrecorded verification procedure. The image_gen caption attribution remains limited to documented Fig1(a) artwork.
+
+## Author editorial update — 2026-11-11
+
+After the reviewed integration, the author edited the acknowledgement directly in Overleaf and commented out the End Matter paragraph beginning “GPT-6-Astra assisted with numerical calculations”. Those exact two source changes were imported locally and into GitHub without rewriting. The compiled local reading copy was refreshed. Earlier attribution fragments and review reports are preserved as historical records of the source they actually described, not instructions to restore the superseded text. No scientific equation, data or claim changed.
+
+The author also corrected repository organization: Overleaf contains current manuscript compilation dependencies and the historical manuscript archive; the complete code/data/calculation/review package belongs locally and on GitHub. The two remote trees intentionally differ.
