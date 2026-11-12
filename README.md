@@ -1,67 +1,75 @@
-# Coauthor review package — revision 2
+# Extracting Operational Entanglement from a Noise-Protected Many-Body System
 
 Repository: [bhavaytyagi/extracting-operational-entanglement-from-a-noise-protected-many-body-system](https://github.com/bhavaytyagi/extracting-operational-entanglement-from-a-noise-protected-many-body-system).
 
-This directory is the active review package. The earlier manuscript and research workspace remain preserved separately. Main source: `letter_prl_revision_2.tex`; bibliography: `References_revision_2.bib`; compiled review copy: `letter_prl_revision_2.pdf`. The tiny `letter_Working_doc.tex` wrapper supports the existing Overleaf main-document setting. It loads revision2; it is not a second manuscript.
+This is the complete **current final-state package**. It contains the manuscript, final figures, editable figure-generation code, all saved numerical data, numerical calculation scripts and the evidence supporting the paper. Older manuscripts, unused renderer variants, duplicate previews and editing-stage records are excluded from the active tree. They remain in Git history and the author's local research archive.
 
-## Where files belong — author correction, 2026-11-11
+## Manuscript
 
-This complete research package belongs locally and on GitHub. **Do not upload this whole directory to Overleaf.** Overleaf contains only `letter_prl_revision_2.tex`, `References_revision_2.bib`, the three referenced PDFs in `Figures/`, `latexmkrc`, a short README, and the requested historical manuscript archive `old_project/` (with `old_paper/` inside it). The main Overleaf document is `letter_prl_revision_2.tex`; the author removed its old compatibility wrapper and generated PDF there. The local/GitHub wrapper is only a convenience for older local workflows.
-
-Data, Python, numerical calculations, review/verification records, provenance, duplicate figure derivatives and the compiled reading PDF remain in this full package on GitHub. The Overleaf and GitHub trees intentionally differ. Do not use whole-project synchronization to copy the full GitHub tree back into Overleaf or to propagate Overleaf's research-file removals into GitHub. Transfer manuscript edits and required figures explicitly.
-
-The author's fetched Overleaf acknowledgement and commented End Matter AI/check paragraph were copied verbatim into this source on 2026-11-11. Earlier review receipts describe the source hashes they actually reviewed; this editorial update does not imply a new scientific review.
-
-## Build and read
-
-Use TeX Live with REVTeX4.2, physics and standard AMS/hyperref packages:
+- `letter_prl_revision_2.tex`: the sole main manuscript, with integrated End Matter.
+- `letter_prl_revision_2.pdf`: compiled reading copy.
+- `References_revision_2.bib`: current bibliography.
+- `Figures/`: exactly the three figure PDFs referenced by the manuscript.
+- `latexmkrc`: build configuration.
 
 ```sh
 latexmk -pdf -interaction=nonstopmode -halt-on-error letter_prl_revision_2.tex
+python verification/check_package.py
 ```
 
-`latexmkrc` selects that source by default. End Matter is included in the same source. Historical Supplemental Material is not an additional current submission document. The earlier original remains in the workspace/remote archive; its results must not be conflated with this revision.
+The author's latest acknowledgement and commented End Matter AI/check paragraph are preserved verbatim. No historical supplemental manuscript or compatibility wrapper is part of the current paper.
 
-## Contents and provenance
+## Figure generation and editable inputs
 
-- `Figures/`: three actual manuscript figures.
-- `scripts/figures/`: editable Python renderers, vector circuit and schematic construction, plus rendering receipts. `scripts/rebuild_figures.py` rebuilds the final versions from packaged inputs.
-- `data/xi_sweep/`: complete twenty-correlation twelve-spin saved observables, original manifest, completion marker, source-code closure and frozen comparison inputs. Source/observable hashes are immutable. Original producer retains its original environment gate.
-- `scripts/numerics/portable_rerun.py`: separate portable execution adapter importing unchanged checked kernels. It records a new environment, writes to a new directory, retains final checkpoints and compares new observables against archived data. It does not weaken or rewrite the original producer's provenance gates.
-- `scripts/ideal_sector/`: earlier ideal-sector kernels and explicit execution-scope note.
-- `verification/`: exact finite-size rank scripts/outputs, selected-pair checks, saved-data checks and revision2 review evidence. A saved review receipt is evidence of its stated bounded checks, not a new independent recertification of every trajectory.
-- `provenance/`: original figure sources, AI artwork prompt/edit records, historical source mapping and historical scientific evidence. The source map records original hashes; MANIFEST.json gives the definitive current package hashes. Original sources may retain historical workspace paths; runnable portable adapters are in `scripts/` and `verification/saved_sweep/`.
+`scripts/rebuild_figures.py` regenerates all three current figures. `scripts/figures/` contains the actual current renderers and their required circuit-construction primitives. `scripts/figures/circuit_candidate/` contains the final circuit PDF, editable SVG and inventory; the directory's inherited name does not designate an alternative manuscript figure. `circuit_original/` contains the geometry constructor and inventory executed by the current labeled renderer. Removing either would break reproduction.
 
-Figure1(a)'s ring/reservoir raster was generated/edited with image_gen. Its prompt, edit record and final raster are supplied. Labels, curves and circuit are composed by Python/vector code. The numerical Figure2/3 data are not AI-generated illustrations. Regeneration starts with the archived raster; it does not rerun an image model.
+`provenance/fig1/` contains the ring/reservoir raster, prompt/edit record and foundation PDFs required by the final Figure1 composition. In particular, `combined-before.pdf` is a required composition input, not an older manuscript. `rebuild_schematic.py` and `rebuild_foundation.py` retain the editable construction of the schematic/foundation. Generated previews and superseded full-figure variants are excluded.
 
-## Reproduce figures and bounded checks
-
-The portable numerical producer supports POSIX/macOS/Linux (Windows users need WSL), because the unchanged kernel imports POSIX lifecycle modules. The recorded Python is3.13.2. Package versions are pinned in `requirements.txt`. The established project environment is `/opt/anaconda3/envs/noisy_env/bin/python`; substitute an equivalently provisioned Python on another machine. No installation or expensive numerical campaign is needed merely to compile/read the paper.
-
-Run figure regeneration in a disposable copy because it updates figure files/receipts:
+Run regeneration in a disposable copy because renderers create intermediate products and audit outputs:
 
 ```sh
 python scripts/rebuild_figures.py
-python scripts/numerics/portable_rerun.py --campaign data/xi_sweep --out rerun-smoke --smoke
-python verification/certificates/verify_cyclic_irreducibility_20260910.py --sizes 12 --prime 1000003
-python verification/certificates/verify_cyclic_irreducibility_20260910.py --sizes 12 --prime 1000033
-python verification/exact_resource/independent_checks.py
 ```
 
-The smoke check is a dense four-spin Lindblad reference, including independent, collective and anticorrelated cases; it is not a twelve-spin production rerun. The saved-data independent checker `verification/saved_sweep/check_final.py` includes additional explicit small-system/dynamical calculations and writes results beside itself; its only adapter change redirects the input root to packaged `data/xi_sweep`. See its docstring for predeclared tolerances. No full campaign was rerun to assemble this package.
+Figure1(a)'s ring/reservoir artwork was generated/edited with image_gen. Labels, curves and the circuit use Python/vector construction. Figures2/3 use the saved numerical data. Reproduction uses the supplied raster and never calls an image-generation model.
 
-A new full curve is optional and expensive:
+## Complete numerical calculations and saved outputs
+
+`data/xi_sweep/` contains all twenty correlation records for the twelve-spin calculation, original campaign configuration/manifest, completion marker, the frozen producer/check scripts, and required regression/reference inputs. All42campaign files are retained. Earlier dated L10 reference records are required numerical regression baselines used by the final checks, not earlier paper versions. Their hashes and the original20-source/20-output closure are immutable.
+
+`scripts/numerics/portable_rerun.py` is the portable driver for the current full-density map. It imports unchanged campaign kernels, checks the frozen closure, writes new runs to a separate directory, and retains new terminal checkpoints. Original campaign provenance/environment gates are not weakened.
+
+`scripts/ideal_sector/` contains the canonical ideal collective-noise calculation kernels underlying the separate ideal-sector reference record. These kernels have their original execution-layout limitations, documented in that directory. Duplicate copies have been removed; they are not a second producer for imperfect correlations.
+
+Use the recorded Python3.13.2 environment and the versions in `requirements.txt`. The author's environment is `/opt/anaconda3/envs/noisy_env/bin/python`; an equivalently provisioned POSIX environment can run the portable interface. Merely compiling the paper requires no numerical simulation.
 
 ```sh
+python scripts/numerics/portable_rerun.py --campaign data/xi_sweep --out rerun-smoke --smoke
 python scripts/numerics/portable_rerun.py --campaign data/xi_sweep --out rerun-xi099 --xi .99
 ```
 
-Use `--all` only deliberately. The original full-density campaign retained observables/diagnostics rather than terminal density matrices or full eigenvalue arrays. The quoted terminal Frobenius distance belongs to the separately archived ideal-sector run, not the full-density sweep. No asymptotic imperfect-noise theorem or all-size attraction theorem is claimed.
+The first command is the existing dense four-spin reference check. The second requests a full expensive production curve; use `--all` only deliberately. The saved full-density campaign contains observables/diagnostics, not terminal full-density matrices or complete eigenvalue arrays. The paper's terminal Frobenius distance is from the separate ideal-sector calculation. No missing arrays or newly verified production run are implied.
 
-## Review status
+## Proof, checks and final evidence
 
-The correction ledger and fresh review receipts are collected under `verification/revision2/`. Title and the broader abstract revision are separate author-taste work; any minimal abstract consistency correction is explicitly recorded. Human coauthor review of significance and provenance remains distinct from automated mathematical/data checks.
+- `verification/certificates/`: finite cyclic-rank algorithms and saved outputs.
+- `verification/exact_resource/`: exact selected-resource/orbit checks.
+- `verification/saved_sweep/`: portable independent saved-campaign checker; its full command also performs additional numerical checks.
+- `verification/revision2/`: final independent review, proof/literature/evidence notes and recorded exact/saved-data results. Superseded editing fragments and preliminary review reports have been removed.
+- `provenance/scientific-evidence/`: supporting raw reference results and executed final-check evidence. They establish only their recorded scopes; original isolated-review code retains its layout limitations.
+- `provenance/source-map.json` and `portable-adapters.json`: retained source origins and portability mapping. Origin hashes describe the source material; `MANIFEST.json` is authoritative for current package bytes.
 
-`MANIFEST.json` inventories deliverable files and SHA256 hashes (excluding itself, caches/build products). Use `python verification/check_package.py` to check it after download. Remote history is preserved before migration; `old_project/` is historical and is not part of the active package or a dependency of its manuscript.
+```sh
+python verification/exact_resource/independent_checks.py
+python verification/revision2/check_saved_claims.py
+python verification/certificates/verify_cyclic_irreducibility_20260910.py --sizes 12 --prime 1000003
+python verification/certificates/verify_cyclic_irreducibility_20260910.py --sizes 12 --prime 1000033
+```
 
-Final independent artifact review: `verification/revision2/FRESH_LILLY_REVIEW.md`. Its code/stdout/hash records are archived under `provenance/scientific-evidence/revision2-fresh/` with their isolated-layout scope note; the portable reproduction commands above remain the runnable package interface.
+The final artifact review is `verification/revision2/FRESH_LILLY_REVIEW.md`. Its bounded proof, decoder, source and saved-data acceptance does not establish all-size attraction, asymptotic imperfect-noise usefulness, practical production rates or a fresh full L12 trajectory/eigenspectrum rerun. Packaging cleanup does not promote scientific claims. Broader abstract/title choices remain with the authors.
+
+## GitHub and Overleaf have different contents
+
+GitHub contains this complete current final-state package and **no `old_project/` or `old_paper/` directory**. Overleaf contains only current manuscript compilation dependencies and its separately requested historical manuscript archive. Transfer current manuscript edits and required figures explicitly. Do not pull the full research repository into Overleaf or propagate Overleaf's research-file deletions into GitHub. READMEs differ intentionally.
+
+`MANIFEST.json` covers exactly the current deliverables, excluding itself and build/cache products. `verification/check_package.py` verifies every current hash and the immutable numerical closure and rejects historical manuscript archive directories in this package. Local historical files and earlier receipts are kept outside this directory.

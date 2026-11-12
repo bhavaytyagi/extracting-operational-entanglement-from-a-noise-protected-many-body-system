@@ -294,40 +294,6 @@
     "patch": null
   },
   {
-    "source": "checks/l12-figure2-2026-11-04/joe/draw_l12.py",
-    "package": "provenance/original-sources/draw_l12.py",
-    "sha256": "771bb2b71df2d2384d8ebdc5d04be8807746ab789386955c254385bd3a36b4aa",
-    "bytes": 8415,
-    "patch": null
-  },
-  {
-    "source": "checks/l12-figure2-2026-11-04/joe/draw_l12.py",
-    "package": "scripts/figures/draw_l12.py",
-    "sha256": "771bb2b71df2d2384d8ebdc5d04be8807746ab789386955c254385bd3a36b4aa",
-    "bytes": 8415,
-    "patch": [
-      {
-        "old": "ROOT = HERE.parents[2]",
-        "new": "ROOT = HERE.parents[1]"
-      },
-      {
-        "old": "ROOT / 'numerical_campaigns/xi-sweep-L12-2026-11-03'",
-        "new": "ROOT / 'data/xi_sweep'"
-      },
-      {
-        "old": "ROOT / 'notebook/projects/correlated-noise/l12-overnight-2026-11-03/joe/plot_l12.py'",
-        "new": "HERE / 'validate_l12.py'"
-      }
-    ]
-  },
-  {
-    "source": "checks/figure3-L12-resources-2026-11-04/joe/draw_resources.py",
-    "package": "provenance/original-sources/draw_resources.py",
-    "sha256": "27270512c616ccd73b7d56fb3d0d686633e2649a7861ccf79bfb3adca02d08fa",
-    "bytes": 8683,
-    "patch": null
-  },
-  {
     "source": "checks/figure3-L12-resources-2026-11-04/joe/draw_resources.py",
     "package": "scripts/figures/draw_resources.py",
     "sha256": "27270512c616ccd73b7d56fb3d0d686633e2649a7861ccf79bfb3adca02d08fa",
@@ -350,13 +316,6 @@
         "new": "ROOT/'Figures'"
       }
     ]
-  },
-  {
-    "source": "notebook/projects/correlated-noise/l12-overnight-2026-11-03/joe/plot_l12.py",
-    "package": "provenance/original-sources/validate_l12.py",
-    "sha256": "f54590463f1b7e7d543582a33ef16773f3bc1275c25f9b84245882903ebbacfc",
-    "bytes": 10083,
-    "patch": null
   },
   {
     "source": "notebook/projects/correlated-noise/l12-overnight-2026-11-03/joe/plot_l12.py",
@@ -416,27 +375,6 @@
     "patch": null
   },
   {
-    "source": "checks/l12-figure2-2026-11-04/joe/figure_checks.json",
-    "package": "verification/original_fig2.json",
-    "sha256": "c38c187b5e3649e40bddf82f399a663f96f76eeeec906b5505c31c06492d7ddb",
-    "bytes": 29433,
-    "patch": null
-  },
-  {
-    "source": "checks/figure3-L12-resources-2026-11-04/joe/artist-arrays.json",
-    "package": "verification/original_fig3_arrays.json",
-    "sha256": "c4ba40479b61119dd3e0837efcc76849e6ae27b9ae7a0a7b3b63bb89c51b8c04",
-    "bytes": 454105,
-    "patch": null
-  },
-  {
-    "source": "checks/figure3-L12-resources-2026-11-04/joe/figure-checks.json",
-    "package": "verification/original_fig3.json",
-    "sha256": "d82099c18449e108c5f778cada5e88430f1704392cc6cdee0df5f712375fdda4",
-    "bytes": 11549,
-    "patch": null
-  },
-  {
     "source": "notebook/projects/correlated-noise/figure1-circuit-install-2026-11-06/joe/combined-before.pdf",
     "package": "provenance/fig1/combined-before.pdf",
     "sha256": "991e5afd3ddcd2ba157ce1881c8c940bba16c0d786b018b313a3201466060fc2",
@@ -458,52 +396,10 @@
     "patch": null
   },
   {
-    "source": "notebook/projects/correlated-noise/full-protocol-labeled-2026-11-06/joe/draw_labeled_protocol.py",
-    "package": "provenance/original-sources/draw_labeled_protocol.py",
-    "sha256": "14cc453c904bc9c82b6eb45a788c65ab72f8e54217f3c00508cc85765626f0a2",
-    "bytes": 7127,
-    "patch": null
-  },
-  {
-    "source": "notebook/projects/correlated-noise/full-protocol-labeled-2026-11-06/joe/full_protocol_labeled.pdf",
-    "package": "provenance/fig1/full_protocol_labeled.pdf",
-    "sha256": "421cbdcf8b8881479ecd337dc3cf33f6b87a88ef3b415b4f8124b17748b19aa7",
-    "bytes": 30467,
-    "patch": null
-  },
-  {
-    "source": "notebook/projects/correlated-noise/full-protocol-labeled-2026-11-06/joe/full_protocol_labeled.svg",
-    "package": "provenance/fig1/full_protocol_labeled.svg",
-    "sha256": "16950745afb7c3da0c51ae23f3456031d562b3146a7d727492845b794599c79e",
-    "bytes": 68537,
-    "patch": null
-  },
-  {
-    "source": "notebook/projects/correlated-noise/full-protocol-labeled-2026-11-06/joe/circuit_inventory.json",
-    "package": "provenance/fig1/circuit_inventory.json",
-    "sha256": "a1e7a4e47be846664ffdbccf214c43be06ecbd9bd5c6806421329d097877fa9a",
-    "bytes": 17760,
-    "patch": null
-  },
-  {
-    "source": "notebook/projects/correlated-noise/figure1-circuit-install-2026-11-06/joe/compose_figure.py",
-    "package": "provenance/original-sources/compose_figure.py",
-    "sha256": "6ceccc0b095f199589b8153c8e883818c392d8d8df73215884c0de116f4fcba3",
-    "bytes": 5033,
-    "patch": null
-  },
-  {
     "source": "notebook/projects/correlated-noise/figure1-option4-refinement-2026-09-26/warm-bath-art.png",
     "package": "provenance/fig1/warm-bath-art.png",
     "sha256": "a97be51cdb0a4aa08eb50dbfb6822dc6b2e75797a85d67d2876fd38d83666730",
     "bytes": 1587415,
-    "patch": null
-  },
-  {
-    "source": "notebook/projects/correlated-noise/figure1-option4-refinement-2026-09-26/compose.py",
-    "package": "provenance/fig1/compose_schematic.py",
-    "sha256": "c80465e97c00c6412113c80c3b7bf93d63845c8cec0bd43e2ebde71140e471d0",
-    "bytes": 3813,
     "patch": null
   },
   {
@@ -521,71 +417,10 @@
     "patch": null
   },
   {
-    "source": "notebook/projects/correlated-noise/figure1-repair-2026-11-03/draw_combined.py",
-    "package": "provenance/fig1/draw_combined.py",
-    "sha256": "1dcc1123e13dd317047f8e3bd228d167e32bb779519d29a80a17447dab7190c0",
-    "bytes": 4181,
-    "patch": null
-  },
-  {
     "source": "Working_paper/Figures/fig1_option4_warm.pdf",
     "package": "provenance/fig1/fig1_option4_warm.pdf",
     "sha256": "e19b109c245797e4de80587b2ff65794dfb1ed64008009e21ee2ba630d061727",
     "bytes": 57666,
-    "patch": null
-  },
-  {
-    "source": "notebook/projects/correlated-noise/full-protocol-labeled-2026-11-06/joe/draw_labeled_protocol.py",
-    "package": "scripts/figures/draw_labeled_protocol.py",
-    "sha256": "14cc453c904bc9c82b6eb45a788c65ab72f8e54217f3c00508cc85765626f0a2",
-    "bytes": 7127,
-    "patch": [
-      {
-        "old": "ROOT=HERE.parents[4]",
-        "new": "ROOT=HERE.parents[1]"
-      },
-      {
-        "old": "OLD=ROOT/'notebook/projects/correlated-noise/full-protocol-circuit-2026-11-05/joe'",
-        "new": "OLD=HERE/'circuit_original'"
-      }
-    ]
-  },
-  {
-    "source": "notebook/projects/correlated-noise/figure1-circuit-install-2026-11-06/joe/compose_figure.py",
-    "package": "scripts/figures/compose_figure.py",
-    "sha256": "6ceccc0b095f199589b8153c8e883818c392d8d8df73215884c0de116f4fcba3",
-    "bytes": 5033,
-    "patch": [
-      {
-        "old": "ROOT=HERE.parents[4]",
-        "new": "ROOT=HERE.parents[1]"
-      },
-      {
-        "old": "FIG=ROOT/'Working_paper/prl-revision-2026-10-30/Figures'",
-        "new": "FIG=ROOT/'Figures'"
-      },
-      {
-        "old": "SOURCE=ROOT/'notebook/projects/correlated-noise/full-protocol-labeled-2026-11-06/joe/full_protocol_labeled.pdf'",
-        "new": "SOURCE=ROOT/'provenance/fig1/full_protocol_labeled.pdf'"
-      },
-      {
-        "old": "BASELINE=HERE/'combined-before.pdf'",
-        "new": "BASELINE=ROOT/'provenance/fig1/combined-before.pdf'"
-      }
-    ]
-  },
-  {
-    "source": "notebook/projects/correlated-noise/figure1-installation-2026-09-27/compose.py",
-    "package": "provenance/original-sources/compose_schematic_installed.py",
-    "sha256": "3e5abef487f964f2f53a3765fc922179b8c7170e6eeb16e6e0d7ad8d27bc2ada",
-    "bytes": 3758,
-    "patch": null
-  },
-  {
-    "source": "checks/figure1-labels-2026-11-04/joe/remove_titles.py",
-    "package": "provenance/original-sources/remove_titles.py",
-    "sha256": "2038abfa9500d81e74b257b3e116c45037b9f2b4b68edc6a03178a6a7d833176",
-    "bytes": 5995,
     "patch": null
   },
   {
