@@ -1,0 +1,3331 @@
+{
+  "L": 12,
+  "xi": 0.99,
+  "J": 0.7853981633974483,
+  "b": -0.7853981633974483,
+  "h": 1.0,
+  "gamma": 0.1,
+  "horizon": 400,
+  "negativity_samples": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    10,
+    20,
+    40,
+    80,
+    150,
+    250,
+    400
+  ],
+  "rows": [
+    {
+      "t": 0,
+      "probability": 0.0009765625,
+      "bell_overlap": 0.4999999999999999,
+      "teleportation_fidelity": 0.6666666666666666,
+      "weighted_advantage": 0.0,
+      "fallback_fidelity": 0.6666666666666666,
+      "log_negativity_nats": 9.12603326241837e-14,
+      "min_density_eigenvalue": -1.1380111968688946e-14,
+      "min_pt_eigenvalue": -1.1380111968688946e-14,
+      "density_spectral_trace_error": 2.2426505097428162e-14,
+      "pt_spectral_trace_error": 2.2426505097428162e-14,
+      "density_spectrum_seconds": 11.81797005503904,
+      "pt_spectrum_seconds": 11.815449859015644
+    },
+    {
+      "t": 1,
+      "probability": 0.00046085004415058174,
+      "bell_overlap": 0.39746451807322913,
+      "teleportation_fidelity": 0.5983096787154861,
+      "weighted_advantage": -3.150232091530232e-05,
+      "fallback_fidelity": 0.6666666666666666,
+      "log_negativity_nats": 1.378442445855145,
+      "min_density_eigenvalue": -3.4869858341066985e-18,
+      "min_pt_eigenvalue": -0.1458519189046693,
+      "density_spectral_trace_error": 7.771561172376096e-16,
+      "pt_spectral_trace_error": 6.661338147750939e-16,
+      "density_spectrum_seconds": 11.641864462988451,
+      "pt_spectrum_seconds": 11.853729579946958
+    },
+    {
+      "t": 2,
+      "probability": 0.003374305993521902,
+      "bell_overlap": 0.6870596273144091,
+      "teleportation_fidelity": 0.7913730848762727,
+      "weighted_advantage": 0.00042079761439532253,
+      "fallback_fidelity": 0.6670874642810619,
+      "log_negativity_nats": 2.513437451525188,
+      "min_density_eigenvalue": 1.9449660563574783e-10,
+      "min_pt_eigenvalue": -0.030302958943434204,
+      "density_spectral_trace_error": 2.220446049250313e-16,
+      "pt_spectral_trace_error": 1.7763568394002505e-15,
+      "density_spectrum_seconds": 11.786571804084815,
+      "pt_spectrum_seconds": 11.701068704016507
+    },
+    {
+      "t": 3,
+      "probability": 0.0019320374144419419,
+      "bell_overlap": 0.8129456050939159,
+      "teleportation_fidelity": 0.8752970700626106,
+      "weighted_advantage": 0.00040308174515107893,
+      "fallback_fidelity": 0.6670697484118177,
+      "log_negativity_nats": 2.6330547904489294,
+      "min_density_eigenvalue": 1.2567297577916847e-08,
+      "min_pt_eigenvalue": -0.010135458069711003,
+      "density_spectral_trace_error": 1.1102230246251565e-16,
+      "pt_spectral_trace_error": 8.881784197001252e-16,
+      "density_spectrum_seconds": 11.679443744011223,
+      "pt_spectrum_seconds": 11.783526282059029
+    },
+    {
+      "t": 4,
+      "probability": 0.007317219371067409,
+      "bell_overlap": 0.9405965058948281,
+      "teleportation_fidelity": 0.960397670596552,
+      "weighted_advantage": 0.0021492941918388347,
+      "fallback_fidelity": 0.6688159608585055,
+      "log_negativity_nats": 2.092607423844533,
+      "min_density_eigenvalue": 7.862823360550283e-08,
+      "min_pt_eigenvalue": -0.009625973843325624,
+      "density_spectral_trace_error": 0.0,
+      "pt_spectral_trace_error": 0.0,
+      "density_spectrum_seconds": 11.797882682993077,
+      "pt_spectrum_seconds": 12.130223266896792
+    },
+    {
+      "t": 5,
+      "probability": 0.007466757028899691,
+      "bell_overlap": 0.8983866513221938,
+      "teleportation_fidelity": 0.9322577675481293,
+      "weighted_advantage": 0.001983104219319868,
+      "fallback_fidelity": 0.6686497708859865,
+      "log_negativity_nats": 1.702619543391616,
+      "min_density_eigenvalue": 1.9926057579105947e-07,
+      "min_pt_eigenvalue": -0.008534277459767783,
+      "density_spectral_trace_error": 1.1102230246251565e-16,
+      "pt_spectral_trace_error": 4.440892098500626e-16,
+      "density_spectrum_seconds": 11.658807434956543,
+      "pt_spectrum_seconds": 11.81526677403599
+    },
+    {
+      "t": 6,
+      "probability": 0.004632269882234913,
+      "bell_overlap": 0.8368530353183361,
+      "teleportation_fidelity": 0.8912353568788908,
+      "weighted_advantage": 0.0010402627801630283,
+      "fallback_fidelity": 0.6677069294468296
+    },
+    {
+      "t": 7,
+      "probability": 0.00474812082411674,
+      "bell_overlap": 0.8380245380423796,
+      "teleportation_fidelity": 0.8920163586949198,
+      "weighted_advantage": 0.001069987565427643,
+      "fallback_fidelity": 0.6677366542320943
+    },
+    {
+      "t": 8,
+      "probability": 0.005299944071707908,
+      "bell_overlap": 0.8475043301314465,
+      "teleportation_fidelity": 0.8983362200876309,
+      "weighted_advantage": 0.0012278356762486582,
+      "fallback_fidelity": 0.6678945023429153
+    },
+    {
+      "t": 9,
+      "probability": 0.004911086999871188,
+      "bell_overlap": 0.8349828301701144,
+      "teleportation_fidelity": 0.889988553446743,
+      "weighted_advantage": 0.0010967532149523383,
+      "fallback_fidelity": 0.6677634198816189
+    },
+    {
+      "t": 10,
+      "probability": 0.004685480901706732,
+      "bell_overlap": 0.8283214067140042,
+      "teleportation_fidelity": 0.8855476044760028,
+      "weighted_advantage": 0.0010255624538533035,
+      "fallback_fidelity": 0.66769222912052,
+      "log_negativity_nats": 0.8708272679125801,
+      "min_density_eigenvalue": 1.1472451963644946e-06,
+      "min_pt_eigenvalue": -0.006572417235965473,
+      "density_spectral_trace_error": 0.0,
+      "pt_spectral_trace_error": 0.0,
+      "density_spectrum_seconds": 11.65114450501278,
+      "pt_spectrum_seconds": 11.98328997194767
+    },
+    {
+      "t": 11,
+      "probability": 0.004743478547487461,
+      "bell_overlap": 0.8314692971808516,
+      "teleportation_fidelity": 0.8876461981205678,
+      "weighted_advantage": 0.0010482116668854109,
+      "fallback_fidelity": 0.667714878333552
+    },
+    {
+      "t": 12,
+      "probability": 0.004687554454059734,
+      "bell_overlap": 0.8286949277319929,
+      "teleportation_fidelity": 0.8857966184879954,
+      "weighted_advantage": 0.0010271835816779646,
+      "fallback_fidelity": 0.6676938502483446
+    },
+    {
+      "t": 13,
+      "probability": 0.004703653000972309,
+      "bell_overlap": 0.8272619390801872,
+      "teleportation_fidelity": 0.8848412927201248,
+      "weighted_advantage": 0.0010262177345723598,
+      "fallback_fidelity": 0.667692884401239
+    },
+    {
+      "t": 14,
+      "probability": 0.004650629964743513,
+      "bell_overlap": 0.8258589094963673,
+      "teleportation_fidelity": 0.8839059396642449,
+      "weighted_advantage": 0.001010299472521634,
+      "fallback_fidelity": 0.6676769661391883
+    },
+    {
+      "t": 15,
+      "probability": 0.004620460546248477,
+      "bell_overlap": 0.8238520617369712,
+      "teleportation_fidelity": 0.8825680411579807,
+      "weighted_advantage": 0.000997563782717934,
+      "fallback_fidelity": 0.6676642304493846
+    },
+    {
+      "t": 16,
+      "probability": 0.004576376206520229,
+      "bell_overlap": 0.822344095697905,
+      "teleportation_fidelity": 0.8815627304652699,
+      "weighted_advantage": 0.000983445233242781,
+      "fallback_fidelity": 0.6676501118999094
+    },
+    {
+      "t": 17,
+      "probability": 0.004532448532271556,
+      "bell_overlap": 0.8202269435056527,
+      "teleportation_fidelity": 0.880151295670435,
+      "weighted_advantage": 0.0009676080933906678,
+      "fallback_fidelity": 0.6676342747600573
+    },
+    {
+      "t": 18,
+      "probability": 0.004489562588432982,
+      "bell_overlap": 0.8180708229724126,
+      "teleportation_fidelity": 0.8787138819816084,
+      "weighted_advantage": 0.0009519992448593557,
+      "fallback_fidelity": 0.667618665911526
+    },
+    {
+      "t": 19,
+      "probability": 0.004453200967787693,
+      "bell_overlap": 0.816342019499579,
+      "teleportation_fidelity": 0.8775613463330526,
+      "weighted_advantage": 0.0009391563915916255,
+      "fallback_fidelity": 0.6676058230582582
+    },
+    {
+      "t": 20,
+      "probability": 0.004416919660868799,
+      "bell_overlap": 0.8146044322165741,
+      "teleportation_fidelity": 0.8764029548110495,
+      "weighted_advantage": 0.0009263883347025682,
+      "fallback_fidelity": 0.6675930550013692,
+      "log_negativity_nats": 0.7499486932605703,
+      "min_density_eigenvalue": 4.673411128368448e-06,
+      "min_pt_eigenvalue": -0.005790382573588397,
+      "density_spectral_trace_error": 0.0,
+      "pt_spectral_trace_error": 2.220446049250313e-16,
+      "density_spectrum_seconds": 11.615178251988254,
+      "pt_spectrum_seconds": 13.529636782943271
+    },
+    {
+      "t": 21,
+      "probability": 0.004380337859664775,
+      "bell_overlap": 0.8127707701239205,
+      "teleportation_fidelity": 0.875180513415947,
+      "weighted_advantage": 0.0009133610971802119,
+      "fallback_fidelity": 0.6675800277638468
+    },
+    {
+      "t": 22,
+      "probability": 0.004343189148520232,
+      "bell_overlap": 0.8109315618740378,
+      "teleportation_fidelity": 0.8739543745826919,
+      "weighted_advantage": 0.0009002897236425121,
+      "fallback_fidelity": 0.6675669563903092
+    },
+    {
+      "t": 23,
+      "probability": 0.004307778266504787,
+      "bell_overlap": 0.8091252996294811,
+      "teleportation_fidelity": 0.8727501997529874,
+      "weighted_advantage": 0.0008877621649137728,
+      "fallback_fidelity": 0.6675544288315804
+    },
+    {
+      "t": 24,
+      "probability": 0.004271700508201081,
+      "bell_overlap": 0.8072966037361511,
+      "teleportation_fidelity": 0.8715310691574341,
+      "weighted_advantage": 0.000875119372232122,
+      "fallback_fidelity": 0.6675417860388988
+    },
+    {
+      "t": 25,
+      "probability": 0.004236396740132754,
+      "bell_overlap": 0.805456310444483,
+      "teleportation_fidelity": 0.8703042069629886,
+      "weighted_advantage": 0.0008626894118799907,
+      "fallback_fidelity": 0.6675293560785466
+    },
+    {
+      "t": 26,
+      "probability": 0.004201638837882387,
+      "bell_overlap": 0.8036287498671788,
+      "teleportation_fidelity": 0.8690858332447858,
+      "weighted_advantage": 0.0008504922318264102,
+      "fallback_fidelity": 0.6675171588984931
+    },
+    {
+      "t": 27,
+      "probability": 0.0041671591221588596,
+      "bell_overlap": 0.8017964579082315,
+      "teleportation_fidelity": 0.8678643052721543,
+      "weighted_advantage": 0.0008384225750716795,
+      "fallback_fidelity": 0.6675050892417383
+    },
+    {
+      "t": 28,
+      "probability": 0.004133046359191481,
+      "bell_overlap": 0.799956009623495,
+      "teleportation_fidelity": 0.8666373397489967,
+      "weighted_advantage": 0.0008264880623279942,
+      "fallback_fidelity": 0.6674931547289946
+    },
+    {
+      "t": 29,
+      "probability": 0.004099368359769802,
+      "bell_overlap": 0.798113347873168,
+      "teleportation_fidelity": 0.8654088985821119,
+      "weighted_advantage": 0.0008147176172642086,
+      "fallback_fidelity": 0.6674813842839309
+    },
+    {
+      "t": 30,
+      "probability": 0.004065986436547058,
+      "bell_overlap": 0.7962641983978391,
+      "teleportation_fidelity": 0.864176132265226,
+      "weighted_advantage": 0.0008030708082134003,
+      "fallback_fidelity": 0.66746973747488
+    },
+    {
+      "t": 31,
+      "probability": 0.004033019054714258,
+      "bell_overlap": 0.7944121886265111,
+      "teleportation_fidelity": 0.8629414590843408,
+      "weighted_advantage": 0.0007915799777805657,
+      "fallback_fidelity": 0.6674582466444472
+    },
+    {
+      "t": 32,
+      "probability": 0.004000374064670265,
+      "bell_overlap": 0.7925547974468166,
+      "teleportation_fidelity": 0.8617031982978777,
+      "weighted_advantage": 0.0007802190828007385,
+      "fallback_fidelity": 0.6674468857494674
+    },
+    {
+      "t": 33,
+      "probability": 0.003968092702474781,
+      "bell_overlap": 0.7906921688125895,
+      "teleportation_fidelity": 0.8604614458750598,
+      "weighted_advantage": 0.0007689956491545363,
+      "fallback_fidelity": 0.6674356623158212
+    },
+    {
+      "t": 34,
+      "probability": 0.003936157805178167,
+      "bell_overlap": 0.7888249901444372,
+      "teleportation_fidelity": 0.8592166600962914,
+      "weighted_advantage": 0.0007579071595250223,
+      "fallback_fidelity": 0.6674245738261917
+    },
+    {
+      "t": 35,
+      "probability": 0.0039045710574680723,
+      "bell_overlap": 0.7869531311139385,
+      "teleportation_fidelity": 0.857968754075959,
+      "weighted_advantage": 0.0007469525937315502,
+      "fallback_fidelity": 0.6674136192603982
+    },
+    {
+      "t": 36,
+      "probability": 0.003873324535572404,
+      "bell_overlap": 0.785076260203273,
+      "teleportation_fidelity": 0.8567175068021821,
+      "weighted_advantage": 0.0007361285821030405,
+      "fallback_fidelity": 0.6674027952487697
+    },
+    {
+      "t": 37,
+      "probability": 0.003842414752075466,
+      "bell_overlap": 0.7831945123105838,
+      "teleportation_fidelity": 0.8554630082070558,
+      "weighted_advantage": 0.0007254338478726694,
+      "fallback_fidelity": 0.6673921005145393
+    },
+    {
+      "t": 38,
+      "probability": 0.00381183730503814,
+      "bell_overlap": 0.7813078708036435,
+      "teleportation_fidelity": 0.854205247202429,
+      "weighted_advantage": 0.0007148665574201185,
+      "fallback_fidelity": 0.6673815332240868
+    },
+    {
+      "t": 39,
+      "probability": 0.0037815904215404575,
+      "bell_overlap": 0.7794163899031997,
+      "teleportation_fidelity": 0.8529442599354665,
+      "weighted_advantage": 0.0007044255624529029,
+      "fallback_fidelity": 0.6673710922291195
+    },
+    {
+      "t": 40,
+      "probability": 0.0037516685817465777,
+      "bell_overlap": 0.7775201028777406,
+      "teleportation_fidelity": 0.8516800685851603,
+      "weighted_advantage": 0.0006941089671796647,
+      "fallback_fidelity": 0.6673607756338463,
+      "log_negativity_nats": 0.5746382711353352,
+      "min_density_eigenvalue": 1.6930080686384798e-05,
+      "min_pt_eigenvalue": -0.004513924310794588,
+      "density_spectral_trace_error": 2.220446049250313e-16,
+      "pt_spectral_trace_error": 4.440892098500626e-16,
+      "density_spectrum_seconds": 11.53641352604609,
+      "pt_spectrum_seconds": 11.694795340998098
+    },
+    {
+      "t": 41,
+      "probability": 0.0037220693672818453,
+      "bell_overlap": 0.7756190112050017,
+      "teleportation_fidelity": 0.8504126741366678,
+      "weighted_advantage": 0.0006839153857644323,
+      "fallback_fidelity": 0.667350582052431
+    },
+    {
+      "t": 42,
+      "probability": 0.003692788386641758,
+      "bell_overlap": 0.7737131500428122,
+      "teleportation_fidelity": 0.8491421000285415,
+      "weighted_advantage": 0.0006738431611661536,
+      "fallback_fidelity": 0.6673405098278328
+    },
+    {
+      "t": 43,
+      "probability": 0.003663822612028121,
+      "bell_overlap": 0.7718025694553926,
+      "teleportation_fidelity": 0.8478683796369285,
+      "weighted_advantage": 0.0006638909333186747,
+      "fallback_fidelity": 0.6673305575999853
+    },
+    {
+      "t": 44,
+      "probability": 0.003635168397556554,
+      "bell_overlap": 0.7698872970475711,
+      "teleportation_fidelity": 0.8465915313650475,
+      "weighted_advantage": 0.000654057182086193,
+      "fallback_fidelity": 0.6673207238487529
+    },
+    {
+      "t": 45,
+      "probability": 0.0036068225116153664,
+      "bell_overlap": 0.7679673907038485,
+      "teleportation_fidelity": 0.8453115938025656,
+      "weighted_advantage": 0.0006443405447796473,
+      "fallback_fidelity": 0.6673110072114463
+    },
+    {
+      "t": 46,
+      "probability": 0.0035787814176795347,
+      "bell_overlap": 0.7660428828130849,
+      "teleportation_fidelity": 0.8440285885420566,
+      "weighted_advantage": 0.0006347395502115751,
+      "fallback_fidelity": 0.6673014062168782
+    },
+    {
+      "t": 47,
+      "probability": 0.00355104194901881,
+      "bell_overlap": 0.7641138287401387,
+      "teleportation_fidelity": 0.8427425524934259,
+      "weighted_advantage": 0.0006252528567814687,
+      "fallback_fidelity": 0.6672919195234481
+    },
+    {
+      "t": 48,
+      "probability": 0.0035236007395440323,
+      "bell_overlap": 0.7621802763513059,
+      "teleportation_fidelity": 0.8414535175675373,
+      "weighted_advantage": 0.0006158790770968804,
+      "fallback_fidelity": 0.6672825457437636
+    },
+    {
+      "t": 49,
+      "probability": 0.0034964545968238954,
+      "bell_overlap": 0.7602422751308333,
+      "teleportation_fidelity": 0.8401615167538888,
+      "weighted_advantage": 0.0006066168661127407,
+      "fallback_fidelity": 0.6672732835327794
+    },
+    {
+      "t": 50,
+      "probability": 0.0034696002803264042,
+      "bell_overlap": 0.7582998774146364,
+      "teleportation_fidelity": 0.8388665849430911,
+      "weighted_advantage": 0.0005974648847240662,
+      "fallback_fidelity": 0.6672641315513907
+    },
+    {
+      "t": 51,
+      "probability": 0.003443034647316042,
+      "bell_overlap": 0.756353137646271,
+      "teleportation_fidelity": 0.8375687584308474,
+      "weighted_advantage": 0.0005884218232428602,
+      "fallback_fidelity": 0.6672550884899094
+    },
+    {
+      "t": 52,
+      "probability": 0.0034167545476716113,
+      "bell_overlap": 0.7544021094512102,
+      "teleportation_fidelity": 0.8362680729674734,
+      "weighted_advantage": 0.0005794863762697822,
+      "fallback_fidelity": 0.6672461530429364
+    },
+    {
+      "t": 53,
+      "probability": 0.0033907568939447862,
+      "bell_overlap": 0.7524468499075819,
+      "teleportation_fidelity": 0.8349645666050547,
+      "weighted_advantage": 0.0005706572644525191,
+      "fallback_fidelity": 0.6672373239311191
+    },
+    {
+      "t": 54,
+      "probability": 0.0033650386132618405,
+      "bell_overlap": 0.7504874153984726,
+      "teleportation_fidelity": 0.8336582769323151,
+      "weighted_advantage": 0.0005619332166346794,
+      "fallback_fidelity": 0.6672285998833013
+    },
+    {
+      "t": 55,
+      "probability": 0.003339596680989282,
+      "bell_overlap": 0.7485238646734881,
+      "teleportation_fidelity": 0.8323492431156586,
+      "weighted_advantage": 0.0005533129824068067,
+      "fallback_fidelity": 0.6672199796490734
+    },
+    {
+      "t": 56,
+      "probability": 0.0033144280966305845,
+      "bell_overlap": 0.7465562570655069,
+      "teleportation_fidelity": 0.8310375047103379,
+      "weighted_advantage": 0.0005447953238786594,
+      "fallback_fidelity": 0.6672114619905453
+    },
+    {
+      "t": 57,
+      "probability": 0.003289529899078967,
+      "bell_overlap": 0.7445846531290291,
+      "teleportation_fidelity": 0.8297231020860195,
+      "weighted_advantage": 0.0005363790195492,
+      "fallback_fidelity": 0.6672030456862158
+    },
+    {
+      "t": 58,
+      "probability": 0.0032648991553652397,
+      "bell_overlap": 0.7426091144259399,
+      "teleportation_fidelity": 0.8284060762839599,
+      "weighted_advantage": 0.0005280628618487734,
+      "fallback_fidelity": 0.6671947295285154
+    },
+    {
+      "t": 59,
+      "probability": 0.003240532967555797,
+      "bell_overlap": 0.7406297036217642,
+      "teleportation_fidelity": 0.8270864690811761,
+      "weighted_advantage": 0.0005198456583730051,
+      "fallback_fidelity": 0.6671865123250397
+    },
+    {
+      "t": 60,
+      "probability": 0.0032164284678112935,
+      "bell_overlap": 0.7386464842977263,
+      "teleportation_fidelity": 0.8257643228651509,
+      "weighted_advantage": 0.0005117262305588587,
+      "fallback_fidelity": 0.6671783928972255
+    },
+    {
+      "t": 61,
+      "probability": 0.003192582820844015,
+      "bell_overlap": 0.7366595211524741,
+      "teleportation_fidelity": 0.824439680768316,
+      "weighted_advantage": 0.0005037034144137062,
+      "fallback_fidelity": 0.6671703700810804
+    },
+    {
+      "t": 62,
+      "probability": 0.003168993221600895,
+      "bell_overlap": 0.7346688797726878,
+      "teleportation_fidelity": 0.8231125865151251,
+      "weighted_advantage": 0.0004957760595468817,
+      "fallback_fidelity": 0.6671624427262135
+    },
+    {
+      "t": 63,
+      "probability": 0.0031456568963930693,
+      "bell_overlap": 0.7326746267934446,
+      "teleportation_fidelity": 0.821783084528963,
+      "weighted_advantage": 0.0004879430295923216,
+      "fallback_fidelity": 0.667154609696259
+    },
+    {
+      "t": 64,
+      "probability": 0.0031225711014036686,
+      "bell_overlap": 0.7306768297739662,
+      "teleportation_fidelity": 0.8204512198493109,
+      "weighted_advantage": 0.0004802032016104006,
+      "fallback_fidelity": 0.667146869868277
+    },
+    {
+      "t": 65,
+      "probability": 0.003099733123173521,
+      "bell_overlap": 0.7286755572444549,
+      "teleportation_fidelity": 0.81911703816297,
+      "weighted_advantage": 0.0004725554661672,
+      "fallback_fidelity": 0.6671392221328338
+    },
+    {
+      "t": 66,
+      "probability": 0.003077140277706219,
+      "bell_overlap": 0.7266708786692869,
+      "teleportation_fidelity": 0.8177805857795247,
+      "weighted_advantage": 0.0004649987270242153,
+      "fallback_fidelity": 0.6671316653936908
+    },
+    {
+      "t": 67,
+      "probability": 0.0030547899104952023,
+      "bell_overlap": 0.7246628644510786,
+      "teleportation_fidelity": 0.8164419096340524,
+      "weighted_advantage": 0.0004575319010587375,
+      "fallback_fidelity": 0.6671241985677253
+    },
+    {
+      "t": 68,
+      "probability": 0.0030326793959673977,
+      "bell_overlap": 0.7226515859074715,
+      "teleportation_fidelity": 0.8151010572716476,
+      "weighted_advantage": 0.0004501539180407025,
+      "fallback_fidelity": 0.6671168205847073
+    },
+    {
+      "t": 69,
+      "probability": 0.003010806137308577,
+      "bell_overlap": 0.7206371152750739,
+      "teleportation_fidelity": 0.8137580768500493,
+      "weighted_advantage": 0.00044286372052550183,
+      "fallback_fidelity": 0.6671095303871921
+    },
+    {
+      "t": 70,
+      "probability": 0.00298916756603935,
+      "bell_overlap": 0.718619525685019,
+      "teleportation_fidelity": 0.812413017123346,
+      "weighted_advantage": 0.00043566026365371045,
+      "fallback_fidelity": 0.6671023269303203
+    },
+    {
+      "t": 71,
+      "probability": 0.002967761141775987,
+      "bell_overlap": 0.7165988911633587,
+      "teleportation_fidelity": 0.8110659274422392,
+      "weighted_advantage": 0.00042854251503092163,
+      "fallback_fidelity": 0.6670952091816975
+    },
+    {
+      "t": 72,
+      "probability": 0.0029465843518657773,
+      "bell_overlap": 0.7145752866137156,
+      "teleportation_fidelity": 0.809716857742477,
+      "weighted_advantage": 0.00042150945455539244,
+      "fallback_fidelity": 0.6670881761212221
+    },
+    {
+      "t": 73,
+      "probability": 0.002925634711116641,
+      "bell_overlap": 0.7125487878103195,
+      "teleportation_fidelity": 0.808365858540213,
+      "weighted_advantage": 0.0004145600742824244,
+      "fallback_fidelity": 0.667081226740949
+    },
+    {
+      "t": 74,
+      "probability": 0.002904909761468069,
+      "bell_overlap": 0.7105194713850473,
+      "teleportation_fidelity": 0.8070129809233649,
+      "weighted_advantage": 0.0004076933782703481,
+      "fallback_fidelity": 0.667074360044937
+    },
+    {
+      "t": 75,
+      "probability": 0.0028844070717083253,
+      "bell_overlap": 0.7084874148175033,
+      "teleportation_fidelity": 0.8056582765450022,
+      "weighted_advantage": 0.0004009083824411959,
+      "fallback_fidelity": 0.6670675750491079
+    },
+    {
+      "t": 76,
+      "probability": 0.002864124237166636,
+      "bell_overlap": 0.7064526964224563,
+      "teleportation_fidelity": 0.8043017976149708,
+      "weighted_advantage": 0.0003942041144346417,
+      "fallback_fidelity": 0.6670608707811013
+    },
+    {
+      "t": 77,
+      "probability": 0.002844058879427956,
+      "bell_overlap": 0.7044153953390175,
+      "teleportation_fidelity": 0.8029435968926784,
+      "weighted_advantage": 0.00038757961347047265,
+      "fallback_fidelity": 0.6670542462801371
+    },
+    {
+      "t": 78,
+      "probability": 0.002824208646038076,
+      "bell_overlap": 0.7023755915177654,
+      "teleportation_fidelity": 0.8015837276785103,
+      "weighted_advantage": 0.0003810339302076954,
+      "fallback_fidelity": 0.6670477005968743
+    },
+    {
+      "t": 79,
+      "probability": 0.0028045712102208516,
+      "bell_overlap": 0.7003333657090652,
+      "teleportation_fidelity": 0.8002222438060436,
+      "weighted_advantage": 0.0003745661266095267,
+      "fallback_fidelity": 0.6670412327932762
+    },
+    {
+      "t": 80,
+      "probability": 0.002785144270592571,
+      "bell_overlap": 0.698288799449951,
+      "teleportation_fidelity": 0.7988591996333007,
+      "weighted_advantage": 0.00036817527580714036,
+      "fallback_fidelity": 0.6670348419424738,
+      "log_negativity_nats": 0.286399723564714,
+      "min_density_eigenvalue": 5.2466896567456834e-05,
+      "min_pt_eigenvalue": -0.0027150822534678307,
+      "density_spectral_trace_error": 6.661338147750939e-16,
+      "pt_spectral_trace_error": 6.661338147750939e-16,
+      "density_spectrum_seconds": 11.629288780968636,
+      "pt_spectrum_seconds": 11.778034097980708
+    },
+    {
+      "t": 81,
+      "probability": 0.002765925550883907,
+      "bell_overlap": 0.6962419750513908,
+      "teleportation_fidelity": 0.7974946500342606,
+      "weighted_advantage": 0.0003618604619670429,
+      "fallback_fidelity": 0.6670285271286337
+    },
+    {
+      "t": 82,
+      "probability": 0.0027469127996620126,
+      "bell_overlap": 0.6941929755848116,
+      "teleportation_fidelity": 0.7961286503898745,
+      "weighted_advantage": 0.00035562078015891475,
+      "fallback_fidelity": 0.6670222874468256
+    },
+    {
+      "t": 83,
+      "probability": 0.002728103790057756,
+      "bell_overlap": 0.6921418848685542,
+      "teleportation_fidelity": 0.7947612565790362,
+      "weighted_advantage": 0.0003494553362258294,
+      "fallback_fidelity": 0.6670161220028925
+    },
+    {
+      "t": 84,
+      "probability": 0.002709496319494667,
+      "bell_overlap": 0.690088787453831,
+      "teleportation_fidelity": 0.7933925249692205,
+      "weighted_advantage": 0.00034336324665557244,
+      "fallback_fidelity": 0.6670100299133223
+    },
+    {
+      "t": 85,
+      "probability": 0.0026910882094217754,
+      "bell_overlap": 0.6880337686105016,
+      "teleportation_fidelity": 0.7920225124070011,
+      "weighted_advantage": 0.00033734363845390887,
+      "fallback_fidelity": 0.6670040103051206
+    },
+    {
+      "t": 86,
+      "probability": 0.0026728773050488635,
+      "bell_overlap": 0.6859769143124023,
+      "teleportation_fidelity": 0.7906512762082682,
+      "weighted_advantage": 0.00033139564901909173,
+      "fallback_fidelity": 0.6669980623156857
+    },
+    {
+      "t": 87,
+      "probability": 0.0026548614750851072,
+      "bell_overlap": 0.6839183112224387,
+      "teleportation_fidelity": 0.7892788741482925,
+      "weighted_advantage": 0.00032551842601811034,
+      "fallback_fidelity": 0.6669921850926848
+    },
+    {
+      "t": 88,
+      "probability": 0.0026370386114803347,
+      "bell_overlap": 0.6818580466772928,
+      "teleportation_fidelity": 0.7879053644515285,
+      "weighted_advantage": 0.000319711127264276,
+      "fallback_fidelity": 0.6669863777939309
+    },
+    {
+      "t": 89,
+      "probability": 0.0026194066291693636,
+      "bell_overlap": 0.6797962086718561,
+      "teleportation_fidelity": 0.7865308057812374,
+      "weighted_advantage": 0.00031397292059638535,
+      "fallback_fidelity": 0.6669806395872631
+    },
+    {
+      "t": 90,
+      "probability": 0.0026019634658190484,
+      "bell_overlap": 0.6777328858433215,
+      "teleportation_fidelity": 0.785155257228881,
+      "weighted_advantage": 0.0003083029837592735,
+      "fallback_fidelity": 0.6669749696504259
+    },
+    {
+      "t": 91,
+      "probability": 0.002584707081578223,
+      "bell_overlap": 0.6756681674549848,
+      "teleportation_fidelity": 0.7837787783033233,
+      "weighted_advantage": 0.0003027005042858459,
+      "fallback_fidelity": 0.6669693671709525
+    },
+    {
+      "t": 92,
+      "probability": 0.0025676354588303786,
+      "bell_overlap": 0.6736021433797229,
+      "teleportation_fidelity": 0.7824014289198153,
+      "weighted_advantage": 0.00029716467938048827,
+      "fallback_fidelity": 0.6669638313460471
+    },
+    {
+      "t": 93,
+      "probability": 0.0025507466019491225,
+      "bell_overlap": 0.6715349040831821,
+      "teleportation_fidelity": 0.781023269388788,
+      "weighted_advantage": 0.0002916947158038968,
+      "fallback_fidelity": 0.6669583613824706
+    },
+    {
+      "t": 94,
+      "probability": 0.0025340385370563384,
+      "bell_overlap": 0.6694665406066619,
+      "teleportation_fidelity": 0.7796443604044413,
+      "weighted_advantage": 0.00028628982975926955,
+      "fallback_fidelity": 0.6669529564964259
+    },
+    {
+      "t": 95,
+      "probability": 0.002517509311783039,
+      "bell_overlap": 0.667397144549714,
+      "teleportation_fidelity": 0.7782647630331426,
+      "weighted_advantage": 0.00028094924677986424,
+      "fallback_fidelity": 0.6669476159134465
+    },
+    {
+      "t": 96,
+      "probability": 0.0025011569950328634,
+      "bell_overlap": 0.6653268080524534,
+      "teleportation_fidelity": 0.7768845387016355,
+      "weighted_advantage": 0.00027567220161789954,
+      "fallback_fidelity": 0.6669423388682846
+    },
+    {
+      "t": 97,
+      "probability": 0.0024849796767482156,
+      "bell_overlap": 0.6632556237775938,
+      "teleportation_fidelity": 0.7755037491850626,
+      "weighted_advantage": 0.00027045793813478247,
+      "fallback_fidelity": 0.6669371246048014
+    },
+    {
+      "t": 98,
+      "probability": 0.002468975467678977,
+      "bell_overlap": 0.6611836848922098,
+      "teleportation_fidelity": 0.7741224565948066,
+      "weighted_advantage": 0.0002653057091926433,
+      "fallback_fidelity": 0.6669319723758593
+    },
+    {
+      "t": 99,
+      "probability": 0.0024531424991538087,
+      "bell_overlap": 0.6591110850492325,
+      "teleportation_fidelity": 0.7727407233661551,
+      "weighted_advantage": 0.00026021477654716586,
+      "fallback_fidelity": 0.6669268814432138
+    },
+    {
+      "t": 100,
+      "probability": 0.002437478922853974,
+      "bell_overlap": 0.6570379183686884,
+      "teleportation_fidelity": 0.7713586122457924,
+      "weighted_advantage": 0.00025518441074169433,
+      "fallback_fidelity": 0.6669218510774083
+    },
+    {
+      "t": 101,
+      "probability": 0.002421982910589677,
+      "bell_overlap": 0.6549642794186873,
+      "teleportation_fidelity": 0.7699761862791249,
+      "weighted_advantage": 0.000250213891002603,
+      "fallback_fidelity": 0.6669168805576692
+    },
+    {
+      "t": 102,
+      "probability": 0.002406652654078881,
+      "bell_overlap": 0.6528902631961655,
+      "teleportation_fidelity": 0.7685935087974437,
+      "weighted_advantage": 0.00024530250513591376,
+      "fallback_fidelity": 0.6669119691718025
+    },
+    {
+      "t": 103,
+      "probability": 0.002391486364728573,
+      "bell_overlap": 0.6508159651073958,
+      "teleportation_fidelity": 0.7672106434049306,
+      "weighted_advantage": 0.00024044954942514514,
+      "fallback_fidelity": 0.6669071162160918
+    },
+    {
+      "t": 104,
+      "probability": 0.0023764822734184633,
+      "bell_overlap": 0.6487414809482659,
+      "teleportation_fidelity": 0.7658276539655106,
+      "weighted_advantage": 0.000235654328530376,
+      "fallback_fidelity": 0.666902320995197
+    },
+    {
+      "t": 105,
+      "probability": 0.0023616386302870744,
+      "bell_overlap": 0.6466669068843413,
+      "teleportation_fidelity": 0.7644446045895608,
+      "weighted_advantage": 0.00023091615538851828,
+      "fallback_fidelity": 0.6668975828220551
+    },
+    {
+      "t": 106,
+      "probability": 0.002346953704520205,
+      "bell_overlap": 0.6445923394307126,
+      "teleportation_fidelity": 0.7630615596204752,
+      "weighted_advantage": 0.00022623435111476955,
+      "fallback_fidelity": 0.6668929010177814
+    },
+    {
+      "t": 107,
+      "probability": 0.0023324257841417367,
+      "bell_overlap": 0.6425178754316427,
+      "teleportation_fidelity": 0.7616785836210952,
+      "weighted_advantage": 0.0002216082449052426,
+      "fallback_fidelity": 0.6668882749115719
+    },
+    {
+      "t": 108,
+      "probability": 0.0023180531758067607,
+      "bell_overlap": 0.64044361204002,
+      "teleportation_fidelity": 0.7602957413600132,
+      "weighted_advantage": 0.00021703717394076045,
+      "fallback_fidelity": 0.6668837038406074
+    },
+    {
+      "t": 109,
+      "probability": 0.0023038342045969946,
+      "bell_overlap": 0.638369646696623,
+      "teleportation_fidelity": 0.7589130977977486,
+      "weighted_advantage": 0.00021252048329178773,
+      "fallback_fidelity": 0.6668791871499584
+    },
+    {
+      "t": 110,
+      "probability": 0.0022897672138184636,
+      "bell_overlap": 0.6362960771092137,
+      "teleportation_fidelity": 0.7575307180728091,
+      "weighted_advantage": 0.00020805752582450058,
+      "fallback_fidelity": 0.6668747241924912
+    },
+    {
+      "t": 111,
+      "probability": 0.002275850564801429,
+      "bell_overlap": 0.6342230012314591,
+      "teleportation_fidelity": 0.7561486674876394,
+      "weighted_advantage": 0.00020364766210797286,
+      "fallback_fidelity": 0.6668703143287746
+    },
+    {
+      "t": 112,
+      "probability": 0.002262082636702528,
+      "bell_overlap": 0.6321505172416978,
+      "teleportation_fidelity": 0.7547670114944651,
+      "weighted_advantage": 0.00019929026032246833,
+      "fallback_fidelity": 0.6668659569269891
+    },
+    {
+      "t": 113,
+      "probability": 0.002248461826309104,
+      "bell_overlap": 0.6300787235215584,
+      "teleportation_fidelity": 0.7533858156810389,
+      "weighted_advantage": 0.0001949846961688268,
+      "fallback_fidelity": 0.6668616513628355
+    },
+    {
+      "t": 114,
+      "probability": 0.0022349865478457093,
+      "bell_overlap": 0.628007718634437,
+      "teleportation_fidelity": 0.7520051457562914,
+      "weighted_advantage": 0.00019073035277892373,
+      "fallback_fidelity": 0.6668573970194456
+    },
+    {
+      "t": 115,
+      "probability": 0.002221655232782744,
+      "bell_overlap": 0.6259376013038498,
+      "teleportation_fidelity": 0.7506250675358999,
+      "weighted_advantage": 0.00018652662062720328,
+      "fallback_fidelity": 0.6668531932872939
+    },
+    {
+      "t": 116,
+      "probability": 0.002208466329647216,
+      "bell_overlap": 0.6238684703916627,
+      "teleportation_fidelity": 0.7492456469277752,
+      "weighted_advantage": 0.00018237289744326028,
+      "fallback_fidelity": 0.6668490395641099
+    },
+    {
+      "t": 117,
+      "probability": 0.0021954183038355984,
+      "bell_overlap": 0.6218004248762147,
+      "teleportation_fidelity": 0.7478669499174764,
+      "weighted_advantage": 0.0001782685881254629,
+      "fallback_fidelity": 0.666844935254792
+    },
+    {
+      "t": 118,
+      "probability": 0.0021825096374287556,
+      "bell_overlap": 0.6197335638303415,
+      "teleportation_fidelity": 0.7464890425535611,
+      "weighted_advantage": 0.00017421310465560785,
+      "fallback_fidelity": 0.6668408797713222
+    },
+    {
+      "t": 119,
+      "probability": 0.002169738829008917,
+      "bell_overlap": 0.6176679863993119,
+      "teleportation_fidelity": 0.7451119909328746,
+      "weighted_advantage": 0.0001702058660145869,
+      "fallback_fidelity": 0.6668368725326812
+    },
+    {
+      "t": 120,
+      "probability": 0.002157104393478681,
+      "bell_overlap": 0.6156037917786836,
+      "teleportation_fidelity": 0.743735861185789,
+      "weighted_advantage": 0.00016624629809906206,
+      "fallback_fidelity": 0.6668329129647657
+    },
+    {
+      "t": 121,
+      "probability": 0.002144604861882014,
+      "bell_overlap": 0.6135410791920937,
+      "teleportation_fidelity": 0.7423607194613958,
+      "weighted_advantage": 0.00016233383363913008,
+      "fallback_fidelity": 0.6668290005003058
+    },
+    {
+      "t": 122,
+      "probability": 0.0021322387812272407,
+      "bell_overlap": 0.6114799478689898,
+      "teleportation_fidelity": 0.7409866319126599,
+      "weighted_advantage": 0.00015846791211696757,
+      "fallback_fidelity": 0.6668251345787836
+    },
+    {
+      "t": 123,
+      "probability": 0.002120004714311982,
+      "bell_overlap": 0.6094204970223163,
+      "teleportation_fidelity": 0.7396136646815442,
+      "weighted_advantage": 0.00015464797968644725,
+      "fallback_fidelity": 0.6668213146463531
+    },
+    {
+      "t": 124,
+      "probability": 0.0021079012395500392,
+      "bell_overlap": 0.607362825826161,
+      "teleportation_fidelity": 0.7382418838841073,
+      "weighted_advantage": 0.00015087348909370644,
+      "fallback_fidelity": 0.6668175401557603
+    },
+    {
+      "t": 125,
+      "probability": 0.002095926950800183,
+      "bell_overlap": 0.605307033393382,
+      "teleportation_fidelity": 0.736871355595588,
+      "weighted_advantage": 0.0001471438995986696,
+      "fallback_fidelity": 0.6668138105662653
+    },
+    {
+      "t": 126,
+      "probability": 0.0020840804571968475,
+      "bell_overlap": 0.6032532187532135,
+      "teleportation_fidelity": 0.7355021458354756,
+      "weighted_advantage": 0.00014345867689749542,
+      "fallback_fidelity": 0.6668101253435641
+    },
+    {
+      "t": 127,
+      "probability": 0.0020723603829826878,
+      "bell_overlap": 0.6012014808288704,
+      "teleportation_fidelity": 0.7341343205525802,
+      "weighted_advantage": 0.0001398172930459553,
+      "fallback_fidelity": 0.6668064839597125
+    },
+    {
+      "t": 128,
+      "probability": 0.002060765367342993,
+      "bell_overlap": 0.5991519184151598,
+      "teleportation_fidelity": 0.7327679456101066,
+      "weighted_advantage": 0.00013621922638371972,
+      "fallback_fidelity": 0.6668028858930504
+    },
+    {
+      "t": 129,
+      "probability": 0.002049294064241929,
+      "bell_overlap": 0.5971046301561087,
+      "teleportation_fidelity": 0.7314030867707392,
+      "weighted_advantage": 0.00013266396145954776,
+      "fallback_fidelity": 0.6667993306281261
+    },
+    {
+      "t": 130,
+      "probability": 0.002037945142260596,
+      "bell_overlap": 0.59505971452262,
+      "teleportation_fidelity": 0.7300398096817466,
+      "weighted_advantage": 0.00012915098895736833,
+      "fallback_fidelity": 0.666795817655624
+    },
+    {
+      "t": 131,
+      "probability": 0.002026717284436867,
+      "bell_overlap": 0.5930172697901673,
+      "teleportation_fidelity": 0.7286781798601115,
+      "weighted_advantage": 0.00012567980562323957,
+      "fallback_fidelity": 0.6667923464722899
+    },
+    {
+      "t": 132,
+      "probability": 0.002015609188107008,
+      "bell_overlap": 0.5909773940165394,
+      "teleportation_fidelity": 0.727318262677693,
+      "weighted_advantage": 0.000122249914193179,
+      "fallback_fidelity": 0.6667889165808598
+    },
+    {
+      "t": 133,
+      "probability": 0.002004619564749042,
+      "bell_overlap": 0.5889401850196438,
+      "teleportation_fidelity": 0.7259601233464292,
+      "weighted_advantage": 0.00011886082332185187,
+      "fallback_fidelity": 0.6667855274899884
+    },
+    {
+      "t": 134,
+      "probability": 0.0019937471398278435,
+      "bell_overlap": 0.586905740355384,
+      "teleportation_fidelity": 0.7246038269035893,
+      "weighted_advantage": 0.00011551204751211196,
+      "fallback_fidelity": 0.6667821787141788
+    },
+    {
+      "t": 135,
+      "probability": 0.001982990652641949,
+      "bell_overlap": 0.5848741572956149,
+      "teleportation_fidelity": 0.7232494381970765,
+      "weighted_advantage": 0.00011220310704537786,
+      "fallback_fidelity": 0.666778869773712
+    },
+    {
+      "t": 136,
+      "probability": 0.0019723488561720604,
+      "bell_overlap": 0.5828455328061918,
+      "teleportation_fidelity": 0.7218970218707946,
+      "weighted_advantage": 0.00010893352791283847,
+      "fallback_fidelity": 0.6667756001945795
+    },
+    {
+      "t": 137,
+      "probability": 0.0019618205169312144,
+      "bell_overlap": 0.5808199635251232,
+      "teleportation_fidelity": 0.7205466423500821,
+      "weighted_advantage": 0.00010570284174747948,
+      "fallback_fidelity": 0.6667723695084141
+    },
+    {
+      "t": 138,
+      "probability": 0.0019514044148166189,
+      "bell_overlap": 0.5787975457408343,
+      "teleportation_fidelity": 0.7191983638272229,
+      "weighted_advantage": 0.00010251058575691917,
+      "fallback_fidelity": 0.6667691772524236
+    },
+    {
+      "t": 139,
+      "probability": 0.0019410993429631166,
+      "bell_overlap": 0.5767783753705568,
+      "teleportation_fidelity": 0.7178522502470379,
+      "weighted_advantage": 9.935630265704239e-05,
+      "fallback_fidelity": 0.6667660229693236
+    },
+    {
+      "t": 140,
+      "probability": 0.001930904107598273,
+      "bell_overlap": 0.5747625479388493,
+      "teleportation_fidelity": 0.7165083652925661,
+      "weighted_advantage": 9.623954060642452e-05,
+      "fallback_fidelity": 0.6667629062072731
+    },
+    {
+      "t": 141,
+      "probability": 0.0019208175278990613,
+      "bell_overlap": 0.5727501585562648,
+      "teleportation_fidelity": 0.7151667723708431,
+      "weighted_advantage": 9.315985314153949e-05,
+      "fallback_fidelity": 0.6667598265198081
+    },
+    {
+      "t": 142,
+      "probability": 0.0019108384358501318,
+      "bell_overlap": 0.5707413018981706,
+      "teleportation_fidelity": 0.7138275345987805,
+      "weighted_advantage": 9.011679911273502e-05,
+      "fallback_fidelity": 0.6667567834657794
+    },
+    {
+      "t": 143,
+      "probability": 0.0019009656761036471,
+      "bell_overlap": 0.5687360721837327,
+      "teleportation_fidelity": 0.7124907147891552,
+      "weighted_advantage": 8.710994262097246e-05,
+      "fallback_fidelity": 0.6667537766092876
+    },
+    {
+      "t": 144,
+      "probability": 0.0018911981058406632,
+      "bell_overlap": 0.5667345631550744,
+      "teleportation_fidelity": 0.7111563754367163,
+      "weighted_advantage": 8.413885295532064e-05,
+      "fallback_fidelity": 0.666750805519622
+    },
+    {
+      "t": 145,
+      "probability": 0.0018815345946340406,
+      "bell_overlap": 0.5647368680566195,
+      "teleportation_fidelity": 0.709824578704413,
+      "weighted_advantage": 8.120310453119261e-05,
+      "fallback_fidelity": 0.6667478697711978
+    },
+    {
+      "t": 146,
+      "probability": 0.0018719740243128718,
+      "bell_overlap": 0.562743079614627,
+      "teleportation_fidelity": 0.7084953864097514,
+      "weighted_advantage": 7.830227682931769e-05,
+      "fallback_fidelity": 0.666744968943496
+    },
+    {
+      "t": 147,
+      "probability": 0.0018625152888284025,
+      "bell_overlap": 0.5607532900169309,
+      "teleportation_fidelity": 0.7071688600112873,
+      "weighted_advantage": 7.543595433544e-05,
+      "fallback_fidelity": 0.6667421026210021
+    },
+    {
+      "t": 148,
+      "probability": 0.0018531572941214336,
+      "bell_overlap": 0.5587675908928914,
+      "teleportation_fidelity": 0.705845060595261,
+      "weighted_advantage": 7.26037264807375e-05,
+      "fallback_fidelity": 0.6667392703931474
+    },
+    {
+      "t": 149,
+      "probability": 0.0018438989579911858,
+      "bell_overlap": 0.5567860732935674,
+      "teleportation_fidelity": 0.7045240488623783,
+      "weighted_advantage": 6.98051875829468e-05,
+      "fallback_fidelity": 0.6667364718542496
+    },
+    {
+      "t": 150,
+      "probability": 0.0018347392099656136,
+      "bell_overlap": 0.55480882767212,
+      "teleportation_fidelity": 0.7032058851147468,
+      "weighted_advantage": 6.703993678819158e-05,
+      "fallback_fidelity": 0.6667337066034548,
+      "log_negativity_nats": 0.0499895879260609,
+      "min_density_eigenvalue": 0.00011823863463359713,
+      "min_pt_eigenvalue": -0.0010469877651828868,
+      "density_spectral_trace_error": 1.1102230246251565e-15,
+      "pt_spectral_trace_error": 8.881784197001252e-16,
+      "density_spectrum_seconds": 11.616105956025422,
+      "pt_spectrum_seconds": 11.85241141403094
+    },
+    {
+      "t": 151,
+      "probability": 0.001825676991173147,
+      "bell_overlap": 0.5528359438644562,
+      "teleportation_fidelity": 0.7018906292429709,
+      "weighted_advantage": 6.430757801350263e-05,
+      "fallback_fidelity": 0.6667309742446801
+    },
+    {
+      "t": 152,
+      "probability": 0.0018167112542158514,
+      "bell_overlap": 0.5508675110701181,
+      "teleportation_fidelity": 0.700578340713412,
+      "weighted_advantage": 6.160771989002186e-05,
+      "fallback_fidelity": 0.6667282743865567
+    },
+    {
+      "t": 153,
+      "probability": 0.0018078409630439833,
+      "bell_overlap": 0.5489036178334326,
+      "teleportation_fidelity": 0.6992690785556217,
+      "weighted_advantage": 5.893997570688515e-05,
+      "fallback_fidelity": 0.6667256066423736
+    },
+    {
+      "t": 154,
+      "probability": 0.0017990650928319338,
+      "bell_overlap": 0.5469443520249225,
+      "teleportation_fidelity": 0.6979629013499483,
+      "weighted_advantage": 5.6303963355768157e-05,
+      "fallback_fidelity": 0.6667229706300224
+    },
+    {
+      "t": 155,
+      "probability": 0.0017903826298555374,
+      "bell_overlap": 0.5449898008229936,
+      "teleportation_fidelity": 0.6966598672153291,
+      "weighted_advantage": 5.369930527609892e-05,
+      "fallback_fidelity": 0.6667203659719427
+    },
+    {
+      "t": 156,
+      "probability": 0.0017817925713707345,
+      "bell_overlap": 0.5430400506959006,
+      "teleportation_fidelity": 0.6953600337972671,
+      "weighted_advantage": 5.112562840091708e-05,
+      "fallback_fidelity": 0.6667177922950676
+    },
+    {
+      "t": 157,
+      "probability": 0.0017732939254935735,
+      "bell_overlap": 0.5410951873840029,
+      "teleportation_fidelity": 0.6940634582560019,
+      "weighted_advantage": 4.858256410338167e-05,
+      "fallback_fidelity": 0.66671524923077
+    },
+    {
+      "t": 158,
+      "probability": 0.0017648857110815334,
+      "bell_overlap": 0.5391552958823164,
+      "teleportation_fidelity": 0.6927701972548777,
+      "weighted_advantage": 4.6069748143913366e-05,
+      "fallback_fidelity": 0.6667127364148105
+    },
+    {
+      "t": 159,
+      "probability": 0.0017565669576161576,
+      "bell_overlap": 0.5372204604233701,
+      "teleportation_fidelity": 0.6914803069489134,
+      "weighted_advantage": 4.358682061796791e-05,
+      "fallback_fidelity": 0.6667102534872846
+    },
+    {
+      "t": 160,
+      "probability": 0.0017483367050869787,
+      "bell_overlap": 0.5352907644603704,
+      "teleportation_fidelity": 0.6901938429735802,
+      "weighted_advantage": 4.113342590442973e-05,
+      "fallback_fidelity": 0.666707800092571
+    },
+    {
+      "t": 161,
+      "probability": 0.001740194003876727,
+      "bell_overlap": 0.5333662906506862,
+      "teleportation_fidelity": 0.6889108604337908,
+      "weighted_advantage": 3.870921261462154e-05,
+      "fallback_fidelity": 0.6667053758792812
+    },
+    {
+      "t": 162,
+      "probability": 0.0017321379146477993,
+      "bell_overlap": 0.531447120839656,
+      "teleportation_fidelity": 0.687631413893104,
+      "weighted_advantage": 3.631383354191947e-05,
+      "fallback_fidelity": 0.6667029805002086
+    },
+    {
+      "t": 163,
+      "probability": 0.0017241675082299822,
+      "bell_overlap": 0.5295333360447257,
+      "teleportation_fidelity": 0.6863555573631505,
+      "weighted_advantage": 3.3946945611969e-05,
+      "fallback_fidelity": 0.6667006136122786
+    },
+    {
+      "t": 164,
+      "probability": 0.0017162818655094122,
+      "bell_overlap": 0.5276250164399252,
+      "teleportation_fidelity": 0.6850833442932834,
+      "weighted_advantage": 3.1608209833495346e-05,
+      "fallback_fidelity": 0.6666982748765001
+    },
+    {
+      "t": 165,
+      "probability": 0.0017084800773187587,
+      "bell_overlap": 0.5257222413406832,
+      "teleportation_fidelity": 0.6838148275604555,
+      "weighted_advantage": 2.9297291249694973e-05,
+      "fallback_fidelity": 0.6666959639579163
+    },
+    {
+      "t": 166,
+      "probability": 0.0017007612443286167,
+      "bell_overlap": 0.5238250891889953,
+      "teleportation_fidelity": 0.6825500594593302,
+      "weighted_advantage": 2.701385889021072e-05,
+      "fallback_fidelity": 0.6666936805255569
+    },
+    {
+      "t": 167,
+      "probability": 0.001693124476940097,
+      "bell_overlap": 0.5219336375389414,
+      "teleportation_fidelity": 0.6812890916926276,
+      "weighted_advantage": 2.4757585723676013e-05,
+      "fallback_fidelity": 0.6666914242523903
+    },
+    {
+      "t": 168,
+      "probability": 0.0016855688951786002,
+      "bell_overlap": 0.5200479630425645,
+      "teleportation_fidelity": 0.6800319753617097,
+      "weighted_advantage": 2.252814861082464e-05,
+      "fallback_fidelity": 0.6666891948152774
+    },
+    {
+      "t": 169,
+      "probability": 0.0016780936285887564,
+      "bell_overlap": 0.5181681414361122,
+      "teleportation_fidelity": 0.6787787609574082,
+      "weighted_advantage": 2.0325228258159664e-05,
+      "fallback_fidelity": 0.6666869918949248
+    },
+    {
+      "t": 170,
+      "probability": 0.00167069781613053,
+      "bell_overlap": 0.5162942475266459,
+      "teleportation_fidelity": 0.6775294983510972,
+      "weighted_advantage": 1.8148509172171704e-05,
+      "fallback_fidelity": 0.6666848151758388
+    },
+    {
+      "t": 171,
+      "probability": 0.0016633806060764589,
+      "bell_overlap": 0.5144263551790237,
+      "teleportation_fidelity": 0.6762842367860159,
+      "weighted_advantage": 1.5997679614106033e-05,
+      "fallback_fidelity": 0.6666826643462808
+    },
+    {
+      "t": 172,
+      "probability": 0.001656141155910035,
+      "bell_overlap": 0.5125645373032595,
+      "teleportation_fidelity": 0.6750430248688396,
+      "weighted_advantage": 1.387243155526325e-05,
+      "fallback_fidelity": 0.6666805390982219
+    },
+    {
+      "t": 173,
+      "probability": 0.0016489786322251942,
+      "bell_overlap": 0.5107088658422629,
+      "teleportation_fidelity": 0.6738059105615086,
+      "weighted_advantage": 1.1772460632838622e-05,
+      "fallback_fidelity": 0.6666784391272995
+    },
+    {
+      "t": 174,
+      "probability": 0.0016418922106269216,
+      "bell_overlap": 0.5088594117599629,
+      "teleportation_fidelity": 0.6725729411733085,
+      "weighted_advantage": 9.697466106279582e-06,
+      "fallback_fidelity": 0.6666763641327729
+    },
+    {
+      "t": 175,
+      "probability": 0.0016348810756329438,
+      "bell_overlap": 0.5070162450298193,
+      "teleportation_fidelity": 0.6713441633532128,
+      "weighted_advantage": 7.64715081417011e-06,
+      "fallback_fidelity": 0.6666743138174808
+    },
+    {
+      "t": 176,
+      "probability": 0.0016279444205765088,
+      "bell_overlap": 0.5051794346237256,
+      "teleportation_fidelity": 0.6701196230824836,
+      "weighted_advantage": 5.621221131623143e-06,
+      "fallback_fidelity": 0.6666722878877982
+    },
+    {
+      "t": 177,
+      "probability": 0.0016210814475102308,
+      "bell_overlap": 0.5033490485013036,
+      "teleportation_fidelity": 0.6688993656675356,
+      "weighted_advantage": 3.619386928183326e-06,
+      "fallback_fidelity": 0.6666702860535948
+    },
+    {
+      "t": 178,
+      "probability": 0.0016142913671109975,
+      "bell_overlap": 0.5015251535995946,
+      "teleportation_fidelity": 0.6676834357330631,
+      "weighted_advantage": 1.641361526229334e-06,
+      "fallback_fidelity": 0.6666683080281929
+    },
+    {
+      "t": 179,
+      "probability": 0.0016075733985859227,
+      "bell_overlap": 0.4997078158231499,
+      "teleportation_fidelity": 0.6664718772154332,
+      "weighted_advantage": -3.131383401279838e-07,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 180,
+      "probability": 0.0016009267695793303,
+      "bell_overlap": 0.4978971000345195,
+      "teleportation_fidelity": 0.6652647333563463,
+      "weighted_advantage": -2.2443925656568098e-06,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 181,
+      "probability": 0.001594350716080768,
+      "bell_overlap": 0.49609307004514375,
+      "teleportation_fidelity": 0.6640620466967625,
+      "weighted_advantage": -4.152677714134921e-06,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 182,
+      "probability": 0.0015878444823340257,
+      "bell_overlap": 0.4942957886066489,
+      "teleportation_fidelity": 0.6628638590710992,
+      "weighted_advantage": -6.038267057999607e-06,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 183,
+      "probability": 0.001581407320747161,
+      "bell_overlap": 0.49250531740254566,
+      "teleportation_fidelity": 0.6616702116016971,
+      "weighted_advantage": -7.901430617526975e-06,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 184,
+      "probability": 0.0015750384918035106,
+      "bell_overlap": 0.4907217170403344,
+      "teleportation_fidelity": 0.6604811446935562,
+      "weighted_advantage": -9.742435199545274e-06,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 185,
+      "probability": 0.001568737263973681,
+      "bell_overlap": 0.48894504704401615,
+      "teleportation_fidelity": 0.6592966980293441,
+      "weighted_advantage": -1.1561544435685188e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 186,
+      "probability": 0.0015625029136285074,
+      "bell_overlap": 0.48717536584701043,
+      "teleportation_fidelity": 0.6581169105646736,
+      "weighted_advantage": -1.3359018820177242e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 187,
+      "probability": 0.0015563347249529698,
+      "bell_overlap": 0.4854127307854796,
+      "teleportation_fidelity": 0.6569418205236531,
+      "weighted_advantage": -1.5135115747196863e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 188,
+      "probability": 0.001550231989861055,
+      "bell_overlap": 0.48365719809205937,
+      "teleportation_fidelity": 0.6557714653947063,
+      "weighted_advantage": -1.689008954776773e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 189,
+      "probability": 0.0015441940079115551,
+      "bell_overlap": 0.481908822889997,
+      "teleportation_fidelity": 0.6546058819266647,
+      "weighted_advantage": -1.8624191526222118e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 190,
+      "probability": 0.0015382200862247904,
+      "bell_overlap": 0.4801676591876938,
+      "teleportation_fidelity": 0.6534451061251292,
+      "weighted_advantage": -2.0337669996230017e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 191,
+      "probability": 0.0015323095394002499,
+      "bell_overlap": 0.4784337598736537,
+      "teleportation_fidelity": 0.6522891732491024,
+      "weighted_advantage": -2.203077031639796e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 192,
+      "probability": 0.0015264616894351331,
+      "bell_overlap": 0.47670717671183466,
+      "teleportation_fidelity": 0.6511381178078898,
+      "weighted_advantage": -2.3703734925444533e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 193,
+      "probability": 0.0015206758656437917,
+      "bell_overlap": 0.4749879603374036,
+      "teleportation_fidelity": 0.6499919735582691,
+      "weighted_advantage": -2.5356803376956982e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 194,
+      "probability": 0.001514951404578053,
+      "bell_overlap": 0.4732761602528914,
+      "teleportation_fidelity": 0.6488507735019277,
+      "weighted_advantage": -2.6990212373733837e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 195,
+      "probability": 0.001509287649948419,
+      "bell_overlap": 0.4715718248247478,
+      "teleportation_fidelity": 0.6477145498831652,
+      "weighted_advantage": -2.8604195801718808e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 196,
+      "probability": 0.0015036839525461327,
+      "bell_overlap": 0.4698750012802933,
+      "teleportation_fidelity": 0.6465833341868622,
+      "weighted_advantage": -3.0198984763530447e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 197,
+      "probability": 0.0014981396701661,
+      "bell_overlap": 0.46818573570506594,
+      "teleportation_fidelity": 0.6454571571367106,
+      "weighted_advantage": -3.17748076115931e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 198,
+      "probability": 0.001492654167530656,
+      "bell_overlap": 0.4665040730405613,
+      "teleportation_fidelity": 0.6443360486937075,
+      "weighted_advantage": -3.333188998087237e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 199,
+      "probability": 0.0014872268162141728,
+      "bell_overlap": 0.4648300570823605,
+      "teleportation_fidelity": 0.643220038054907,
+      "weighted_advantage": -3.487045482122338e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 200,
+      "probability": 0.0014818569945684906,
+      "bell_overlap": 0.4631637304786486,
+      "teleportation_fidelity": 0.6421091536524325,
+      "weighted_advantage": -3.639072242934961e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 201,
+      "probability": 0.0014765440876491705,
+      "bell_overlap": 0.46150513472911303,
+      "teleportation_fidelity": 0.6410034231527421,
+      "weighted_advantage": -3.789291048038625e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 202,
+      "probability": 0.0014712874871425571,
+      "bell_overlap": 0.45985431018422596,
+      "teleportation_fidelity": 0.6399028734561506,
+      "weighted_advantage": -3.937723405910316e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 203,
+      "probability": 0.0014660865912936387,
+      "bell_overlap": 0.45821129604490235,
+      "teleportation_fidelity": 0.6388075306966016,
+      "weighted_advantage": -4.084390569073869e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 204,
+      "probability": 0.001460940804834704,
+      "bell_overlap": 0.45657613036253175,
+      "teleportation_fidelity": 0.6377174202416879,
+      "weighted_advantage": -4.2293135371466644e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 205,
+      "probability": 0.0014558495389147778,
+      "bell_overlap": 0.45494885003938,
+      "teleportation_fidelity": 0.63663256669292,
+      "weighted_advantage": -4.372513059849935e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 206,
+      "probability": 0.0014508122110298326,
+      "bell_overlap": 0.4533294908293571,
+      "teleportation_fidelity": 0.635552993886238,
+      "weighted_advantage": -4.51400963998324e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 207,
+      "probability": 0.0014458282449537683,
+      "bell_overlap": 0.4517180873391456,
+      "teleportation_fidelity": 0.6344787248927637,
+      "weighted_advantage": -4.6538235363636174e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 208,
+      "probability": 0.0014408970706701438,
+      "bell_overlap": 0.45011467302968805,
+      "teleportation_fidelity": 0.633409782019792,
+      "weighted_advantage": -4.791974766729648e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 209,
+      "probability": 0.0014360181243046636,
+      "bell_overlap": 0.44851928021802445,
+      "teleportation_fidelity": 0.6323461868120163,
+      "weighted_advantage": -4.928483110611101e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 210,
+      "probability": 0.0014311908480584014,
+      "bell_overlap": 0.4469319400794807,
+      "teleportation_fidelity": 0.6312879600529872,
+      "weighted_advantage": -5.063368112164131e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 211,
+      "probability": 0.001426414690141757,
+      "bell_overlap": 0.44535268265019834,
+      "teleportation_fidelity": 0.6302351217667989,
+      "weighted_advantage": -5.19664908297304e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 212,
+      "probability": 0.0014216891047091381,
+      "bell_overlap": 0.4437815368300029,
+      "teleportation_fidelity": 0.629187691220002,
+      "weighted_advantage": -5.328345104818447e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 213,
+      "probability": 0.001417013551794358,
+      "bell_overlap": 0.4422185303856059,
+      "teleportation_fidelity": 0.6281456869237373,
+      "weighted_advantage": -5.4584750324126816e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 214,
+      "probability": 0.0014123874972467412,
+      "bell_overlap": 0.4406636899541346,
+      "teleportation_fidelity": 0.6271091266360896,
+      "weighted_advantage": -5.587057496102441e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 215,
+      "probability": 0.0014078104126679313,
+      "bell_overlap": 0.43911704104698407,
+      "teleportation_fidelity": 0.626078027364656,
+      "weighted_advantage": -5.714110904539339e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 216,
+      "probability": 0.0014032817753493903,
+      "bell_overlap": 0.4375786080539864,
+      "teleportation_fidelity": 0.6250524053693243,
+      "weighted_advantage": -5.8396534473188006e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 217,
+      "probability": 0.0013988010682105833,
+      "bell_overlap": 0.43604841424789187,
+      "teleportation_fidelity": 0.6240322761652612,
+      "weighted_advantage": -5.9637030975872995e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 218,
+      "probability": 0.00139436777973784,
+      "bell_overlap": 0.4345264817891556,
+      "teleportation_fidelity": 0.6230176545261038,
+      "weighted_advantage": -6.086277614618661e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 219,
+      "probability": 0.00138998140392389,
+      "bell_overlap": 0.43301283173102345,
+      "teleportation_fidelity": 0.6220085544873489,
+      "weighted_advantage": -6.207394546359858e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 220,
+      "probability": 0.001385641440208055,
+      "bell_overlap": 0.4315074840249138,
+      "teleportation_fidelity": 0.6210049893499425,
+      "weighted_advantage": -6.327071231946106e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 221,
+      "probability": 0.0013813473934171014,
+      "bell_overlap": 0.43001045752608563,
+      "teleportation_fidelity": 0.6200069716840572,
+      "weighted_advantage": -6.44532480418646e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 222,
+      "probability": 0.0013770987737067382,
+      "bell_overlap": 0.4285217699995897,
+      "teleportation_fidelity": 0.6190145133330598,
+      "weighted_advantage": -6.562172192019543e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 223,
+      "probability": 0.0013728950965037582,
+      "bell_overlap": 0.4270414381264947,
+      "teleportation_fidelity": 0.6180276254176631,
+      "weighted_advantage": -6.677630122940099e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 224,
+      "probability": 0.0013687358824488085,
+      "bell_overlap": 0.425569477510385,
+      "teleportation_fidelity": 0.6170463183402567,
+      "weighted_advantage": -6.791715125396596e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 225,
+      "probability": 0.0013646206573397946,
+      "bell_overlap": 0.4241059026841186,
+      "teleportation_fidelity": 0.6160706017894123,
+      "weighted_advantage": -6.904443531160569e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 226,
+      "probability": 0.0013605489520758989,
+      "bell_overlap": 0.42265072711684465,
+      "teleportation_fidelity": 0.6151004847445631,
+      "weighted_advantage": -7.015831477667307e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 227,
+      "probability": 0.0013565203026022139,
+      "bell_overlap": 0.4212039632212712,
+      "teleportation_fidelity": 0.6141359754808474,
+      "weighted_advantage": -7.125894910329093e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 228,
+      "probability": 0.0013525342498549838,
+      "bell_overlap": 0.41976562236117526,
+      "teleportation_fidelity": 0.6131770815741168,
+      "weighted_advantage": -7.234649584820625e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 229,
+      "probability": 0.0013485903397074416,
+      "bell_overlap": 0.4183357148591535,
+      "teleportation_fidelity": 0.6122238099061024,
+      "weighted_advantage": -7.342111069337294e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 230,
+      "probability": 0.0013446881229162442,
+      "bell_overlap": 0.4169142500046004,
+      "teleportation_fidelity": 0.6112761666697336,
+      "weighted_advantage": -7.448294746826809e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 231,
+      "probability": 0.001340827155068489,
+      "bell_overlap": 0.41550123606191447,
+      "teleportation_fidelity": 0.6103341573746096,
+      "weighted_advantage": -7.553215817193804e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 232,
+      "probability": 0.0013370069965293145,
+      "bell_overlap": 0.4140966802789192,
+      "teleportation_fidelity": 0.6093977868526128,
+      "weighted_advantage": -7.656889299478638e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 233,
+      "probability": 0.0013332272123900714,
+      "bell_overlap": 0.41270058889549815,
+      "teleportation_fidelity": 0.6084670592636655,
+      "weighted_advantage": -7.759330034009974e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 234,
+      "probability": 0.0013294873724170632,
+      "bell_overlap": 0.41131296715243226,
+      "teleportation_fidelity": 0.6075419781016215,
+      "weighted_advantage": -7.860552684531906e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 235,
+      "probability": 0.0013257870510008465,
+      "bell_overlap": 0.4099338193004361,
+      "teleportation_fidelity": 0.6066225462002907,
+      "weighted_advantage": -7.960571740305617e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 236,
+      "probability": 0.0013221258271060863,
+      "bell_overlap": 0.4085631486093864,
+      "teleportation_fidelity": 0.6057087657395909,
+      "weighted_advantage": -8.05940151818609e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 237,
+      "probability": 0.0013185032842219602,
+      "bell_overlap": 0.40720095737773293,
+      "teleportation_fidelity": 0.604800638251822,
+      "weighted_advantage": -8.157056164674182e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 238,
+      "probability": 0.0013149190103131049,
+      "bell_overlap": 0.40584724694208996,
+      "teleportation_fidelity": 0.60389816462806,
+      "weighted_advantage": -8.253549657944073e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 239,
+      "probability": 0.0013113725977710999,
+      "bell_overlap": 0.4045020176869966,
+      "teleportation_fidelity": 0.6030013451246644,
+      "weighted_advantage": -8.348895809846782e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 240,
+      "probability": 0.0013078636433664814,
+      "bell_overlap": 0.40316526905484373,
+      "teleportation_fidelity": 0.6021101793698959,
+      "weighted_advantage": -8.44310826788966e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 241,
+      "probability": 0.0013043917482012798,
+      "bell_overlap": 0.40183699955595836,
+      "teleportation_fidelity": 0.6012246663706389,
+      "weighted_advantage": -8.536200517192432e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 242,
+      "probability": 0.0013009565176620788,
+      "bell_overlap": 0.40051720677883906,
+      "teleportation_fidelity": 0.600344804519226,
+      "weighted_advantage": -8.628185882419879e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 243,
+      "probability": 0.0012975575613735863,
+      "bell_overlap": 0.39920588740053664,
+      "teleportation_fidelity": 0.5994705916003578,
+      "weighted_advantage": -8.719077529691618e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 244,
+      "probability": 0.001294194493152713,
+      "bell_overlap": 0.39790303719717324,
+      "teleportation_fidelity": 0.5986020247981155,
+      "weighted_advantage": -8.808888468469042e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 245,
+      "probability": 0.0012908669309631524,
+      "bell_overlap": 0.3966086510545936,
+      "teleportation_fidelity": 0.5977391007030625,
+      "weighted_advantage": -8.897631553419796e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 246,
+      "probability": 0.00128757449687046,
+      "bell_overlap": 0.3953227229791406,
+      "teleportation_fidelity": 0.5968818153194271,
+      "weighted_advantage": -8.985319486260181e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 247,
+      "probability": 0.001284316816997619,
+      "bell_overlap": 0.394045246108551,
+      "teleportation_fidelity": 0.5960301640723674,
+      "weighted_advantage": -9.071964817575443e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 248,
+      "probability": 0.0012810935214810964,
+      "bell_overlap": 0.3927762127229639,
+      "teleportation_fidelity": 0.5951841418153093,
+      "weighted_advantage": -9.157579948618532e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 249,
+      "probability": 0.0012779042444273762,
+      "bell_overlap": 0.3915156142560334,
+      "teleportation_fidelity": 0.5943437428373556,
+      "weighted_advantage": -9.242177133087442e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 250,
+      "probability": 0.0012747486238699679,
+      "bell_overlap": 0.3902634413061438,
+      "teleportation_fidelity": 0.5935089608707625,
+      "weighted_advantage": -9.32576847888127e-05,
+      "fallback_fidelity": 0.6666666666666666,
+      "log_negativity_nats": 0.001158493653586032,
+      "min_density_eigenvalue": 0.00018414607477340995,
+      "min_pt_eigenvalue": -0.00015259692122076733,
+      "density_spectral_trace_error": 1.5543122344752192e-15,
+      "pt_spectral_trace_error": 1.5543122344752192e-15,
+      "density_spectrum_seconds": 11.549817561055534,
+      "pt_spectrum_seconds": 11.735924887936562
+    },
+    {
+      "t": 251,
+      "probability": 0.001271626301726887,
+      "bell_overlap": 0.38901968364771733,
+      "teleportation_fidelity": 0.5926797890984782,
+      "weighted_advantage": -9.408365949835545e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 252,
+      "probability": 0.0012685369237585976,
+      "bell_overlap": 0.3877843302426092,
+      "teleportation_fidelity": 0.5918562201617394,
+      "weighted_advantage": -9.489981367436747e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 253,
+      "probability": 0.0012654801395264141,
+      "bell_overlap": 0.3865573692515852,
+      "teleportation_fidelity": 0.5910382461677234,
+      "weighted_advantage": -9.570626412516503e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 254,
+      "probability": 0.0012624556023513604,
+      "bell_overlap": 0.3853387880458736,
+      "teleportation_fidelity": 0.5902258586972491,
+      "weighted_advantage": -9.650312626925569e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 255,
+      "probability": 0.001259462969273475,
+      "bell_overlap": 0.38412857321878763,
+      "teleportation_fidelity": 0.589419048812525,
+      "weighted_advantage": -9.729051415187987e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 256,
+      "probability": 0.0012565019010115622,
+      "bell_overlap": 0.3829267105974112,
+      "teleportation_fidelity": 0.5886178070649408,
+      "weighted_advantage": -9.8068540461353e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 257,
+      "probability": 0.0012535720619233834,
+      "bell_overlap": 0.38173318525434163,
+      "teleportation_fidelity": 0.5878221235028944,
+      "weighted_advantage": -9.883731654521712e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 258,
+      "probability": 0.0012506731199662812,
+      "bell_overlap": 0.3805479815194865,
+      "teleportation_fidelity": 0.5870319876796577,
+      "weighted_advantage": -9.959695242619572e-05,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 259,
+      "probability": 0.0012478047466582343,
+      "bell_overlap": 0.37937108299190486,
+      "teleportation_fidelity": 0.5862473886612699,
+      "weighted_advantage": -0.00010034755681796217,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 260,
+      "probability": 0.0012449666170393392,
+      "bell_overlap": 0.3782024725516904,
+      "teleportation_fidelity": 0.5854683150344603,
+      "weighted_advantage": -0.00010108923714071864,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 261,
+      "probability": 0.0012421584096337086,
+      "bell_overlap": 0.3770421323718896,
+      "teleportation_fidelity": 0.584694754914593,
+      "weighted_advantage": -0.00010182209953659049,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 262,
+      "probability": 0.0012393798064117903,
+      "bell_overlap": 0.3758900439304505,
+      "teleportation_fidelity": 0.5839266959536337,
+      "weighted_advantage": -0.00010254624888483599,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 263,
+      "probability": 0.001236630492753092,
+      "bell_overlap": 0.37474618802219506,
+      "teleportation_fidelity": 0.58316412534813,
+      "weighted_advantage": -0.00010326178881687738,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 264,
+      "probability": 0.0012339101574093182,
+      "bell_overlap": 0.3736105447708122,
+      "teleportation_fidelity": 0.5824070298472082,
+      "weighted_advantage": -0.00010396882173114998,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 265,
+      "probability": 0.0012312184924679055,
+      "bell_overlap": 0.372483093640864,
+      "teleportation_fidelity": 0.581655395760576,
+      "weighted_advantage": -0.00010466744880777761,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 266,
+      "probability": 0.0012285551933159575,
+      "bell_overlap": 0.37136381344980185,
+      "teleportation_fidelity": 0.5809092089665345,
+      "weighted_advantage": -0.00010535777002307085,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 267,
+      "probability": 0.0012259199586045727,
+      "bell_overlap": 0.3702526823799868,
+      "teleportation_fidelity": 0.5801684549199911,
+      "weighted_advantage": -0.00010603988416385398,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 268,
+      "probability": 0.0012233124902135614,
+      "bell_overlap": 0.36914967799070947,
+      "teleportation_fidelity": 0.579433118660473,
+      "weighted_advantage": -0.00010671388884162101,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 269,
+      "probability": 0.0012207324932165474,
+      "bell_overlap": 0.3680547772302041,
+      "teleportation_fidelity": 0.578703184820136,
+      "weighted_advantage": -0.00010737988050652379,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 270,
+      "probability": 0.0012181796758464504,
+      "bell_overlap": 0.36696795644765334,
+      "teleportation_fidelity": 0.5779786376317689,
+      "weighted_advantage": -0.00010803795446119226,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 271,
+      "probability": 0.0012156537494613451,
+      "bell_overlap": 0.3658891914051782,
+      "teleportation_fidelity": 0.5772594609367855,
+      "weighted_advantage": -0.00010868820487439188,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 272,
+      "probability": 0.0012131544285106928,
+      "bell_overlap": 0.3648184572898089,
+      "teleportation_fidelity": 0.5765456381932059,
+      "weighted_advantage": -0.0001093307247945171,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 273,
+      "probability": 0.0012106814305019387,
+      "bell_overlap": 0.36375572872543294,
+      "teleportation_fidelity": 0.575837152483622,
+      "weighted_advantage": -0.0001099656061629246,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 274,
+      "probability": 0.0012082344759674769,
+      "bell_overlap": 0.362700979784715,
+      "teleportation_fidelity": 0.5751339865231433,
+      "weighted_advantage": -0.0001105929398271086,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 275,
+      "probability": 0.0012058132884319739,
+      "bell_overlap": 0.361654184000985,
+      "teleportation_fidelity": 0.5744361226673234,
+      "weighted_advantage": -0.00011121281555371796,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 276,
+      "probability": 0.0012034175943800472,
+      "bell_overlap": 0.3606153143800912,
+      "teleportation_fidelity": 0.5737435429200608,
+      "weighted_advantage": -0.00011182532204141982,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 277,
+      "probability": 0.0012010471232242982,
+      "bell_overlap": 0.35958434341221257,
+      "teleportation_fidelity": 0.573056228941475,
+      "weighted_advantage": -0.0001124305469336087,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 278,
+      "probability": 0.0011987016072736913,
+      "bell_overlap": 0.35856124308362824,
+      "teleportation_fidelity": 0.5723741620557522,
+      "weighted_advantage": -0.00011302857683096508,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 279,
+      "probability": 0.0011963807817022797,
+      "bell_overlap": 0.357545984888439,
+      "teleportation_fidelity": 0.5716973232589594,
+      "weighted_advantage": -0.00011361949730386502,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 280,
+      "probability": 0.0011940843845182699,
+      "bell_overlap": 0.35653853984023876,
+      "teleportation_fidelity": 0.5710256932268258,
+      "weighted_advantage": -0.0001142033929046405,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 281,
+      "probability": 0.0011918121565334247,
+      "bell_overlap": 0.3555388784837299,
+      "teleportation_fidelity": 0.5703592523224866,
+      "weighted_advantage": -0.00011478034717969524,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 282,
+      "probability": 0.0011895638413327993,
+      "bell_overlap": 0.35454697090628234,
+      "teleportation_fidelity": 0.5696979806041882,
+      "weighted_advantage": -0.00011535044268147612,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 283,
+      "probability": 0.0011873391852448055,
+      "bell_overlap": 0.3535627867494304,
+      "teleportation_fidelity": 0.5690418578329536,
+      "weighted_advantage": -0.00011591376098030075,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 284,
+      "probability": 0.0011851379373116046,
+      "bell_overlap": 0.3525862952203048,
+      "teleportation_fidelity": 0.5683908634802032,
+      "weighted_advantage": -0.0001164703826760465,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 285,
+      "probability": 0.00118295984925982,
+      "bell_overlap": 0.3516174651029978,
+      "teleportation_fidelity": 0.5677449767353319,
+      "weighted_advantage": -0.00011702038740969843,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 286,
+      "probability": 0.0011808046754715699,
+      "bell_overlap": 0.3506562647698573,
+      "teleportation_fidelity": 0.5671041765132382,
+      "weighted_advantage": -0.00011756385387476043,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 287,
+      "probability": 0.0011786721729558167,
+      "bell_overlap": 0.3497026621927064,
+      "teleportation_fidelity": 0.5664684414618043,
+      "weighted_advantage": -0.00011810085982853136,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 288,
+      "probability": 0.0011765621013200252,
+      "bell_overlap": 0.34875662495398846,
+      "teleportation_fidelity": 0.5658377499693256,
+      "weighted_advantage": -0.00011863148210324538,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 289,
+      "probability": 0.0011744742227421327,
+      "bell_overlap": 0.34781812025783077,
+      "teleportation_fidelity": 0.5652120801718872,
+      "weighted_advantage": -0.00011915579661708058,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 290,
+      "probability": 0.001172408301942821,
+      "bell_overlap": 0.3468871149410274,
+      "teleportation_fidelity": 0.5645914099606849,
+      "weighted_advantage": -0.00011967387838503758,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 291,
+      "probability": 0.001170364106158093,
+      "bell_overlap": 0.3459635754839385,
+      "teleportation_fidelity": 0.5639757169892924,
+      "weighted_advantage": -0.00012018580152968582,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 292,
+      "probability": 0.0011683414051121463,
+      "bell_overlap": 0.3450474680213008,
+      "teleportation_fidelity": 0.5633649786808672,
+      "weighted_advantage": -0.00012069163929178542,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 293,
+      "probability": 0.0011663399709905405,
+      "bell_overlap": 0.34413875835295094,
+      "teleportation_fidelity": 0.5627591722353006,
+      "weighted_advantage": -0.00012119146404077922,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 294,
+      "probability": 0.0011643595784136605,
+      "bell_overlap": 0.3432374119544557,
+      "teleportation_fidelity": 0.5621582746363037,
+      "weighted_advantage": -0.00012168534728516289,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 295,
+      "probability": 0.0011624000044104642,
+      "bell_overlap": 0.34234339398765,
+      "teleportation_fidelity": 0.5615622626584333,
+      "weighted_advantage": -0.0001221733596827296,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 296,
+      "probability": 0.0011604610283925188,
+      "bell_overlap": 0.34145666931107876,
+      "teleportation_fidelity": 0.5609711128740525,
+      "weighted_advantage": -0.00012265557105069374,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 297,
+      "probability": 0.0011585424321283169,
+      "bell_overlap": 0.34057720249034096,
+      "teleportation_fidelity": 0.5603848016602273,
+      "weighted_advantage": -0.00012313205037569366,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 298,
+      "probability": 0.0011566439997178742,
+      "bell_overlap": 0.3397049578083349,
+      "teleportation_fidelity": 0.5598033052055565,
+      "weighted_advantage": -0.0001236028658236753,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 299,
+      "probability": 0.0011547655175676032,
+      "bell_overlap": 0.3388398992754013,
+      "teleportation_fidelity": 0.5592265995169342,
+      "weighted_advantage": -0.0001240680847496588,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 300,
+      "probability": 0.001152906774365458,
+      "bell_overlap": 0.3379819906393645,
+      "teleportation_fidelity": 0.558654660426243,
+      "weighted_advantage": -0.00012452777370738853,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 301,
+      "probability": 0.001151067561056352,
+      "bell_overlap": 0.3371311953954686,
+      "teleportation_fidelity": 0.558087463596979,
+      "weighted_advantage": -0.00012498199845886767,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 302,
+      "probability": 0.0011492476708178402,
+      "bell_overlap": 0.3362874767962077,
+      "teleportation_fidelity": 0.5575249845308051,
+      "weighted_advantage": -0.0001254308239837799,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 303,
+      "probability": 0.0011474468990360694,
+      "bell_overlap": 0.3354507978610485,
+      "teleportation_fidelity": 0.5569671985740323,
+      "weighted_advantage": -0.00012587431448879947,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 304,
+      "probability": 0.0011456650432819853,
+      "bell_overlap": 0.3346211213860443,
+      "teleportation_fidelity": 0.5564140809240296,
+      "weighted_advantage": -0.0001263125334167891,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 305,
+      "probability": 0.001143901903287803,
+      "bell_overlap": 0.33379840995333915,
+      "teleportation_fidelity": 0.5558656066355594,
+      "weighted_advantage": -0.00012674554345588969,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 306,
+      "probability": 0.0011421572809237283,
+      "bell_overlap": 0.3329826259405601,
+      "teleportation_fidelity": 0.5553217506270401,
+      "weighted_advantage": -0.0001271734065485006,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 307,
+      "probability": 0.0011404309801749356,
+      "bell_overlap": 0.33217373153009827,
+      "teleportation_fidelity": 0.5547824876867322,
+      "weighted_advantage": -0.00012759618390015452,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 308,
+      "probability": 0.0011387228071187956,
+      "bell_overlap": 0.3313716887182745,
+      "teleportation_fidelity": 0.5542477924788497,
+      "weighted_advantage": -0.0001280139359882856,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 309,
+      "probability": 0.001137032569902348,
+      "bell_overlap": 0.3305764593243934,
+      "teleportation_fidelity": 0.5537176395495956,
+      "weighted_advantage": -0.00012842672257089324,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 310,
+      "probability": 0.0011353600787200207,
+      "bell_overlap": 0.3297880049996802,
+      "teleportation_fidelity": 0.5531920033331201,
+      "weighted_advantage": -0.0001288346026951032,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 311,
+      "probability": 0.001133705145791591,
+      "bell_overlap": 0.32900628723610187,
+      "teleportation_fidelity": 0.5526708581574012,
+      "weighted_advantage": -0.00012923763470562701,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 312,
+      "probability": 0.0011320675853403867,
+      "bell_overlap": 0.3282312673750728,
+      "teleportation_fidelity": 0.5521541782500485,
+      "weighted_advantage": -0.00012963587625311986,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 313,
+      "probability": 0.0011304472135717212,
+      "bell_overlap": 0.32746290661604166,
+      "teleportation_fidelity": 0.5516419377440278,
+      "weighted_advantage": -0.00013002938430243963,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 314,
+      "probability": 0.0011288438486515664,
+      "bell_overlap": 0.326701166024961,
+      "teleportation_fidelity": 0.5511341106833073,
+      "weighted_advantage": -0.00013041821514080788,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 315,
+      "probability": 0.0011272573106854544,
+      "bell_overlap": 0.3259460065426386,
+      "teleportation_fidelity": 0.5506306710284258,
+      "weighted_advantage": -0.00013080242438587249,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 316,
+      "probability": 0.0011256874216976098,
+      "bell_overlap": 0.32519738899296996,
+      "teleportation_fidelity": 0.55013159266198,
+      "weighted_advantage": -0.00013118206699367586,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 317,
+      "probability": 0.0011241340056103077,
+      "bell_overlap": 0.32445527409105046,
+      "teleportation_fidelity": 0.5496368493940337,
+      "weighted_advantage": -0.00013155719726652725,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 318,
+      "probability": 0.0011225968882234562,
+      "bell_overlap": 0.32371962245117,
+      "teleportation_fidelity": 0.5491464149674466,
+      "weighted_advantage": -0.0001319278688607817,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 319,
+      "probability": 0.0011210758971943997,
+      "bell_overlap": 0.3229903945946856,
+      "teleportation_fidelity": 0.5486602630631238,
+      "weighted_advantage": -0.00013229413479452627,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 320,
+      "probability": 0.0011195708620179434,
+      "bell_overlap": 0.3222675509577757,
+      "teleportation_fidelity": 0.5481783673051838,
+      "weighted_advantage": -0.00013265604745517552,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 321,
+      "probability": 0.0011180816140065916,
+      "bell_overlap": 0.32155105189907335,
+      "teleportation_fidelity": 0.547700701266049,
+      "weighted_advantage": -0.00013301365860697491,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 322,
+      "probability": 0.0011166079862710027,
+      "bell_overlap": 0.3208408577071795,
+      "teleportation_fidelity": 0.547227238471453,
+      "weighted_advantage": -0.00013336701939841746,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 323,
+      "probability": 0.0011151498137006559,
+      "bell_overlap": 0.3201369286080568,
+      "teleportation_fidelity": 0.5467579524053713,
+      "weighted_advantage": -0.00013371618036956868,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 324,
+      "probability": 0.001113706932944726,
+      "bell_overlap": 0.3194392247723012,
+      "teleportation_fidelity": 0.5462928165148675,
+      "weighted_advantage": -0.00013406119145930825,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 325,
+      "probability": 0.0011122791823931681,
+      "bell_overlap": 0.31874770632229577,
+      "teleportation_fidelity": 0.5458318042148639,
+      "weighted_advantage": -0.00013440210201248208,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 326,
+      "probability": 0.0011108664021580055,
+      "bell_overlap": 0.3180623333392434,
+      "teleportation_fidelity": 0.5453748888928289,
+      "weighted_advantage": -0.00013473896078697144,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 327,
+      "probability": 0.0011094684340548218,
+      "bell_overlap": 0.31738306587007936,
+      "teleportation_fidelity": 0.5449220439133863,
+      "weighted_advantage": -0.00013507181596067696,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 328,
+      "probability": 0.0011080851215844521,
+      "bell_overlap": 0.3167098639342657,
+      "teleportation_fidelity": 0.5444732426228438,
+      "weighted_advantage": -0.00013540071513841993,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 329,
+      "probability": 0.001106716309914875,
+      "bell_overlap": 0.31604268753046505,
+      "teleportation_fidelity": 0.5440284583536433,
+      "weighted_advantage": -0.0001357257053587609,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 330,
+      "probability": 0.001105361845863299,
+      "bell_overlap": 0.31538149664309617,
+      "teleportation_fidelity": 0.5435876644287307,
+      "weighted_advantage": -0.0001360468331007379,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 331,
+      "probability": 0.0011040215778784427,
+      "bell_overlap": 0.31472625124877107,
+      "teleportation_fidelity": 0.5431508341658474,
+      "weighted_advantage": -0.00013636414429052388,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 332,
+      "probability": 0.0011026953560230109,
+      "bell_overlap": 0.31407691132261395,
+      "teleportation_fidelity": 0.5427179408817426,
+      "weighted_advantage": -0.00013667768430800531,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 333,
+      "probability": 0.0011013830319563547,
+      "bell_overlap": 0.3134334368444622,
+      "teleportation_fidelity": 0.5422889578963082,
+      "weighted_advantage": -0.0001369874979932819,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 334,
+      "probability": 0.0011000844589173246,
+      "bell_overlap": 0.3127957878049508,
+      "teleportation_fidelity": 0.5418638585366339,
+      "weighted_advantage": -0.00013729362965308976,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 335,
+      "probability": 0.0010987994917073067,
+      "bell_overlap": 0.3121639242114798,
+      "teleportation_fidelity": 0.5414426161409865,
+      "weighted_advantage": -0.00013759612306714738,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 336,
+      "probability": 0.0010975279866734435,
+      "bell_overlap": 0.3115378060940662,
+      "teleportation_fidelity": 0.5410252040627108,
+      "weighted_advantage": -0.00013789502149442638,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 337,
+      "probability": 0.0010962698016920365,
+      "bell_overlap": 0.31091739351107983,
+      "teleportation_fidelity": 0.5406115956740533,
+      "weighted_advantage": -0.00013819036767934785,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 338,
+      "probability": 0.0010950247961521286,
+      "bell_overlap": 0.310302646554865,
+      "teleportation_fidelity": 0.5402017643699101,
+      "weighted_advantage": -0.0001384822038579047,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 339,
+      "probability": 0.001093792830939264,
+      "bell_overlap": 0.30969352535724815,
+      "teleportation_fidelity": 0.5397956835714988,
+      "weighted_advantage": -0.00013877057176371117,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 340,
+      "probability": 0.0010925737684194246,
+      "bell_overlap": 0.30908999009493177,
+      "teleportation_fidelity": 0.5393933267299545,
+      "weighted_advantage": -0.00013905551263397996,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 341,
+      "probability": 0.0010913674724231394,
+      "bell_overlap": 0.30849200099477636,
+      "teleportation_fidelity": 0.5389946673298509,
+      "weighted_advantage": -0.0001393370672154293,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 342,
+      "probability": 0.0010901738082297672,
+      "bell_overlap": 0.3078995183389701,
+      "teleportation_fidelity": 0.5385996788926467,
+      "weighted_advantage": -0.00013961527577011835,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 343,
+      "probability": 0.0010889926425519491,
+      "bell_overlap": 0.30731250247008746,
+      "teleportation_fidelity": 0.5382083349800583,
+      "weighted_advantage": -0.00013989017808121442,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 344,
+      "probability": 0.0010878238435202273,
+      "bell_overlap": 0.3067309137960385,
+      "teleportation_fidelity": 0.5378206091973591,
+      "weighted_advantage": -0.00014016181345869025,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 345,
+      "probability": 0.0010866672806678342,
+      "bell_overlap": 0.3061547127949079,
+      "teleportation_fidelity": 0.5374364751966053,
+      "weighted_advantage": -0.00014043022074495507,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 346,
+      "probability": 0.0010855228249156434,
+      "bell_overlap": 0.3055838600196859,
+      "teleportation_fidelity": 0.5370559066797905,
+      "weighted_advantage": -0.0001406954383204172,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 347,
+      "probability": 0.0010843903485572835,
+      "bell_overlap": 0.3050183161028925,
+      "teleportation_fidelity": 0.5366788774019283,
+      "weighted_advantage": -0.0001409575041089803,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 348,
+      "probability": 0.0010832697252444157,
+      "bell_overlap": 0.30445804176109315,
+      "teleportation_fidelity": 0.5363053611740621,
+      "weighted_advantage": -0.000141216455583477,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 349,
+      "probability": 0.0010821608299721665,
+      "bell_overlap": 0.3039029977993117,
+      "teleportation_fidelity": 0.5359353318662078,
+      "weighted_advantage": -0.0001414723297710337,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 350,
+      "probability": 0.0010810635390647218,
+      "bell_overlap": 0.3033531451153361,
+      "teleportation_fidelity": 0.5355687634102241,
+      "weighted_advantage": -0.0001417251632583743,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 351,
+      "probability": 0.001079977730161075,
+      "bell_overlap": 0.30280844470392154,
+      "teleportation_fidelity": 0.5352056298026143,
+      "weighted_advantage": -0.00014197499219706063,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 352,
+      "probability": 0.0010789032822009297,
+      "bell_overlap": 0.3022688576608913,
+      "teleportation_fidelity": 0.5348459051072608,
+      "weighted_advantage": -0.00014222185230866908,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 353,
+      "probability": 0.001077840075410755,
+      "bell_overlap": 0.30173434518713516,
+      "teleportation_fidelity": 0.5344895634580901,
+      "weighted_advantage": -0.0001424657788899073,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 354,
+      "probability": 0.0010767879912899903,
+      "bell_overlap": 0.3012048685925079,
+      "teleportation_fidelity": 0.534136579061672,
+      "weighted_advantage": -0.0001427068068176686,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 355,
+      "probability": 0.0010757469125974024,
+      "bell_overlap": 0.3006803892996275,
+      "teleportation_fidelity": 0.5337869261997517,
+      "weighted_advantage": -0.0001429449705540279,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 356,
+      "probability": 0.0010747167233375876,
+      "bell_overlap": 0.3001608688475761,
+      "teleportation_fidelity": 0.5334405792317174,
+      "weighted_advantage": -0.0001431803041511756,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 357,
+      "probability": 0.001073697308747618,
+      "bell_overlap": 0.29964626889550244,
+      "teleportation_fidelity": 0.5330975125970016,
+      "weighted_advantage": -0.00014341284125629533,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 358,
+      "probability": 0.001072688555283838,
+      "bell_overlap": 0.29913655122612826,
+      "teleportation_fidelity": 0.5327577008174188,
+      "weighted_advantage": -0.00014364261511638245,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 359,
+      "probability": 0.0010716903506087984,
+      "bell_overlap": 0.29863167774916016,
+      "teleportation_fidelity": 0.5324211184994402,
+      "weighted_advantage": -0.00014386965858300524,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 360,
+      "probability": 0.0010707025835783321,
+      "bell_overlap": 0.29813161050460657,
+      "teleportation_fidelity": 0.5320877403364044,
+      "weighted_advantage": -0.0001440940041170098,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 361,
+      "probability": 0.0010697251442287736,
+      "bell_overlap": 0.29763631166600246,
+      "teleportation_fidelity": 0.5317575411106683,
+      "weighted_advantage": -0.00014431568379316803,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 362,
+      "probability": 0.0010687579237643105,
+      "bell_overlap": 0.2971457435435416,
+      "teleportation_fidelity": 0.5314304956956944,
+      "weighted_advantage": -0.00014453472930477156,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 363,
+      "probability": 0.0010678008145444788,
+      "bell_overlap": 0.2966598685871186,
+      "teleportation_fidelity": 0.5311065790580791,
+      "weighted_advantage": -0.00014475117196817064,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 364,
+      "probability": 0.0010668537100717856,
+      "bell_overlap": 0.2961786493892814,
+      "teleportation_fidelity": 0.5307857662595209,
+      "weighted_advantage": -0.00014496504272725825,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 365,
+      "probability": 0.0010659165049794715,
+      "bell_overlap": 0.29570204868809546,
+      "teleportation_fidelity": 0.5304680324587303,
+      "weighted_advantage": -0.00014517637215790097,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 366,
+      "probability": 0.0010649890950194035,
+      "bell_overlap": 0.29523002936992004,
+      "teleportation_fidelity": 0.53015335291328,
+      "weighted_advantage": -0.0001453851904723191,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 367,
+      "probability": 0.0010640713770500969,
+      "bell_overlap": 0.29476255447209954,
+      "teleportation_fidelity": 0.5298417029813997,
+      "weighted_advantage": -0.00014559152752341152,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 368,
+      "probability": 0.0010631632490248682,
+      "bell_overlap": 0.2942995871855692,
+      "teleportation_fidelity": 0.5295330581237128,
+      "weighted_advantage": -0.00014579541280903126,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 369,
+      "probability": 0.001062264609980117,
+      "bell_overlap": 0.2938410908573773,
+      "teleportation_fidelity": 0.5292273939049182,
+      "weighted_advantage": -0.00014599687547620958,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 370,
+      "probability": 0.0010613753600237316,
+      "bell_overlap": 0.2933870289931247,
+      "teleportation_fidelity": 0.5289246859954164,
+      "weighted_advantage": -0.00014619594432533007,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 371,
+      "probability": 0.0010604954003236222,
+      "bell_overlap": 0.29293736525932307,
+      "teleportation_fidelity": 0.528624910172882,
+      "weighted_advantage": -0.00014639264781425205,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 372,
+      "probability": 0.001059624633096376,
+      "bell_overlap": 0.2924920634856738,
+      "teleportation_fidelity": 0.5283280423237825,
+      "weighted_advantage": -0.000146587014062386,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 373,
+      "probability": 0.0010587629615960382,
+      "bell_overlap": 0.29205108766726556,
+      "teleportation_fidelity": 0.5280340584448436,
+      "weighted_advantage": -0.0001467790708547206,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 374,
+      "probability": 0.0010579102901030085,
+      "bell_overlap": 0.2916144019666969,
+      "teleportation_fidelity": 0.5277429346444645,
+      "weighted_advantage": -0.00014696884564580043,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 375,
+      "probability": 0.0010570665239130633,
+      "bell_overlap": 0.29118197071612006,
+      "teleportation_fidelity": 0.5274546471440801,
+      "weighted_advantage": -0.00014715636556365808,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 376,
+      "probability": 0.001056231569326492,
+      "bell_overlap": 0.2907537584192104,
+      "teleportation_fidelity": 0.5271691722794736,
+      "weighted_advantage": -0.00014734165741369843,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 377,
+      "probability": 0.0010554053336373531,
+      "bell_overlap": 0.2903297297530613,
+      "teleportation_fidelity": 0.526886486502041,
+      "weighted_advantage": -0.0001475247476825361,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 378,
+      "probability": 0.001054587725122846,
+      "bell_overlap": 0.2899098495700047,
+      "teleportation_fidelity": 0.5266065663800031,
+      "weighted_advantage": -0.0001477056625417901,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 379,
+      "probability": 0.001053778653032795,
+      "bell_overlap": 0.2894940828993624,
+      "teleportation_fidelity": 0.5263293885995749,
+      "weighted_advantage": -0.0001478844278518287,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 380,
+      "probability": 0.0010529780275792505,
+      "bell_overlap": 0.2890823949491235,
+      "teleportation_fidelity": 0.5260549299660823,
+      "weighted_advantage": -0.00014806106916547421,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 381,
+      "probability": 0.0010521857599261998,
+      "bell_overlap": 0.28867475110755386,
+      "teleportation_fidelity": 0.5257831674050358,
+      "weighted_advantage": -0.0001482356117316612,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 382,
+      "probability": 0.001051401762179389,
+      "bell_overlap": 0.28827111694473706,
+      "teleportation_fidelity": 0.5255140779631581,
+      "weighted_advantage": -0.0001484080804990514,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 383,
+      "probability": 0.0010506259473762563,
+      "bell_overlap": 0.2878714582140473,
+      "teleportation_fidelity": 0.5252476388093649,
+      "weighted_advantage": -0.00014857850011960685,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 384,
+      "probability": 0.0010498582294759717,
+      "bell_overlap": 0.28747574085355626,
+      "teleportation_fidelity": 0.5249838272357041,
+      "weighted_advantage": -0.00014874689495211868,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 385,
+      "probability": 0.0010490985233495866,
+      "bell_overlap": 0.28708393098737567,
+      "teleportation_fidelity": 0.5247226206582504,
+      "weighted_advantage": -0.00014891328906569526,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 386,
+      "probability": 0.0010483467447702864,
+      "bell_overlap": 0.2866959949269347,
+      "teleportation_fidelity": 0.5244639966179565,
+      "weighted_advantage": -0.00014907770624320835,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 387,
+      "probability": 0.0010476028104037514,
+      "bell_overlap": 0.2863118991721955,
+      "teleportation_fidelity": 0.5242079327814637,
+      "weighted_advantage": -0.0001492401699846987,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 388,
+      "probability": 0.0010468666377986204,
+      "bell_overlap": 0.2859316104128065,
+      "teleportation_fidelity": 0.523954406941871,
+      "weighted_advantage": -0.00014940070351074025,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 389,
+      "probability": 0.0010461381453770549,
+      "bell_overlap": 0.2855550955291956,
+      "teleportation_fidelity": 0.5237033970194638,
+      "weighted_advantage": -0.0001495593297657646,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 390,
+      "probability": 0.0010454172524254099,
+      "bell_overlap": 0.28518232159360307,
+      "teleportation_fidelity": 0.5234548810624021,
+      "weighted_advantage": -0.00014971607142134707,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 391,
+      "probability": 0.0010447038790849998,
+      "bell_overlap": 0.2848132558710573,
+      "teleportation_fidelity": 0.5232088372473715,
+      "weighted_advantage": -0.00014987095087945178,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 392,
+      "probability": 0.0010439979463429672,
+      "bell_overlap": 0.28444786582029213,
+      "teleportation_fidelity": 0.5229652438801947,
+      "weighted_advantage": -0.00015002399027563913,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 393,
+      "probability": 0.0010432993760232504,
+      "bell_overlap": 0.2840861190946085,
+      "teleportation_fidelity": 0.5227240793964056,
+      "weighted_advantage": -0.00015017521148223556,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 394,
+      "probability": 0.0010426080907776445,
+      "bell_overlap": 0.2837279835426813,
+      "teleportation_fidelity": 0.5224853223617876,
+      "weighted_advantage": -0.00015032463611146417,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 395,
+      "probability": 0.001041924014076964,
+      "bell_overlap": 0.28337342720931086,
+      "teleportation_fidelity": 0.522248951472874,
+      "weighted_advantage": -0.0001504722855185402,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 396,
+      "probability": 0.0010412470702022962,
+      "bell_overlap": 0.28302241833612335,
+      "teleportation_fidelity": 0.5220149455574156,
+      "weighted_advantage": -0.0001506181808047273,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 397,
+      "probability": 0.0010405771842363506,
+      "bell_overlap": 0.282674925362218,
+      "teleportation_fidelity": 0.5217832835748121,
+      "weighted_advantage": -0.0001507623428203585,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 398,
+      "probability": 0.0010399142820549023,
+      "bell_overlap": 0.28233091692476303,
+      "teleportation_fidelity": 0.5215539446165086,
+      "weighted_advantage": -0.00015090479216782268,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 399,
+      "probability": 0.0010392582903183262,
+      "bell_overlap": 0.28199036185954296,
+      "teleportation_fidelity": 0.5213269079063619,
+      "weighted_advantage": -0.00015104554920451223,
+      "fallback_fidelity": 0.6666666666666666
+    },
+    {
+      "t": 400,
+      "probability": 0.001038609136463222,
+      "bell_overlap": 0.28165322920145636,
+      "teleportation_fidelity": 0.5211021528009709,
+      "weighted_advantage": -0.0001511846340457389,
+      "fallback_fidelity": 0.6666666666666666,
+      "log_negativity_nats": 1.7763568394002489e-15,
+      "min_density_eigenvalue": 0.00022715741951572372,
+      "min_pt_eigenvalue": 0.00017541598951687824,
+      "density_spectral_trace_error": 1.9984014443252818e-15,
+      "pt_spectral_trace_error": 1.7763568394002505e-15,
+      "density_spectrum_seconds": 11.688040364999324,
+      "pt_spectrum_seconds": 11.853639389039017
+    }
+  ],
+  "max_trace_error": 1.998401925640922e-15,
+  "max_hermiticity_error": 2.6851967994446385e-18,
+  "seconds": 1564.7717068420025,
+  "peak_rss_bytes": 1331343360,
+  "manifest_sha256": "b45bbcc00aa4bf601ef90d428f2ea49696e486a79e1e38ee2d9d3c32c96f3e0f",
+  "resumed_from_t": null
+}

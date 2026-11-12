@@ -1,0 +1,23 @@
+{
+  "immutable_campaign_hash_closure": {
+    "source_files": 20,
+    "data_files": 20,
+    "pass": true
+  },
+  "fig2_portable_original_render_pixels_3x_exact": true,
+  "fig3_portable_original_render_pixels_3x_exact": true,
+  "fig2_original_and_candidate_arrays_and_color_normalization_zero_tolerance": true,
+  "fig3_all8020_values_each_observable_and_cell_edges_zero_tolerance": true,
+  "fig1_protocol_geometry_and_label_text_positions_zero_tolerance": true,
+  "fig1_panel_a_3x_pixels_exact": true,
+  "environment": {
+    "python": "3.13.2 | packaged by Anaconda, Inc. | (main, Feb  6 2025, 12:54:57) [Clang 14.0.6 ]",
+    "executable": "/opt/anaconda3/envs/noisy_env/bin/python",
+    "numpy": "2.1.3",
+    "scipy": "1.15.2",
+    "matplotlib": "3.10.0",
+    "pymupdf": "1.28.2",
+    "platform": "macOS-26.6.2-x86_64-i386-64bit-Mach-O"
+  },
+  "status": "pass: bounded author checks; fresh independent review pending"
+}

@@ -1,0 +1,4 @@
+Useful saved integer times: 0.99 2 178
+Useful saved integer times: 0.999 2 400
+xi=.995 t400: {'log_negativity_nats': 0.009888097886421723, 'teleportation_fidelity': 0.6426028775842515, 'probability': 0.0014793259157734261}
+PASS: manifest digest,20 output digests,8020 resource rows,260 spectral records, stated useful sets/rounded example/ideal scalar anchors

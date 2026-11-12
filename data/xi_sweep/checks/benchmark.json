@@ -1,0 +1,32 @@
+{
+  "L": 12,
+  "xi": 0.99,
+  "setup_seconds": 1.6480462509207428,
+  "step_seconds": [
+    7.90420263109263,
+    7.975847905036062
+  ],
+  "spectrum": {
+    "t": 2,
+    "probability": 0.0033743059935219,
+    "bell_overlap": 0.6870596273144092,
+    "teleportation_fidelity": 0.7913730848762728,
+    "weighted_advantage": 0.00042079761439532264,
+    "fallback_fidelity": 0.6670874642810619,
+    "log_negativity_nats": 2.5134374515251876,
+    "min_density_eigenvalue": 1.9449660574246157e-10,
+    "min_pt_eigenvalue": -0.030302958943434335,
+    "density_spectral_trace_error": 2.220446049250313e-16,
+    "pt_spectral_trace_error": 8.881784197001252e-16,
+    "density_spectrum_seconds": 14.67383109300863,
+    "pt_spectrum_seconds": 14.339010654948652
+  },
+  "checkpoint_write_seconds": 0.7719402039656416,
+  "checkpoint_bytes": 268436416,
+  "trace_error": 4.443236371947198e-16,
+  "hermiticity_error": 6.53328606472409e-19,
+  "peak_rss_bytes": 1393557504,
+  "measured_threads": 2,
+  "projected20curve_hours": 20.046771864155826,
+  "caveat": "Projection from two steps and one pair of spectra; excludes load changes and invariant/heartbeat IO."
+}

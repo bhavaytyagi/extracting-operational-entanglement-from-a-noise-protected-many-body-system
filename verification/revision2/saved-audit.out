@@ -1,0 +1,53 @@
+{
+  "status": "saved-record-audit-pass; no trajectory rerun",
+  "manifest_sha256": "b45bbcc00aa4bf601ef90d428f2ea49696e486a79e1e38ee2d9d3c32c96f3e0f",
+  "source_hashes_checked": 20,
+  "output_hashes_checked": 20,
+  "tolerance": 1e-10,
+  "resources": 8020,
+  "spectral_samples": 260,
+  "maxima": {
+    "trace": 3.3306700603864844e-15,
+    "hermiticity": 2.6851967994446385e-18,
+    "density_spectral_trace": 2.2426505097428162e-14,
+    "pt_spectral_trace": 2.2426505097428162e-14
+  },
+  "min_density_eigenvalue": -1.1380111968688946e-14,
+  "ideal_sector_baseline_terminal": {
+    "t": 400,
+    "probability": 0.005208333333333704,
+    "bell_overlap": 0.8571428571428569,
+    "teleportation_fidelity": 0.9047619047619045,
+    "weighted_advantage": 0.0012400793650794524,
+    "fallback_fidelity": 0.667906746031746,
+    "log_negativity_nats": 0.9419524091957566,
+    "min_sector_density_eigenvalue": 0.00446428571428602,
+    "min_pt_eigenvalue": -0.0074182828530592335,
+    "distance_target_frobenius": 4.796463671315687e-15,
+    "negativity_seconds": 5.192732596988208
+  },
+  "ideal_sector_target_stationarity_max_entry_residual": 1.0408398128305076e-17,
+  "final_density_files_in_campaign": [
+    "numerical_campaigns/xi-sweep-L12-2026-11-03/review/preflight/reviewer/straight/checkpoint.npz"
+  ]
+}
+-0.09090909090909091 [] censored= False F400= 0.5
+-0.05 [] censored= False F400= 0.5
+0 [] censored= False F400= 0.5
+0.1 [] censored= False F400= 0.5
+0.2 [] censored= False F400= 0.5
+0.3 [] censored= False F400= 0.5
+0.4 [] censored= False F400= 0.5
+0.5 [] censored= False F400= 0.5
+0.6 [[4, 4]] censored= False F400= 0.5
+0.7 [[2, 5]] censored= False F400= 0.5
+0.8 [[2, 8]] censored= False F400= 0.5
+0.85 [[2, 10]] censored= False F400= 0.5
+0.9 [[2, 16]] censored= False F400= 0.5
+0.95 [[2, 34]] censored= False F400= 0.5000000012069703
+0.97 [[2, 58]] censored= False F400= 0.5000040245991818
+0.98 [[2, 88]] censored= False F400= 0.5002755978028445
+0.99 [[2, 178]] censored= False F400= 0.5211021528009709
+0.995 [[2, 358]] censored= False F400= 0.6426028775842515
+0.999 [[2, 400]] censored= True F400= 0.8555919881400182
+1.0 [[2, 400]] censored= True F400= 0.9047619047619047

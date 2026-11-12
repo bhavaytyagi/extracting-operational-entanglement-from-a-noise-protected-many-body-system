@@ -1,0 +1,68 @@
+{
+  "rows": [
+    {
+      "t": 0,
+      "probability": 0.0009765625,
+      "bell_overlap": 0.4999999999999999,
+      "teleportation_fidelity": 0.6666666666666666,
+      "weighted_advantage": 0.0,
+      "fallback_fidelity": 0.6666666666666666,
+      "log_negativity_nats": 9.12603326241837e-14,
+      "min_density_eigenvalue": -1.1380111968688946e-14,
+      "min_pt_eigenvalue": -1.1380111968688946e-14,
+      "density_spectral_trace_error": 2.2426505097428162e-14,
+      "pt_spectral_trace_error": 2.2426505097428162e-14,
+      "density_spectrum_seconds": 13.671955608064309,
+      "pt_spectrum_seconds": 13.103474739938974
+    },
+    {
+      "t": 1,
+      "probability": 0.00046085004415058174,
+      "bell_overlap": 0.40223386336373174,
+      "teleportation_fidelity": 0.6014892422424878,
+      "weighted_advantage": -3.0037018923504023e-05,
+      "fallback_fidelity": 0.6666666666666666,
+      "log_negativity_nats": 1.3793606285462765,
+      "min_density_eigenvalue": -1.4071766585364003e-15,
+      "min_pt_eigenvalue": -0.14717720976424967,
+      "density_spectral_trace_error": 6.661338147750939e-16,
+      "pt_spectral_trace_error": 4.440892098500626e-16,
+      "density_spectrum_seconds": 14.640451636048965,
+      "pt_spectrum_seconds": 14.230751272989437
+    },
+    {
+      "t": 2,
+      "probability": 0.0034059728847233165,
+      "bell_overlap": 0.6960941385147381,
+      "teleportation_fidelity": 0.7973960923431588,
+      "weighted_advantage": 0.0004452608790895844,
+      "fallback_fidelity": 0.6671119275457562
+    },
+    {
+      "t": 3,
+      "probability": 0.0019595760389990316,
+      "bell_overlap": 0.8287088423185756,
+      "teleportation_fidelity": 0.8858058948790504,
+      "weighted_advantage": 0.00042941998080972776,
+      "fallback_fidelity": 0.6670960866474763
+    },
+    {
+      "t": 4,
+      "probability": 0.00752767242822471,
+      "bell_overlap": 0.955070826228807,
+      "teleportation_fidelity": 0.9700472174858713,
+      "weighted_advantage": 0.0022837494076613524,
+      "fallback_fidelity": 0.668950416074328,
+      "log_negativity_nats": 2.1313415793967594,
+      "min_density_eigenvalue": -2.8258620758917487e-16,
+      "min_pt_eigenvalue": -0.01006637206654862,
+      "density_spectral_trace_error": 1.1102230246251565e-16,
+      "pt_spectral_trace_error": 0.0,
+      "density_spectrum_seconds": 13.779373305966146,
+      "pt_spectrum_seconds": 15.119584655971266
+    }
+  ],
+  "resource_max_error": 7.216449660063518e-16,
+  "negativity_max_error": 3.508304757815236e-14,
+  "peak_rss_bytes": 1330356224
+}

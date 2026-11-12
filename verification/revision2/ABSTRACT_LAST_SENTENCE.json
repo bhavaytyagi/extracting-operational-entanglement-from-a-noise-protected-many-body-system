@@ -1,0 +1,6 @@
+{
+  "status": "Manny-authored minimal consistency replacement for root application; no concurrent integrated-source edit by Manny",
+  "scope": "abstract last sentence only; all other abstract/title text held",
+  "old": "However, while collective noise offers permanent protection, the addition of residual independent dephasing ultimately restricts this useful entanglement to a finite time window.",
+  "new": "For imperfect correlations, our finite-time simulations show correlation-dependent survival of the chosen decoder's teleportation advantage."
+}

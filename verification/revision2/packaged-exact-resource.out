@@ -1,0 +1,12 @@
+L=4: N=6, p=1/4, Bell=2/3, F=7/9, mean preparations=4
+L=6: N=13, p=5/39, Bell=3/5, F=11/15, mean preparations=39/5
+L=8: N=30, p=1/24, Bell=4/5, F=13/15, mean preparations=24
+L=10: N=78, p=7/390, Bell=5/7, F=17/21, mean preparations=390/7
+L=12: N=224, p=1/192, Bell=6/7, F=19/21, mean preparations=192
+L=12 pair partial-transpose spectrum: [-0.35714286  0.35714286  0.5         0.5       ]
+L=14: N=687, p=3/1603, Bell=7/9, F=23/27, mean preparations=1603/3
+L=16: N=2250, p=1/2000, Bell=8/9, F=25/27, mean preparations=2000
+L=12 modular cyclic rank prime 1000003: 224
+L=12 modular cyclic rank prime 1000033: 224
+Exhaustive 64-input CNOT selection: [('010101', '0'), ('101010', '1')]
+ALL PREDECLARED CHECKS PASSED

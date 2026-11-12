@@ -1,0 +1,61 @@
+{
+  "status": "pass: native composition/source-preservation checks; root build pending",
+  "author": "Joe (GPT-6.1 Sol High)",
+  "baseline_sha256": "991e5afd3ddcd2ba157ce1881c8c940bba16c0d786b018b313a3201466060fc2",
+  "circuit_source_sha256": "2482675f539639233ff9a8e239cb85e9c19cac402264ffcc18e6019d8877bb69",
+  "combined_sha256": "64bb262ef9d13ceaa27be6c2d81754a6448bc63bd97205d892a87bc4587698eb",
+  "page_rect_pt": [
+    0.0,
+    0.0,
+    245.0,
+    354.0
+  ],
+  "panel_a_rect_pt": [
+    0.0,
+    0.0,
+    245.0,
+    174.0
+  ],
+  "panel_a_pixels_3x_exact": true,
+  "panel_a_and_b_label_source_blocks_exact": true,
+  "divider_source_block_exact": true,
+  "circuit_source_rect_pt": [
+    0.0,
+    0.0,
+    507.6000061035156,
+    345.45001220703125
+  ],
+  "circuit_destination_rect_pt": [
+    0.6759985351562534,
+    187.0,
+    244.32400146484375,
+    352.81600585937497
+  ],
+  "circuit_uniform_scale": 0.48,
+  "circuit_full_page_content_stream_exact": true,
+  "circuit_full_page_reference_pixels_exact": true,
+  "circuit_embedding_form": {
+    "xref": 121,
+    "matrix": [
+      0.48,
+      0.0,
+      0.0,
+      0.48,
+      0.67599,
+      1.18399
+    ],
+    "object": "<<\n  /Type /XObject\n  /Subtype /Form\n  /BBox [ 0 0 507.6 345.45 ]\n  /Matrix [ .48 0 0 .48 .67599 1.18399 ]\n  /Resources <<\n    /XObject <<\n      /fullpage 120 0 R\n    >>\n  >>\n  /Length 12\n>>"
+  },
+  "circuit_reference_pixel_aligned_clip_pt": [
+    1.0,
+    187.0,
+    244.0,
+    352.6666666666667
+  ],
+  "new_rasters": 0,
+  "original_rasters_unchanged_count": 1,
+  "effective_qubit_base_font_pt": 6.72,
+  "effective_phase_font_pt": 7.68,
+  "effective_party_font_pt": 7.199999999999999,
+  "effective_H_font_pt": 6.72
+}

@@ -1,0 +1,10 @@
+CYCLIC L=4 prime=1000033 rank=6 dim_S=6 J0_rank=5 all_blocks_full=True
+CYCLIC L=6 prime=1000033 rank=13 dim_S=13 J0_rank=7 all_blocks_full=True
+CYCLIC L=8 prime=1000033 rank=30 dim_S=30 J0_rank=9 all_blocks_full=True
+CYCLIC L=10 prime=1000033 rank=78 dim_S=78 J0_rank=11 all_blocks_full=True
+CYCLIC L=12 prime=1000033 rank=224 dim_S=224 J0_rank=13 all_blocks_full=True
+CYCLIC L=13 prime=1000033 rank=380 dim_S=380 J0_rank=14 all_blocks_full=True
+CYCLIC L=14 prime=1000033 rank=687 dim_S=687 J0_rank=15 all_blocks_full=True
+CYCLIC L=15 prime=1000033 rank=1224 dim_S=1224 J0_rank=16 all_blocks_full=True
+CYCLIC L=16 prime=1000033 rank=2250 dim_S=2250 J0_rank=17 all_blocks_full=True
+ALL DECLARED CYCLICITY CHECKS PASS; NO ALL-L CLAIM

@@ -1,0 +1,899 @@
+{
+  "L": 12,
+  "gate_events": [
+    {
+      "kind": "CNOT",
+      "party": "A",
+      "control": "A1",
+      "target": "A2",
+      "x": 45,
+      "control_y": 35,
+      "target_y": 59
+    },
+    {
+      "kind": "measure-Z",
+      "wire": "A2",
+      "stage": "extraction",
+      "x": 171,
+      "y": 59
+    },
+    {
+      "kind": "CNOT",
+      "party": "A",
+      "control": "A1",
+      "target": "A3",
+      "x": 69,
+      "control_y": 35,
+      "target_y": 83
+    },
+    {
+      "kind": "measure-Z",
+      "wire": "A3",
+      "stage": "extraction",
+      "x": 171,
+      "y": 83
+    },
+    {
+      "kind": "CNOT",
+      "party": "A",
+      "control": "A1",
+      "target": "A4",
+      "x": 93,
+      "control_y": 35,
+      "target_y": 107
+    },
+    {
+      "kind": "measure-Z",
+      "wire": "A4",
+      "stage": "extraction",
+      "x": 171,
+      "y": 107
+    },
+    {
+      "kind": "CNOT",
+      "party": "A",
+      "control": "A1",
+      "target": "A5",
+      "x": 117,
+      "control_y": 35,
+      "target_y": 131
+    },
+    {
+      "kind": "measure-Z",
+      "wire": "A5",
+      "stage": "extraction",
+      "x": 171,
+      "y": 131
+    },
+    {
+      "kind": "CNOT",
+      "party": "A",
+      "control": "A1",
+      "target": "A6",
+      "x": 141,
+      "control_y": 35,
+      "target_y": 155
+    },
+    {
+      "kind": "measure-Z",
+      "wire": "A6",
+      "stage": "extraction",
+      "x": 171,
+      "y": 155
+    },
+    {
+      "kind": "CNOT",
+      "party": "B",
+      "control": "B1",
+      "target": "B2",
+      "x": 310,
+      "control_y": 35,
+      "target_y": 59
+    },
+    {
+      "kind": "measure-Z",
+      "wire": "B2",
+      "stage": "extraction",
+      "x": 436,
+      "y": 59
+    },
+    {
+      "kind": "CNOT",
+      "party": "B",
+      "control": "B1",
+      "target": "B3",
+      "x": 334,
+      "control_y": 35,
+      "target_y": 83
+    },
+    {
+      "kind": "measure-Z",
+      "wire": "B3",
+      "stage": "extraction",
+      "x": 436,
+      "y": 83
+    },
+    {
+      "kind": "CNOT",
+      "party": "B",
+      "control": "B1",
+      "target": "B4",
+      "x": 358,
+      "control_y": 35,
+      "target_y": 107
+    },
+    {
+      "kind": "measure-Z",
+      "wire": "B4",
+      "stage": "extraction",
+      "x": 436,
+      "y": 107
+    },
+    {
+      "kind": "CNOT",
+      "party": "B",
+      "control": "B1",
+      "target": "B5",
+      "x": 382,
+      "control_y": 35,
+      "target_y": 131
+    },
+    {
+      "kind": "measure-Z",
+      "wire": "B5",
+      "stage": "extraction",
+      "x": 436,
+      "y": 131
+    },
+    {
+      "kind": "CNOT",
+      "party": "B",
+      "control": "B1",
+      "target": "B6",
+      "x": 406,
+      "control_y": 35,
+      "target_y": 155
+    },
+    {
+      "kind": "measure-Z",
+      "wire": "B6",
+      "stage": "extraction",
+      "x": 436,
+      "y": 155
+    },
+    {
+      "kind": "CNOT",
+      "party": "teleportation",
+      "control": "Q",
+      "target": "A1",
+      "x": 370,
+      "control_y": 275,
+      "target_y": 310
+    },
+    {
+      "kind": "H",
+      "wire": "Q",
+      "x": 399,
+      "y": 275,
+      "symbol": "blank-square"
+    },
+    {
+      "kind": "measure-Z",
+      "wire": "Q",
+      "stage": "teleportation",
+      "x": 430,
+      "y": 275
+    },
+    {
+      "kind": "measure-Z",
+      "wire": "A1",
+      "stage": "teleportation",
+      "x": 430,
+      "y": 310
+    },
+    {
+      "kind": "X",
+      "wire": "B1",
+      "control_bit": "measure-A1",
+      "x": 575,
+      "y": 350,
+      "order": 1
+    },
+    {
+      "kind": "Z",
+      "wire": "B1",
+      "control_bit": "measure-Q",
+      "x": 605,
+      "y": 350,
+      "order": 2
+    }
+  ],
+  "quantum_paths": [
+    {
+      "id": "A1-retained",
+      "points": [
+        [
+          20,
+          35
+        ],
+        [
+          255,
+          35
+        ],
+        [
+          255,
+          310
+        ]
+      ],
+      "color": "#24558b"
+    },
+    {
+      "id": "A2",
+      "points": [
+        [
+          20,
+          59
+        ],
+        [
+          171,
+          59
+        ]
+      ],
+      "color": "#24558b"
+    },
+    {
+      "id": "A3",
+      "points": [
+        [
+          20,
+          83
+        ],
+        [
+          171,
+          83
+        ]
+      ],
+      "color": "#24558b"
+    },
+    {
+      "id": "A4",
+      "points": [
+        [
+          20,
+          107
+        ],
+        [
+          171,
+          107
+        ]
+      ],
+      "color": "#24558b"
+    },
+    {
+      "id": "A5",
+      "points": [
+        [
+          20,
+          131
+        ],
+        [
+          171,
+          131
+        ]
+      ],
+      "color": "#24558b"
+    },
+    {
+      "id": "A6",
+      "points": [
+        [
+          20,
+          155
+        ],
+        [
+          171,
+          155
+        ]
+      ],
+      "color": "#24558b"
+    },
+    {
+      "id": "B1-retained",
+      "points": [
+        [
+          285,
+          35
+        ],
+        [
+          545,
+          35
+        ],
+        [
+          545,
+          350
+        ]
+      ],
+      "color": "#b86626"
+    },
+    {
+      "id": "B2",
+      "points": [
+        [
+          285,
+          59
+        ],
+        [
+          436,
+          59
+        ]
+      ],
+      "color": "#b86626"
+    },
+    {
+      "id": "B3",
+      "points": [
+        [
+          285,
+          83
+        ],
+        [
+          436,
+          83
+        ]
+      ],
+      "color": "#b86626"
+    },
+    {
+      "id": "B4",
+      "points": [
+        [
+          285,
+          107
+        ],
+        [
+          436,
+          107
+        ]
+      ],
+      "color": "#b86626"
+    },
+    {
+      "id": "B5",
+      "points": [
+        [
+          285,
+          131
+        ],
+        [
+          436,
+          131
+        ]
+      ],
+      "color": "#b86626"
+    },
+    {
+      "id": "B6",
+      "points": [
+        [
+          285,
+          155
+        ],
+        [
+          436,
+          155
+        ]
+      ],
+      "color": "#b86626"
+    },
+    {
+      "id": "Q",
+      "points": [
+        [
+          310,
+          275
+        ],
+        [
+          430,
+          275
+        ]
+      ],
+      "color": "#203448"
+    },
+    {
+      "id": "A1-accepted-to-Bell",
+      "points": [
+        [
+          255,
+          310
+        ],
+        [
+          430,
+          310
+        ]
+      ],
+      "color": "#24558b"
+    },
+    {
+      "id": "B1-accepted-corrections-output",
+      "points": [
+        [
+          545,
+          350
+        ],
+        [
+          633,
+          350
+        ]
+      ],
+      "color": "#b86626"
+    }
+  ],
+  "classical_paths": [
+    {
+      "id": "A-record-2",
+      "points": [
+        [
+          180,
+          59
+        ],
+        [
+          207,
+          59
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "A-record-3",
+      "points": [
+        [
+          180,
+          83
+        ],
+        [
+          207,
+          83
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "A-record-4",
+      "points": [
+        [
+          180,
+          107
+        ],
+        [
+          207,
+          107
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "A-record-5",
+      "points": [
+        [
+          180,
+          131
+        ],
+        [
+          207,
+          131
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "A-record-6",
+      "points": [
+        [
+          180,
+          155
+        ],
+        [
+          207,
+          155
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "B-record-2",
+      "points": [
+        [
+          445,
+          59
+        ],
+        [
+          472,
+          59
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "B-record-3",
+      "points": [
+        [
+          445,
+          83
+        ],
+        [
+          472,
+          83
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "B-record-4",
+      "points": [
+        [
+          445,
+          107
+        ],
+        [
+          472,
+          107
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "B-record-5",
+      "points": [
+        [
+          445,
+          131
+        ],
+        [
+          472,
+          131
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "B-record-6",
+      "points": [
+        [
+          445,
+          155
+        ],
+        [
+          472,
+          155
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "A-success",
+      "points": [
+        [
+          242,
+          107
+        ],
+        [
+          247,
+          107
+        ],
+        [
+          247,
+          203
+        ],
+        [
+          267,
+          203
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "B-success",
+      "points": [
+        [
+          507,
+          107
+        ],
+        [
+          522,
+          107
+        ],
+        [
+          522,
+          183
+        ],
+        [
+          237,
+          183
+        ],
+        [
+          237,
+          217
+        ],
+        [
+          267,
+          217
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "joint-success-output",
+      "points": [
+        [
+          297,
+          210
+        ],
+        [
+          315,
+          210
+        ],
+        [
+          365,
+          210
+        ],
+        [
+          365,
+          230
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "reject-zero",
+      "points": [
+        [
+          315,
+          210
+        ],
+        [
+          315,
+          172
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "accept-herald-bus",
+      "points": [
+        [
+          240,
+          230
+        ],
+        [
+          535,
+          230
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "herald-enable-A",
+      "points": [
+        [
+          240,
+          230
+        ],
+        [
+          240,
+          245
+        ],
+        [
+          247,
+          245
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "herald-enable-B",
+      "points": [
+        [
+          530,
+          230
+        ],
+        [
+          530,
+          245
+        ],
+        [
+          537,
+          245
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "Bell-A-to-X",
+      "points": [
+        [
+          439,
+          310
+        ],
+        [
+          575,
+          310
+        ],
+        [
+          575,
+          343
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "Bell-Q-to-Z",
+      "points": [
+        [
+          439,
+          275
+        ],
+        [
+          605,
+          275
+        ],
+        [
+          605,
+          342
+        ]
+      ],
+      "dash_pattern_pt": [
+        3,
+        2
+      ]
+    }
+  ],
+  "selectors": [
+    {
+      "party": "A",
+      "record_order": [
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "expected_bits": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "symbol_x": 217,
+      "symbol_ys": [
+        59,
+        83,
+        107,
+        131,
+        155
+      ]
+    },
+    {
+      "party": "B",
+      "record_order": [
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6"
+      ],
+      "expected_bits": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "symbol_x": 482,
+      "symbol_ys": [
+        59,
+        83,
+        107,
+        131,
+        155
+      ]
+    }
+  ],
+  "branch_enables": [
+    {
+      "party": "A",
+      "wire": "A1",
+      "x": 255,
+      "y": 245,
+      "control": "g=AND(A-record==10101,B-record==10101)",
+      "g1": "identity/continue",
+      "g0": "discard"
+    },
+    {
+      "party": "B",
+      "wire": "B1",
+      "x": 545,
+      "y": 245,
+      "control": "g=AND(A-record==10101,B-record==10101)",
+      "g1": "identity/continue",
+      "g0": "discard"
+    }
+  ],
+  "visual_dictionary": {
+    "blank_blue_square": "H",
+    "circled_plus": "X or CNOT target",
+    "diamond_central_dot": "Z",
+    "empty_diamond": "classically enabled identity/pass or discard",
+    "meter": "computational-Z measurement",
+    "pattern_filled_open": "predetermined1/0"
+  },
+  "checks": {
+    "nonempty_text_objects": 0,
+    "all_classical_lines_dashed": true,
+    "classical_line_fragment_count": 38,
+    "unknown_input_starts_postherald": true,
+    "native_dimensions_pt": [
+      507.59999999999997,
+      300.6553846153846
+    ]
+  },
+  "output_hashes": {
+    "full_protocol_draft.pdf": "4ff3755e157c4aa82f6735f15dc40559984b2ee0f921b524dd9ef0e61c741b6b",
+    "full_protocol_draft.svg": "bf30adc5e5fa24235cfb422d14beeb1c57cc685a6a06a9cf92a1178d24951f19",
+    "full_protocol_draft.png": "1e3fa037b23ed7ca58434cbdf419576d2bfad9d070da145dfa8a72f2574faf8b"
+  }
+}

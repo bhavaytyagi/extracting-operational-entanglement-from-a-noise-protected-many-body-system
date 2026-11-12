@@ -1,0 +1,177 @@
+{
+  "output_integrity_guards": {
+    "valid_output_accepted": true,
+    "rejected_count": 57,
+    "rejected_cases": [
+      "missing-0-t",
+      "missing-0-probability",
+      "missing-0-bell_overlap",
+      "missing-0-teleportation_fidelity",
+      "missing-0-weighted_advantage",
+      "missing-0-fallback_fidelity",
+      "missing-0-log_negativity_nats",
+      "missing-0-min_density_eigenvalue",
+      "missing-0-min_pt_eigenvalue",
+      "missing-0-density_spectral_trace_error",
+      "missing-0-pt_spectral_trace_error",
+      "missing-0-density_spectrum_seconds",
+      "missing-0-pt_spectrum_seconds",
+      "missing-6-t",
+      "missing-6-probability",
+      "missing-6-bell_overlap",
+      "missing-6-teleportation_fidelity",
+      "missing-6-weighted_advantage",
+      "missing-6-fallback_fidelity",
+      "nonfinite-t",
+      "nonfinite-probability",
+      "nonfinite-bell_overlap",
+      "nonfinite-teleportation_fidelity",
+      "nonfinite-weighted_advantage",
+      "nonfinite-fallback_fidelity",
+      "nonfinite-log_negativity_nats",
+      "nonfinite-min_density_eigenvalue",
+      "nonfinite-min_pt_eigenvalue",
+      "nonfinite-density_spectral_trace_error",
+      "nonfinite-pt_spectral_trace_error",
+      "nonfinite-density_spectrum_seconds",
+      "nonfinite-pt_spectrum_seconds",
+      "nonfinite-summary-max_trace_error",
+      "negative-summary-max_trace_error",
+      "nonfinite-summary-max_hermiticity_error",
+      "negative-summary-max_hermiticity_error",
+      "nonfinite-summary-seconds",
+      "negative-summary-seconds",
+      "nonfinite-summary-peak_rss_bytes",
+      "negative-summary-peak_rss_bytes",
+      "inconsistent-teleportation_fidelity-1.0",
+      "inconsistent-weighted_advantage-0.1",
+      "inconsistent-fallback_fidelity-1.0",
+      "inconsistent-min_density_eigenvalue--0.01",
+      "inconsistent-min_density_eigenvalue-0.5",
+      "inconsistent-min_pt_eigenvalue-0.5",
+      "inconsistent-log_negativity_nats-10.0",
+      "inconsistent-density_spectral_trace_error--1e-12",
+      "inconsistent-density_spectrum_seconds--1.0",
+      "inconsistent-t-False",
+      "wrong-initial-probability",
+      "reviewer-all-density-minima-missing",
+      "reviewer-all-derived-resources-missing",
+      "checkpoint-missing-resource",
+      "checkpoint-missing-spectral",
+      "checkpoint-nan-summary",
+      "checkpoint-bad-formula"
+    ]
+  },
+  "kernel_identity": {
+    "single_site_error": 1.1102230246251565e-16,
+    "repeated_generic_state_errors": {
+      "L4_xi-0.3333333333333333": 5.623582236304298e-17,
+      "L4_xi0": 4.188165075897818e-17,
+      "L4_xi0.99": 5.595670243448785e-17,
+      "L4_xi1.0": 5.589101634117221e-17,
+      "L6_xi-0.2": 2.0817000449544185e-17,
+      "L6_xi0": 2.0818032729547832e-17,
+      "L6_xi0.99": 2.082119873069895e-17,
+      "L6_xi1.0": 2.0833633115267983e-17
+    }
+  },
+  "manifest_guards": {
+    "changed_source_rejected": true,
+    "changed_config_rejected": true
+  },
+  "dense_reference": {
+    "-0.3333333333333333": {
+      "density_max_error": 4.1662766514167685e-17,
+      "negativity_error": 8.777700788442644e-16
+    },
+    "0": {
+      "density_max_error": 4.1662766514167685e-17,
+      "negativity_error": 8.864436962241484e-16
+    },
+    "0.5": {
+      "density_max_error": 4.1662766514167685e-17,
+      "negativity_error": 0.0
+    },
+    "0.99": {
+      "density_max_error": 4.1662766514167685e-17,
+      "negativity_error": 2.1510571102112408e-16
+    },
+    "1.0": {
+      "density_max_error": 4.1662766514167685e-17,
+      "negativity_error": 4.2327252813834093e-16
+    }
+  },
+  "invalid_inputs_rejected": [
+    [
+      "12",
+      "-0.1111111111111111"
+    ],
+    [
+      "12",
+      "-0.09090909091009092"
+    ],
+    [
+      "12",
+      "1.000000000001"
+    ],
+    [
+      "12",
+      "nan"
+    ],
+    [
+      "12",
+      "inf"
+    ],
+    [
+      "True",
+      "0"
+    ],
+    [
+      "3",
+      "0"
+    ],
+    [
+      "14",
+      "0"
+    ]
+  ],
+  "known_states": {
+    "L4_plus": 2.2204460492503128e-16,
+    "L4_mixed": 0.0,
+    "L4_bell": 2.220446049250313e-16,
+    "L6_plus": 6.217248937900858e-15,
+    "L6_mixed": 0.0,
+    "L6_bell": 2.220446049250313e-16
+  },
+  "J0_controls": {
+    "-0.3333333333333333": {
+      "max_absolute_negativity": 4.440892098500625e-16,
+      "max_fidelity": 0.6666666666666666
+    },
+    "0": {
+      "max_absolute_negativity": 2.2204460492503128e-16,
+      "max_fidelity": 0.6666666666666666
+    },
+    "0.99": {
+      "max_absolute_negativity": 4.440892098500625e-16,
+      "max_fidelity": 0.6666666666666666
+    },
+    "1.0": {
+      "max_absolute_negativity": 4.440892098500625e-16,
+      "max_fidelity": 0.6666666666666666
+    }
+  },
+  "resume": {
+    "rows_bit_identical": true,
+    "density_bit_identical": true,
+    "completed_checkpoint_cleanup": true,
+    "later_checkpoint_preserved": true,
+    "rejected": [
+      "fingerprint",
+      "xi",
+      "density-checksum",
+      "output-overwrite"
+    ],
+    "duplicate_writer_rejected": true
+  }
+}

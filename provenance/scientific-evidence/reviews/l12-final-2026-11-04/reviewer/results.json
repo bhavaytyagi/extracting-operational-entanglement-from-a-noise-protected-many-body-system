@@ -1,0 +1,110 @@
+{
+  "hashes": {
+    "manifest_sha256": "b45bbcc00aa4bf601ef90d428f2ea49696e486a79e1e38ee2d9d3c32c96f3e0f",
+    "verified_output_count": 20,
+    "verified_present_source_count": 20,
+    "missing_manifest_files": []
+  },
+  "full_schema_and_bounds": {
+    "resource_rows": 8020,
+    "spectral_rows": 260,
+    "maxima": {
+      "trace": 3.3306700603864844e-15,
+      "hermiticity": 2.6851967994446385e-18,
+      "density_spectral_trace": 2.2426505097428162e-14,
+      "pt_spectral_trace": 2.2426505097428162e-14,
+      "peak_rss_bytes": 1336832000
+    },
+    "minima": {
+      "density": -1.1380111968688946e-14,
+      "negativity": -3.33066907387547e-16
+    }
+  },
+  "frozen_ideal_regression": {
+    "resource_times": 401,
+    "spectral_times": 13,
+    "tolerance": 1e-09,
+    "max_errors": {
+      "bell_overlap": 7.216449660063518e-16,
+      "weighted_advantage": 8.630249292984615e-17,
+      "min_pt_eigenvalue": 3.6767478836781334e-15,
+      "fallback_fidelity": 1.1102230246251565e-16,
+      "log_negativity_nats": 7.016609515630989e-14,
+      "teleportation_fidelity": 5.551115123125783e-16,
+      "probability": 3.642919299551295e-16
+    },
+    "caveat": "Density minima are not directly comparable: baseline density is sector-restricted, production full-space."
+  },
+  "independent_dense_reference": {
+    "sizes": [
+      4,
+      6
+    ],
+    "generic_L4_steps": 5,
+    "xi": [
+      -0.3333333333333333,
+      0,
+      0.5,
+      0.99,
+      1
+    ],
+    "J0_steps": 40,
+    "max_state_error": 6.940151931578151e-16,
+    "max_decoder_error": 1.1102230246251565e-16,
+    "max_spectral_error": 0.0,
+    "tolerance": 1e-10
+  },
+  "independent_L12_t1_all_grid": {
+    "curves": 20,
+    "max_errors": {
+      "bell_overlap": 3.885780586188048e-16,
+      "weighted_advantage": 1.0164395367051604e-19,
+      "fallback_fidelity": 0.0,
+      "teleportation_fidelity": 2.220446049250313e-16,
+      "probability": 5.421010862427522e-20
+    },
+    "tolerance": 1e-10
+  },
+  "independent_full_L12_imperfect_point": {
+    "xi": 0.99,
+    "t": 1,
+    "reference": {
+      "log_negativity_nats": 1.3784424458551445,
+      "min_density_eigenvalue": -2.273036983549884e-19,
+      "min_pt_eigenvalue": -0.1458519189046696
+    },
+    "max_errors": {
+      "log_negativity_nats": 4.440892098500626e-16,
+      "min_density_eigenvalue": 3.25968213575171e-18,
+      "min_pt_eigenvalue": 2.7755575615628914e-16
+    },
+    "density_trace_error": 9.992007221626409e-16,
+    "pt_trace_error": 8.881784197001252e-16,
+    "tolerance": 1e-10
+  },
+  "invalid_domains": {
+    "rejected": 9
+  },
+  "frozen_L10_regression": {
+    "curves": 3,
+    "times": 6,
+    "max_errors": {
+      "bell_overlap": 1.6653345369377348e-16,
+      "weighted_advantage": 7.806255641895632e-18,
+      "min_pt_eigenvalue": 3.3306690738754696e-16,
+      "fallback_fidelity": 0.0,
+      "log_negativity_nats": 1.4432899320127035e-15,
+      "teleportation_fidelity": 1.1102230246251565e-16,
+      "probability": 3.122502256758253e-17
+    },
+    "tolerance": 1e-09
+  },
+  "completion": {
+    "status": "all-executed-checks-pass",
+    "scope": "finite L12 full-density twenty-xi grid, resources t=0..400, exact spectral evaluations only at thirteen scheduled times",
+    "environment": {
+      "executable": "/opt/anaconda3/envs/noisy_env/bin/python",
+      "numpy": "2.1.3"
+    }
+  }
+}

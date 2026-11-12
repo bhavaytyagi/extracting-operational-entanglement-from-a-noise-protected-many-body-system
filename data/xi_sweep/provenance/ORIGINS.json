@@ -1,0 +1,22 @@
+{
+  "sweep_L10.py": {
+    "original_project_path": "numerical_campaigns/xi-sweep-2026-10-30/scripts/sweep.py",
+    "sha256": "39093ffd351f928d41c1b48ffbd289e3a4dad673d833fcdb712c410d15c859d9"
+  },
+  "dynamics_L12_xi1.json": {
+    "original_project_path": "numerical_campaigns/prl-2026-10-29/data/dynamics_L12_xi1.json",
+    "sha256": "3741dcc40d7d76209078c97b311fe6319e0e316bb9b18b720dffee92f95ac3c5"
+  },
+  "L10_xi0.500000000.json": {
+    "original_project_path": "numerical_campaigns/xi-sweep-2026-10-30/data/L10_xi0.500000000.json",
+    "sha256": "8b2f47267764f667d0b13e179d456f28aa7c724fd5db61a4a85c86285746398d"
+  },
+  "L10_xi0.990000000.json": {
+    "original_project_path": "numerical_campaigns/xi-sweep-2026-10-30/data/L10_xi0.990000000.json",
+    "sha256": "188e08909237b6215ae0aa62e1a98fe5809dd44689de67497cc00803b8738029"
+  },
+  "L10_xi1.000000000.json": {
+    "original_project_path": "numerical_campaigns/xi-sweep-2026-10-30/data/L10_xi1.000000000.json",
+    "sha256": "f1f174529ac2a21a8a7e99e37db7ef4ba2d5384d625946caae59551f027a4d3c"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "step_seconds": [
+    3.1907794430153444,
+    2.9846123289316893
+  ],
+  "peak_rss_bytes": 1328590848,
+  "row": {
+    "t": 2,
+    "probability": 0.003374305993521902,
+    "bell_overlap": 0.6870596273144091,
+    "teleportation_fidelity": 0.7913730848762727,
+    "weighted_advantage": 0.00042079761439532253,
+    "fallback_fidelity": 0.6670874642810619,
+    "log_negativity_nats": 2.513437451525188,
+    "min_density_eigenvalue": 1.9449660563574783e-10,
+    "min_pt_eigenvalue": -0.030302958943434204,
+    "density_spectral_trace_error": 2.220446049250313e-16,
+    "pt_spectral_trace_error": 1.7763568394002505e-15,
+    "density_spectrum_seconds": 15.773514228058048,
+    "pt_spectrum_seconds": 17.381803844007663
+  },
+  "prior_metrics_max_error": 4.440892098500626e-16
+}

@@ -1,0 +1,66 @@
+{
+  "status": "accepted-for-figure-with-finite-scope",
+  "reviewer": "Luke, GPT-6 Astra High",
+  "date": "2026-11-04",
+  "critical_findings": 0,
+  "major_findings": 0,
+  "minor_scientific_findings": 0,
+  "manifest_sha256": "b45bbcc00aa4bf601ef90d428f2ea49696e486a79e1e38ee2d9d3c32c96f3e0f",
+  "complete_sha256": "37eae18167cb507de48207225654ef927636d6bb47b0d0ee2a310927c1ac8ede",
+  "output_sha256": {
+    "data/L12_xi-0.090909091.json": "bdcd67f0f906ba4cc5d53f190338d3a2dfab6fd7534e40eecf4b790c20af10a7",
+    "data/L12_xi-0.050000000.json": "014d6311c8dc7ad471a777edc041759661f30839aa205450578e85c7ee4eaf47",
+    "data/L12_xi0.000000000.json": "aadaec0e736c2b3e312ebab86106de54c87e689247108f1e475605357ddcb0b1",
+    "data/L12_xi0.100000000.json": "a4d56a3f0452ffcb107b512157d28a35aeea7c9ff8c9570fa4009dc062034bb9",
+    "data/L12_xi0.200000000.json": "22779e8b70f06a9d08addf96f79b982aa675bc59c0e8168ea603bd4681910b8d",
+    "data/L12_xi0.300000000.json": "8d2a381bed76493b3017da6471211e467e7f8361b1df94a705bfbee72a4df8af",
+    "data/L12_xi0.400000000.json": "e683f1dfd7bbfa3724aa8879a61e1bca1f662f6a8464665668e84fec2b9c2970",
+    "data/L12_xi0.500000000.json": "60b3dcb0e63eac827b6e6c6cffd7cbf4642c169fa90b6de9cc11999992d6ff5b",
+    "data/L12_xi0.600000000.json": "80880220d34a60b0c95f0ebc1c7cb010126cc083de3ed49cfc21b1b3051b0c95",
+    "data/L12_xi0.700000000.json": "6e6f707626008c8fad302c47fba41f289a1ca005712f8771a762ac6562d9e7c2",
+    "data/L12_xi0.800000000.json": "6803491a88ac055920f95e9154f2c6072b1b3a467c7c3e6524efa46af1267302",
+    "data/L12_xi0.850000000.json": "7f06944b9f0561070bef538a92288dc0cb1b6a2c2b3453aa68d615b01f8b4cce",
+    "data/L12_xi0.900000000.json": "ec46aba1a05e08d76ec63cd8c2ad73ff67620eacb90509f0f47e044c4c923271",
+    "data/L12_xi0.950000000.json": "d73fb66a5d6e115899bc3500502f1cb010929d316e6dfe556d9ed697dbe741dd",
+    "data/L12_xi0.970000000.json": "935a1309f2f3dca0c5fb4157efe8cd52a46b0960f512a84885140c10dbfc9d5b",
+    "data/L12_xi0.980000000.json": "95c96e72e66b2eeb515508fba43b99b4e814ad4b2e2765bacd25dfe1f2afbeed",
+    "data/L12_xi0.990000000.json": "55443fd798ebfdae3c879f0d6df95fd326c7d43f9ab52c81c460bb2262b32430",
+    "data/L12_xi0.995000000.json": "dfa24f4d7fcc9a152f9965cb55967c2c4fc03d8fe4716bd1cf09adfffbf387d3",
+    "data/L12_xi0.999000000.json": "c19a25253ca11134662bec9b2df464c94834ab5b7379ac1ac616b5e2ba5fb97a",
+    "data/L12_xi1.000000000.json": "75b252c6dd02ec5c89bad238eeadebcbbe27ab4551392685c36ae82c7cc8df7a"
+  },
+  "reviewer_artifact_sha256": {
+    "check_final.py": "b9cc5e5b9adfe27b9cb80e10272680273efde9f82921954c5c7174244c686adb",
+    "stdout.txt": "285eaf997573390a7a8d1c7bbaa5e9e502e508fd7bcf6938ed5433963c68a54f",
+    "results.json": "7372d968a3e72c9743b1167466ce2f14ae81b9fec54af53cec0cca23c3c22722",
+    "REPORT.md": "0322446cc7a84ed9073a4a03ba9dd702430d88e1746037b7df2de2ae56b15317"
+  },
+  "scope": {
+    "L": 12,
+    "curves": 20,
+    "horizon": 400,
+    "resource_rows": 8020,
+    "spectral_rows": 260,
+    "negativity_samples": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      10,
+      20,
+      40,
+      80,
+      150,
+      250,
+      400
+    ]
+  },
+  "independent_full_L12_imperfect_check": {
+    "xi": 0.99,
+    "t": 1
+  },
+  "full_production_rerun": false,
+  "exit_code": 0
+}

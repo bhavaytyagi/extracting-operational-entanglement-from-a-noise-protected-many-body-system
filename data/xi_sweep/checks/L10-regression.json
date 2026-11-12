@@ -1,0 +1,15 @@
+{
+  "generic_state_error": 8.677851511149104e-19,
+  "0.5": {
+    "resource_max_error": 1.6653345369377348e-16,
+    "negativity_max_error": 1.4432899320127035e-15
+  },
+  "0.99": {
+    "resource_max_error": 1.1102230246251565e-16,
+    "negativity_max_error": 8.881784197001252e-16
+  },
+  "1.0": {
+    "resource_max_error": 1.1102230246251565e-16,
+    "negativity_max_error": 1.1102230246251565e-15
+  }
+}

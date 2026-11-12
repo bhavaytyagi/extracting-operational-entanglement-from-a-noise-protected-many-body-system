@@ -1,0 +1,12 @@
+{
+  "figure_sources": "provenance/source-map.json",
+  "numeric_adapter": "scripts/numerics/portable_rerun.py",
+  "saved_sweep_checker": {
+    "original": "provenance/scientific-evidence/reviews/l12-final-2026-11-04/reviewer/check_final.py",
+    "portable": "verification/saved_sweep/check_final.py",
+    "only_replacement": {
+      "ROOT=OUT.parent/'input'": "ROOT=OUT.parents[1]/'data/xi_sweep'"
+    }
+  },
+  "immutable_sources": "data/xi_sweep/manifest.json"
+}

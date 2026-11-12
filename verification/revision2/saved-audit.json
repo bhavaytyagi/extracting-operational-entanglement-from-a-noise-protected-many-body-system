@@ -1,0 +1,745 @@
+{
+  "status": "saved-record-audit-pass; no trajectory rerun",
+  "manifest_sha256": "b45bbcc00aa4bf601ef90d428f2ea49696e486a79e1e38ee2d9d3c32c96f3e0f",
+  "source_hashes_checked": 20,
+  "output_hashes_checked": 20,
+  "tolerance": 1e-10,
+  "resources": 8020,
+  "spectral_samples": 260,
+  "maxima": {
+    "trace": 3.3306700603864844e-15,
+    "hermiticity": 2.6851967994446385e-18,
+    "density_spectral_trace": 2.2426505097428162e-14,
+    "pt_spectral_trace": 2.2426505097428162e-14
+  },
+  "min_density_eigenvalue": -1.1380111968688946e-14,
+  "curves": [
+    {
+      "xi": -0.09090909090909091,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi-0.090909091.json",
+      "sha256": "bdcd67f0f906ba4cc5d53f190338d3a2dfab6fd7534e40eecf4b790c20af10a7",
+      "useful_integer_intervals": [],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.0009765624999999998,
+        "bell_overlap": 0.24999999999999997,
+        "teleportation_fidelity": 0.5,
+        "weighted_advantage": -0.0001627604166666666,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": -2.220446049250313e-16,
+        "min_density_eigenvalue": 0.00024414062499999756,
+        "min_pt_eigenvalue": 0.00024414062499999724,
+        "density_spectral_trace_error": 2.220446049250313e-16,
+        "pt_spectral_trace_error": 2.220446049250313e-16,
+        "density_spectrum_seconds": 11.472213136963546,
+        "pt_spectrum_seconds": 11.505751309916377
+      }
+    },
+    {
+      "xi": -0.05,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi-0.050000000.json",
+      "sha256": "014d6311c8dc7ad471a777edc041759661f30839aa205450578e85c7ee4eaf47",
+      "useful_integer_intervals": [],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.0009765624999999998,
+        "bell_overlap": 0.24999999999999997,
+        "teleportation_fidelity": 0.5,
+        "weighted_advantage": -0.0001627604166666666,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": -2.220446049250313e-16,
+        "min_density_eigenvalue": 0.00024414062499999724,
+        "min_pt_eigenvalue": 0.00024414062499999686,
+        "density_spectral_trace_error": 2.220446049250313e-16,
+        "pt_spectral_trace_error": 2.220446049250313e-16,
+        "density_spectrum_seconds": 11.494120693067089,
+        "pt_spectrum_seconds": 11.562373970984481
+      }
+    },
+    {
+      "xi": 0,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi0.000000000.json",
+      "sha256": "aadaec0e736c2b3e312ebab86106de54c87e689247108f1e475605357ddcb0b1",
+      "useful_integer_intervals": [],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.0009765624999999998,
+        "bell_overlap": 0.24999999999999997,
+        "teleportation_fidelity": 0.5,
+        "weighted_advantage": -0.0001627604166666666,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": -2.220446049250313e-16,
+        "min_density_eigenvalue": 0.0002441406249999973,
+        "min_pt_eigenvalue": 0.00024414062499999767,
+        "density_spectral_trace_error": 2.220446049250313e-16,
+        "pt_spectral_trace_error": 2.220446049250313e-16,
+        "density_spectrum_seconds": 11.665069174021482,
+        "pt_spectrum_seconds": 11.468909631017596
+      }
+    },
+    {
+      "xi": 0.1,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi0.100000000.json",
+      "sha256": "a4d56a3f0452ffcb107b512157d28a35aeea7c9ff8c9570fa4009dc062034bb9",
+      "useful_integer_intervals": [],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.0009765624999999998,
+        "bell_overlap": 0.24999999999999997,
+        "teleportation_fidelity": 0.5,
+        "weighted_advantage": -0.0001627604166666666,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": -2.220446049250313e-16,
+        "min_density_eigenvalue": 0.00024414062499999734,
+        "min_pt_eigenvalue": 0.00024414062499999664,
+        "density_spectral_trace_error": 2.220446049250313e-16,
+        "pt_spectral_trace_error": 2.220446049250313e-16,
+        "density_spectrum_seconds": 11.524135404964909,
+        "pt_spectrum_seconds": 11.561010882956907
+      }
+    },
+    {
+      "xi": 0.2,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi0.200000000.json",
+      "sha256": "22779e8b70f06a9d08addf96f79b982aa675bc59c0e8168ea603bd4681910b8d",
+      "useful_integer_intervals": [],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.0009765624999999998,
+        "bell_overlap": 0.24999999999999997,
+        "teleportation_fidelity": 0.5,
+        "weighted_advantage": -0.0001627604166666666,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": -2.220446049250313e-16,
+        "min_density_eigenvalue": 0.00024414062499999743,
+        "min_pt_eigenvalue": 0.00024414062499999732,
+        "density_spectral_trace_error": 2.220446049250313e-16,
+        "pt_spectral_trace_error": 2.220446049250313e-16,
+        "density_spectrum_seconds": 11.532075686962344,
+        "pt_spectrum_seconds": 11.530966577935033
+      }
+    },
+    {
+      "xi": 0.3,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi0.300000000.json",
+      "sha256": "8d2a381bed76493b3017da6471211e467e7f8361b1df94a705bfbee72a4df8af",
+      "useful_integer_intervals": [],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.0009765624999999998,
+        "bell_overlap": 0.24999999999999997,
+        "teleportation_fidelity": 0.5,
+        "weighted_advantage": -0.0001627604166666666,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": -2.220446049250313e-16,
+        "min_density_eigenvalue": 0.00024414062499999743,
+        "min_pt_eigenvalue": 0.0002441406249999977,
+        "density_spectral_trace_error": 2.220446049250313e-16,
+        "pt_spectral_trace_error": 2.220446049250313e-16,
+        "density_spectrum_seconds": 11.493081233929843,
+        "pt_spectrum_seconds": 11.571844357065856
+      }
+    },
+    {
+      "xi": 0.4,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi0.400000000.json",
+      "sha256": "e683f1dfd7bbfa3724aa8879a61e1bca1f662f6a8464665668e84fec2b9c2970",
+      "useful_integer_intervals": [],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.0009765624999999998,
+        "bell_overlap": 0.24999999999999997,
+        "teleportation_fidelity": 0.5,
+        "weighted_advantage": -0.0001627604166666666,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": -2.220446049250313e-16,
+        "min_density_eigenvalue": 0.0002441406249999969,
+        "min_pt_eigenvalue": 0.00024414062499999737,
+        "density_spectral_trace_error": 2.220446049250313e-16,
+        "pt_spectral_trace_error": 2.220446049250313e-16,
+        "density_spectrum_seconds": 11.546561939059757,
+        "pt_spectrum_seconds": 11.528163505950943
+      }
+    },
+    {
+      "xi": 0.5,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi0.500000000.json",
+      "sha256": "60b3dcb0e63eac827b6e6c6cffd7cbf4642c169fa90b6de9cc11999992d6ff5b",
+      "useful_integer_intervals": [],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.0009765624999999998,
+        "bell_overlap": 0.24999999999999997,
+        "teleportation_fidelity": 0.5,
+        "weighted_advantage": -0.0001627604166666666,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": -2.220446049250313e-16,
+        "min_density_eigenvalue": 0.00024414062499999783,
+        "min_pt_eigenvalue": 0.00024414062499999764,
+        "density_spectral_trace_error": 2.220446049250313e-16,
+        "pt_spectral_trace_error": 2.220446049250313e-16,
+        "density_spectrum_seconds": 11.545639430056326,
+        "pt_spectrum_seconds": 11.522567342035472
+      }
+    },
+    {
+      "xi": 0.6,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi0.600000000.json",
+      "sha256": "80880220d34a60b0c95f0ebc1c7cb010126cc083de3ed49cfc21b1b3051b0c95",
+      "useful_integer_intervals": [
+        [
+          4,
+          4
+        ]
+      ],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.0009765624999999998,
+        "bell_overlap": 0.24999999999999997,
+        "teleportation_fidelity": 0.5,
+        "weighted_advantage": -0.0001627604166666666,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": -2.220446049250313e-16,
+        "min_density_eigenvalue": 0.00024414062499999715,
+        "min_pt_eigenvalue": 0.00024414062499999705,
+        "density_spectral_trace_error": 2.220446049250313e-16,
+        "pt_spectral_trace_error": 2.220446049250313e-16,
+        "density_spectrum_seconds": 11.514209848013707,
+        "pt_spectrum_seconds": 11.551488389959559
+      }
+    },
+    {
+      "xi": 0.7,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi0.700000000.json",
+      "sha256": "6e6f707626008c8fad302c47fba41f289a1ca005712f8771a762ac6562d9e7c2",
+      "useful_integer_intervals": [
+        [
+          2,
+          5
+        ]
+      ],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.0009765624999999998,
+        "bell_overlap": 0.24999999999999997,
+        "teleportation_fidelity": 0.5,
+        "weighted_advantage": -0.0001627604166666666,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": -2.220446049250313e-16,
+        "min_density_eigenvalue": 0.00024414062499999734,
+        "min_pt_eigenvalue": 0.00024414062499999718,
+        "density_spectral_trace_error": 2.220446049250313e-16,
+        "pt_spectral_trace_error": 2.220446049250313e-16,
+        "density_spectrum_seconds": 11.625468609039672,
+        "pt_spectrum_seconds": 11.54915186506696
+      }
+    },
+    {
+      "xi": 0.8,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi0.800000000.json",
+      "sha256": "6803491a88ac055920f95e9154f2c6072b1b3a467c7c3e6524efa46af1267302",
+      "useful_integer_intervals": [
+        [
+          2,
+          8
+        ]
+      ],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.0009765625,
+        "bell_overlap": 0.24999999999999994,
+        "teleportation_fidelity": 0.5,
+        "weighted_advantage": -0.00016276041666666663,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": -2.220446049250313e-16,
+        "min_density_eigenvalue": 0.00024414062499999732,
+        "min_pt_eigenvalue": 0.00024414062499999705,
+        "density_spectral_trace_error": 1.1102230246251565e-16,
+        "pt_spectral_trace_error": 2.220446049250313e-16,
+        "density_spectrum_seconds": 11.536316678044386,
+        "pt_spectrum_seconds": 11.60321881994605
+      }
+    },
+    {
+      "xi": 0.85,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi0.850000000.json",
+      "sha256": "7f06944b9f0561070bef538a92288dc0cb1b6a2c2b3453aa68d615b01f8b4cce",
+      "useful_integer_intervals": [
+        [
+          2,
+          10
+        ]
+      ],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.0009765624999999998,
+        "bell_overlap": 0.24999999999999997,
+        "teleportation_fidelity": 0.5,
+        "weighted_advantage": -0.0001627604166666666,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": -2.220446049250313e-16,
+        "min_density_eigenvalue": 0.00024414062499999753,
+        "min_pt_eigenvalue": 0.0002441406249999972,
+        "density_spectral_trace_error": 2.220446049250313e-16,
+        "pt_spectral_trace_error": 2.220446049250313e-16,
+        "density_spectrum_seconds": 11.634744801092893,
+        "pt_spectrum_seconds": 11.602004494983703
+      }
+    },
+    {
+      "xi": 0.9,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi0.900000000.json",
+      "sha256": "ec46aba1a05e08d76ec63cd8c2ad73ff67620eacb90509f0f47e044c4c923271",
+      "useful_integer_intervals": [
+        [
+          2,
+          16
+        ]
+      ],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.0009765624999999998,
+        "bell_overlap": 0.24999999999999997,
+        "teleportation_fidelity": 0.5,
+        "weighted_advantage": -0.0001627604166666666,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": -2.220446049250313e-16,
+        "min_density_eigenvalue": 0.00024414062499999713,
+        "min_pt_eigenvalue": 0.00024414062499999761,
+        "density_spectral_trace_error": 2.220446049250313e-16,
+        "pt_spectral_trace_error": 2.220446049250313e-16,
+        "density_spectrum_seconds": 11.572412539971992,
+        "pt_spectrum_seconds": 11.547406752943061
+      }
+    },
+    {
+      "xi": 0.95,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi0.950000000.json",
+      "sha256": "d73fb66a5d6e115899bc3500502f1cb010929d316e6dfe556d9ed697dbe741dd",
+      "useful_integer_intervals": [
+        [
+          2,
+          34
+        ]
+      ],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.0009765625065863317,
+        "bell_overlap": 0.25000000181045545,
+        "teleportation_fidelity": 0.5000000012069703,
+        "weighted_advantage": -0.00016276041658570665,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": 8.881784197001248e-16,
+        "min_density_eigenvalue": 0.00024414062154491222,
+        "min_pt_eigenvalue": 0.00024414062005994862,
+        "density_spectral_trace_error": 1.1102230246251565e-15,
+        "pt_spectral_trace_error": 8.881784197001252e-16,
+        "density_spectrum_seconds": 11.718790236976929,
+        "pt_spectrum_seconds": 11.83154294907581
+      }
+    },
+    {
+      "xi": 0.97,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi0.970000000.json",
+      "sha256": "935a1309f2f3dca0c5fb4157efe8cd52a46b0960f512a84885140c10dbfc9d5b",
+      "useful_integer_intervals": [
+        [
+          2,
+          58
+        ]
+      ],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.000976580965475801,
+        "bell_overlap": 0.25000603689877265,
+        "teleportation_fidelity": 0.5000040245991818,
+        "weighted_advantage": -0.00016275956389901218,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": 1.110223024625156e-15,
+        "min_density_eigenvalue": 0.00024413175941595495,
+        "min_pt_eigenvalue": 0.00024412664083894717,
+        "density_spectral_trace_error": 8.881784197001252e-16,
+        "pt_spectral_trace_error": 1.1102230246251565e-15,
+        "density_spectrum_seconds": 11.69632174493745,
+        "pt_spectrum_seconds": 11.782736118067987
+      }
+    },
+    {
+      "xi": 0.98,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi0.980000000.json",
+      "sha256": "95c96e72e66b2eeb515508fba43b99b4e814ad4b2e2765bacd25dfe1f2afbeed",
+      "useful_integer_intervals": [
+        [
+          2,
+          88
+        ]
+      ],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.000977593443268281,
+        "bell_overlap": 0.25041339670426666,
+        "teleportation_fidelity": 0.5002755978028445,
+        "weighted_advantage": -0.00016266281793967356,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": 1.332267629550187e-15,
+        "min_density_eigenvalue": 0.00024371805036775725,
+        "min_pt_eigenvalue": 0.00024332211188542722,
+        "density_spectral_trace_error": 1.3322676295501878e-15,
+        "pt_spectral_trace_error": 1.3322676295501878e-15,
+        "density_spectrum_seconds": 11.64958247798495,
+        "pt_spectrum_seconds": 11.71525189105887
+      }
+    },
+    {
+      "xi": 0.99,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi0.990000000.json",
+      "sha256": "55443fd798ebfdae3c879f0d6df95fd326c7d43f9ab52c81c460bb2262b32430",
+      "useful_integer_intervals": [
+        [
+          2,
+          178
+        ]
+      ],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.001038609136463222,
+        "bell_overlap": 0.28165322920145636,
+        "teleportation_fidelity": 0.5211021528009709,
+        "weighted_advantage": -0.0001511846340457389,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": 1.7763568394002489e-15,
+        "min_density_eigenvalue": 0.00022715741951572372,
+        "min_pt_eigenvalue": 0.00017541598951687824,
+        "density_spectral_trace_error": 1.9984014443252818e-15,
+        "pt_spectral_trace_error": 1.7763568394002505e-15,
+        "density_spectrum_seconds": 11.688040364999324,
+        "pt_spectrum_seconds": 11.853639389039017
+      }
+    },
+    {
+      "xi": 0.995,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi0.995000000.json",
+      "sha256": "dfa24f4d7fcc9a152f9965cb55967c2c4fc03d8fe4716bd1cf09adfffbf387d3",
+      "useful_integer_intervals": [
+        [
+          2,
+          358
+        ]
+      ],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": false,
+      "terminal": {
+        "t": 400,
+        "probability": 0.0014793259157734261,
+        "bell_overlap": 0.46390431637637713,
+        "teleportation_fidelity": 0.6426028775842515,
+        "weighted_advantage": -3.559818682132234e-05,
+        "fallback_fidelity": 0.6666666666666666,
+        "log_negativity_nats": 0.009888097886421723,
+        "min_density_eigenvalue": 0.00015625530144915934,
+        "min_pt_eigenvalue": -0.0004708527156702559,
+        "density_spectral_trace_error": 2.6645352591003757e-15,
+        "pt_spectral_trace_error": 2.6645352591003757e-15,
+        "density_spectrum_seconds": 11.891571891959757,
+        "pt_spectrum_seconds": 12.190775690949522
+      }
+    },
+    {
+      "xi": 0.999,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi0.999000000.json",
+      "sha256": "c19a25253ca11134662bec9b2df464c94834ab5b7379ac1ac616b5e2ba5fb97a",
+      "useful_integer_intervals": [
+        [
+          2,
+          400
+        ]
+      ],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": true,
+      "terminal": {
+        "t": 400,
+        "probability": 0.003731079605414438,
+        "bell_overlap": 0.7833879822100274,
+        "teleportation_fidelity": 0.8555919881400182,
+        "weighted_advantage": 0.0007048954138955887,
+        "fallback_fidelity": 0.6673715620805623,
+        "log_negativity_nats": 0.5755668061654406,
+        "min_density_eigenvalue": 1.750026837040961e-05,
+        "min_pt_eigenvalue": -0.004516979877307683,
+        "density_spectral_trace_error": 3.3306690738754696e-15,
+        "pt_spectral_trace_error": 3.1086244689504383e-15,
+        "density_spectrum_seconds": 12.22605499799829,
+        "pt_spectrum_seconds": 11.969501857995056
+      }
+    },
+    {
+      "xi": 1.0,
+      "path": "numerical_campaigns/xi-sweep-L12-2026-11-03/data/L12_xi1.000000000.json",
+      "sha256": "75b252c6dd02ec5c89bad238eeadebcbbe27ab4551392685c36ae82c7cc8df7a",
+      "useful_integer_intervals": [
+        [
+          2,
+          400
+        ]
+      ],
+      "threshold_equal_or_unresolved_integer_times": [
+        0
+      ],
+      "right_censored": true,
+      "terminal": {
+        "t": 400,
+        "probability": 0.005208333333333341,
+        "bell_overlap": 0.857142857142857,
+        "teleportation_fidelity": 0.9047619047619047,
+        "weighted_advantage": 0.0012400793650793665,
+        "fallback_fidelity": 0.667906746031746,
+        "log_negativity_nats": 0.9419524091956865,
+        "min_density_eigenvalue": -1.3894713233385758e-17,
+        "min_pt_eigenvalue": -0.0074182828530587105,
+        "density_spectral_trace_error": 1.5543122344752192e-15,
+        "pt_spectral_trace_error": 1.5543122344752192e-15,
+        "density_spectrum_seconds": 12.556661681039259,
+        "pt_spectrum_seconds": 12.436834724037908
+      }
+    }
+  ],
+  "ideal_sector_baseline_terminal": {
+    "t": 400,
+    "probability": 0.005208333333333704,
+    "bell_overlap": 0.8571428571428569,
+    "teleportation_fidelity": 0.9047619047619045,
+    "weighted_advantage": 0.0012400793650794524,
+    "fallback_fidelity": 0.667906746031746,
+    "log_negativity_nats": 0.9419524091957566,
+    "min_sector_density_eigenvalue": 0.00446428571428602,
+    "min_pt_eigenvalue": -0.0074182828530592335,
+    "distance_target_frobenius": 4.796463671315687e-15,
+    "negativity_seconds": 5.192732596988208
+  },
+  "ideal_sector_target_stationarity_max_entry_residual": 1.0408398128305076e-17,
+  "final_density_files_in_campaign": [
+    "numerical_campaigns/xi-sweep-L12-2026-11-03/review/preflight/reviewer/straight/checkpoint.npz"
+  ],
+  "archival_ranks": {
+    "verify_cyclic_irreducibility_20260910.out": {
+      "sha256": "ded8e35988f45720ca1d180fc013bb5a0f3e60702dbece9ada31f6fd3acf1e2c",
+      "archival_not_rerun_here": [
+        {
+          "L": 3,
+          "prime": 1000003,
+          "rank": 4,
+          "dimension": 4
+        },
+        {
+          "L": 4,
+          "prime": 1000003,
+          "rank": 6,
+          "dimension": 6
+        },
+        {
+          "L": 5,
+          "prime": 1000003,
+          "rank": 8,
+          "dimension": 8
+        },
+        {
+          "L": 6,
+          "prime": 1000003,
+          "rank": 13,
+          "dimension": 13
+        },
+        {
+          "L": 7,
+          "prime": 1000003,
+          "rank": 18,
+          "dimension": 18
+        },
+        {
+          "L": 8,
+          "prime": 1000003,
+          "rank": 30,
+          "dimension": 30
+        },
+        {
+          "L": 9,
+          "prime": 1000003,
+          "rank": 46,
+          "dimension": 46
+        },
+        {
+          "L": 10,
+          "prime": 1000003,
+          "rank": 78,
+          "dimension": 78
+        },
+        {
+          "L": 11,
+          "prime": 1000003,
+          "rank": 126,
+          "dimension": 126
+        },
+        {
+          "L": 12,
+          "prime": 1000003,
+          "rank": 224,
+          "dimension": 224
+        },
+        {
+          "L": 13,
+          "prime": 1000003,
+          "rank": 380,
+          "dimension": 380
+        },
+        {
+          "L": 14,
+          "prime": 1000003,
+          "rank": 687,
+          "dimension": 687
+        },
+        {
+          "L": 15,
+          "prime": 1000003,
+          "rank": 1224,
+          "dimension": 1224
+        },
+        {
+          "L": 16,
+          "prime": 1000003,
+          "rank": 2250,
+          "dimension": 2250
+        }
+      ]
+    },
+    "verify_cyclic_irreducibility_second_prime_20260911.out": {
+      "sha256": "41a5d1f6377bb13012c35c9212e3446cf01f2a754cde216e5685f00e59999361",
+      "archival_not_rerun_here": [
+        {
+          "L": 4,
+          "prime": 1000033,
+          "rank": 6,
+          "dimension": 6
+        },
+        {
+          "L": 6,
+          "prime": 1000033,
+          "rank": 13,
+          "dimension": 13
+        },
+        {
+          "L": 8,
+          "prime": 1000033,
+          "rank": 30,
+          "dimension": 30
+        },
+        {
+          "L": 10,
+          "prime": 1000033,
+          "rank": 78,
+          "dimension": 78
+        },
+        {
+          "L": 12,
+          "prime": 1000033,
+          "rank": 224,
+          "dimension": 224
+        },
+        {
+          "L": 13,
+          "prime": 1000033,
+          "rank": 380,
+          "dimension": 380
+        },
+        {
+          "L": 14,
+          "prime": 1000033,
+          "rank": 687,
+          "dimension": 687
+        },
+        {
+          "L": 15,
+          "prime": 1000033,
+          "rank": 1224,
+          "dimension": 1224
+        },
+        {
+          "L": 16,
+          "prime": 1000033,
+          "rank": 2250,
+          "dimension": 2250
+        }
+      ]
+    }
+  }
+}

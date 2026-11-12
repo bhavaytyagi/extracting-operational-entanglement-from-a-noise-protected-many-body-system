@@ -1,0 +1,53 @@
+{
+  "generic_full_density_max_error": 2.2061915819741345e-19,
+  "generic_original_seconds": 7.845507060061209,
+  "generic_selected_seconds": 3.5234730859519914,
+  "negative_endpoint": {
+    "min_mask": 0.07293535207721413,
+    "max_mask": 1.0000000000000004,
+    "uniform_coherence": 1.0000000000000004
+  },
+  "step_seconds": [
+    3.5379105450119823,
+    3.342888079932891,
+    3.4404916840139776,
+    3.388871456962079,
+    3.367015092051588,
+    3.5778767419978976,
+    3.6812867380212992,
+    3.9628076639492065,
+    3.6845692910719663,
+    3.570550426025875
+  ],
+  "period_including_invariants_seconds": [
+    3.8934055340941995,
+    3.8963598349364474,
+    3.805537531967275,
+    3.771353774005547,
+    3.711681896005757,
+    4.00689749896992,
+    4.034756395034492,
+    4.376904419972561,
+    4.061807234073058,
+    3.9743216049391776
+  ],
+  "spectral_row": {
+    "t": 10,
+    "probability": 0.004685480901706732,
+    "bell_overlap": 0.8283214067140042,
+    "teleportation_fidelity": 0.8855476044760028,
+    "weighted_advantage": 0.0010255624538533035,
+    "fallback_fidelity": 0.66769222912052,
+    "log_negativity_nats": 0.8708272679125801,
+    "min_density_eigenvalue": 1.1472451963644946e-06,
+    "min_pt_eigenvalue": -0.006572417235965473,
+    "density_spectral_trace_error": 0.0,
+    "pt_spectral_trace_error": 0.0,
+    "density_spectrum_seconds": 15.226269046077505,
+    "pt_spectrum_seconds": 12.945256734965369
+  },
+  "checkpoint_seconds": 0.8035210589878261,
+  "peak_rss_bytes": 1712541696,
+  "projected20curve_hours": 11.997656773716315,
+  "projection": "Conservative max of10 measured periods plus13 spectral pairs and53 checkpoints per curve; hardware load may change."
+}
