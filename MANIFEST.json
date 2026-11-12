@@ -27,8 +27,8 @@
       "bytes": 352176
     },
     "README.md": {
-      "sha256": "b2e3d3696bf1a0eb926ab47ed628a8fec70638581127259ee73db4560c0b773d",
-      "bytes": 5538
+      "sha256": "f584de9d13834639358448e9456900075c60e3bd2b9e65715f34ada2ee8fcb27",
+      "bytes": 5839
     },
     "References_revision_2.bib": {
       "sha256": "a9d4c21d64a0e7c4c3c6c36ff77595ccb8c4b405d7ab979adcefb8dd6f550846",
@@ -334,6 +334,34 @@
       "sha256": "71f4b5cfe2e1eacbf80b095f6cdee547acf317e4678f490d2671f67f778952f9",
       "bytes": 2284
     },
+    "provenance/scientific-evidence/revision2-fresh/INPUT_HASHES.json": {
+      "sha256": "8a7e7066b1d1e039941a68cf8e9ad1d37954e24c28d9d1aa150467454ca05199",
+      "bytes": 7213
+    },
+    "provenance/scientific-evidence/revision2-fresh/OUTPUT_HASHES.json": {
+      "sha256": "a2e3708cbfede5a88134e7a52651fbae32a8ccfc0800071614e0c73d8d2f4150",
+      "bytes": 1894
+    },
+    "provenance/scientific-evidence/revision2-fresh/README.md": {
+      "sha256": "8c95bd3bd2c7904578c041365e62624c6a44eed63297226f48f7ff29c4654838",
+      "bytes": 1386
+    },
+    "provenance/scientific-evidence/revision2-fresh/independent_checks.out": {
+      "sha256": "39e9af9b4ffff30dc1f509f55bc49df7d2d140fff440cb08695706a8ef8277a5",
+      "bytes": 3159
+    },
+    "provenance/scientific-evidence/revision2-fresh/independent_checks.py": {
+      "sha256": "68d12d72525710c168687b6645a20018684e1e44c9658288de70d6aa2fae31fd",
+      "bytes": 9027
+    },
+    "provenance/scientific-evidence/revision2-fresh/record_attribution.out": {
+      "sha256": "834955dff2cfc03bcf8c1e496628ed73cb3e0c1b33ee5e80d4778b9a58a99104",
+      "bytes": 1179
+    },
+    "provenance/scientific-evidence/revision2-fresh/record_attribution.py": {
+      "sha256": "f419950716568855fc8577a5e81fc0f41b00093d936e8a5d6a7490dbba0daeab",
+      "bytes": 1228
+    },
     "provenance/source-map.json": {
       "sha256": "14ef87bda1e379d24562dfeef4809b7d9bf929da804cdc7beb5d88b7fad749b0",
       "bytes": 23256
@@ -581,6 +609,10 @@
     "verification/revision2/EVIDENCE_INVENTORY.md": {
       "sha256": "e87114415a7f487e09da2964414d189dbb0931773750b4cc80db61226a8e1cf0",
       "bytes": 13647
+    },
+    "verification/revision2/FRESH_LILLY_REVIEW.md": {
+      "sha256": "e7c9b267631ba191f2fb514fbac1ae568a9fb24636ae3ff90ed9375b9fa3a659",
+      "bytes": 15032
     },
     "verification/revision2/LEMMA_NOTES.md": {
       "sha256": "7457b7d40b30ddae002d7a7624984403fe2fe396b9a0ba6c82cb59840409e7e4",

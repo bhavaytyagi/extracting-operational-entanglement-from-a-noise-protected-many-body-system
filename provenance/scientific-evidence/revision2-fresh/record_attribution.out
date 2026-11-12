@@ -1,0 +1,7 @@
+IDEAL400 residual 4.796463671315687e-15
+IDEAL_SAVED_AGREEMENT {'probability': 3.642919299551295e-16, 'bell_overlap': 7.216449660063518e-16, 'teleportation_fidelity': 5.551115123125783e-16, 'log_negativity_nats': 7.016609515630989e-14}
+CROSSREF Moharramipour2024.crossref.json 10.1103/prxquantum.5.040336 ['Symmetry-Enforced Entanglement in Maximally Mixed States']
+CROSSREF BucaProsen2012.crossref.json 10.1088/1367-2630/14/7/073007 ['A note on symmetry reductions of the Lindblad equation: transport in constrained open spin chains']
+CROSSREF Popp2005.crossref.json 10.1103/physreva.71.042306 ['Localizable entanglement']
+EXACT SUPPLEMENTAL HASHES {'check_final.py': 'b9cc5e5b9adfe27b9cb80e10272680273efde9f82921954c5c7174244c686adb', 'SOURCE.md': '75f5469d68454cc7892348975246bcf5ed58930af2154b149330754372e527ec', 'results.json': '7372d968a3e72c9743b1167466ce2f14ae81b9fec54af53cec0cca23c3c22722'}
+RECORDED DENSE COMPARISON {'sizes': [4, 6], 'generic_L4_steps': 5, 'xi': [-0.3333333333333333, 0, 0.5, 0.99, 1], 'J0_steps': 40, 'max_state_error': 6.940151931578151e-16, 'max_decoder_error': 1.1102230246251565e-16, 'max_spectral_error': 0.0, 'tolerance': 1e-10} NOT RERUN HERE

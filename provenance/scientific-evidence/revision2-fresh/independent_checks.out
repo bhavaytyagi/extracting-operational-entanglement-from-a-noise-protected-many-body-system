@@ -1,0 +1,33 @@
+EXACT INPUT HASHES 64 PASS
+EXACT IMMUTABLE PRODUCER CLOSURE 20 PASS
+INDEPENDENT CYCLIC 3 prime 1000033 rank 4 dim 4
+INDEPENDENT CYCLIC 4 prime 1000033 rank 6 dim 6
+INDEPENDENT CYCLIC 5 prime 1000033 rank 8 dim 8
+INDEPENDENT CYCLIC 6 prime 1000033 rank 13 dim 13
+INDEPENDENT CYCLIC 7 prime 1000033 rank 18 dim 18
+INDEPENDENT CYCLIC 8 prime 1000033 rank 30 dim 30
+INDEPENDENT CYCLIC 9 prime 1000033 rank 46 dim 46
+INDEPENDENT CYCLIC 10 prime 1000033 rank 78 dim 78
+INDEPENDENT CYCLIC 11 prime 1000033 rank 126 dim 126
+INDEPENDENT CYCLIC 12 prime 1000033 rank 224 dim 224
+INDEPENDENT CYCLIC 13 prime 1000033 rank 380 dim 380
+INDEPENDENT CYCLIC 14 prime 1000033 rank 687 dim 687
+INDEPENDENT CYCLIC 15 prime 1000033 rank 1224 dim 1224
+INDEPENDENT CYCLIC 16 prime 1000033 rank 2250 dim 2250
+EXACT PAIR [[Fraction(1, 448), Fraction(0, 1), Fraction(0, 1), Fraction(1, 448)], [Fraction(0, 1), Fraction(1, 2688), Fraction(1, 2688), Fraction(0, 1)], [Fraction(0, 1), Fraction(1, 2688), Fraction(1, 2688), Fraction(0, 1)], [Fraction(1, 448), Fraction(0, 1), Fraction(0, 1), Fraction(1, 448)]] p 1/192 f 6/7 F 19/21
+CNOT ACCEPTANCE RECORD 10101 PASS
+DIRECT TELEPORTATION 0 six_input_mean 0.9047619047619042 formula 0.9047619047619047
+DIRECT TELEPORTATION 1 six_input_mean 0.4860301352415024 formula 0.48603013524150257
+DIRECT TELEPORTATION 2 six_input_mean 0.5867933949935208 formula 0.586793394993521
+DIRECT TELEPORTATION 3 six_input_mean 0.4075541366901195 formula 0.4075541366901197
+DENSE MAP -0.3333333333333333 max_entry_error 2.101656187862657e-17 target_change 0.13584339299691672 sector_leak 0.2197653701384795
+DENSE MAP 0 max_entry_error 2.101656187862657e-17 target_change 0.11115638213446619 sector_leak 0.17872719747346752
+DENSE MAP 0.5 max_entry_error 2.101656187862657e-17 target_change 0.06395174695594248 sector_leak 0.10163307655288448
+DENSE MAP 0.99 max_entry_error 2.101656187862657e-17 target_change 0.0014859535287733215 sector_leak 0.0023266808640369126
+DENSE MAP 1 max_entry_error 2.101656187862657e-17 target_change 8.117405108392842e-17 sector_leak -3.469446951953614e-18
+USEFUL TIMES 0.99 2 178 177
+XI .995 PERIOD 400 {'t': 400, 'probability': 0.0014793259157734261, 'bell_overlap': 0.46390431637637713, 'teleportation_fidelity': 0.6426028775842515, 'weighted_advantage': -3.559818682132234e-05, 'fallback_fidelity': 0.6666666666666666, 'log_negativity_nats': 0.009888097886421723, 'min_density_eigenvalue': 0.00015625530144915934, 'min_pt_eigenvalue': -0.0004708527156702559, 'density_spectral_trace_error': 2.6645352591003757e-15, 'pt_spectral_trace_error': 2.6645352591003757e-15, 'density_spectrum_seconds': 11.891571891959757, 'pt_spectrum_seconds': 12.190775690949522}
+USEFUL TIMES 0.999 2 400 399
+SAVED RECORDS 20 CURVES / 8020 RESOURCE ROWS / 260 SPECTRAL DIAGNOSTICS PASS
+IDEAL REFERENCE TOP LEVEL KEYS ['J', 'L', 'b', 'gamma', 'h', 'horizon', 'max_hermiticity_error', 'max_trace_error', 'minimum_sampled_sector_density_eigenvalue', 'negativity_samples', 'peak_rss_bytes', 'projected_unitarity_error', 'rows', 'seconds', 'sector_dimension', 'target_metrics', 'target_stationarity_residual', 'unitary_leakage', 'xi']
+RENDERED PDF PAGES 7

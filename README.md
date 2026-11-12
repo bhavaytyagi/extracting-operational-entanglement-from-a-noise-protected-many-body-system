@@ -53,3 +53,5 @@ Use `--all` only deliberately. The original full-density campaign retained obser
 The correction ledger and fresh review receipts are collected under `verification/revision2/`. Title and the broader abstract revision are separate author-taste work; any minimal abstract consistency correction is explicitly recorded. Human coauthor review of significance and provenance remains distinct from automated mathematical/data checks.
 
 `MANIFEST.json` inventories deliverable files and SHA256 hashes (excluding itself, caches/build products). Use `python verification/check_package.py` to check it after download. Remote history is preserved before migration; `old_project/` is historical and is not part of the active package or a dependency of its manuscript.
+
+Final independent artifact review: `verification/revision2/FRESH_LILLY_REVIEW.md`. Its code/stdout/hash records are archived under `provenance/scientific-evidence/revision2-fresh/` with their isolated-layout scope note; the portable reproduction commands above remain the runnable package interface.
