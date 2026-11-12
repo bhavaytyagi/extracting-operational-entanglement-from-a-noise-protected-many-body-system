@@ -1,5 +1,7 @@
 # Coauthor review package — revision 2
 
+Repository: [bhavaytyagi/extracting-operational-entanglement-from-a-noise-protected-many-body-system](https://github.com/bhavaytyagi/extracting-operational-entanglement-from-a-noise-protected-many-body-system).
+
 This directory is the active review package. The earlier manuscript and research workspace remain preserved separately. Main source: `letter_prl_revision_2.tex`; bibliography: `References_revision_2.bib`; compiled review copy: `letter_prl_revision_2.pdf`. The tiny `letter_Working_doc.tex` wrapper supports the existing Overleaf main-document setting. It loads revision2; it is not a second manuscript.
 
 ## Where files belong — author correction, 2026-11-11
