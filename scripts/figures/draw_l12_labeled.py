@@ -1,7 +1,4 @@
-"""Single-panel Figure 2 from immutable, actual twelve-spin spectra."""
-import os
-os.environ.setdefault('MPLCONFIGDIR', '/private/tmp/joe-matplotlib')
-os.environ.setdefault('XDG_CACHE_HOME', '/private/tmp/joe-cache')
+"""Figure 2: logarithmic negativity for the 20 correlations, using the saved spectra."""
 from pathlib import Path
 import argparse
 import hashlib
@@ -32,8 +29,8 @@ def draw(campaign=CAMPAIGN, out=HERE):
     records, marker, manifest = validator.validate_campaign(campaign)
     snapshot = {path: digest(path) for path in [marker, manifest, *[p for p, _ in records]]}
     out.mkdir(parents=True, exist_ok=True)
-    plt.rcParams.update({'font.size': 8, 'axes.labelsize': 8,
-        'xtick.labelsize': 7, 'ytick.labelsize': 7,
+    plt.rcParams.update({'font.size': 9, 'axes.labelsize': 9,
+        'xtick.labelsize': 9, 'ytick.labelsize': 9,
         'axes.spines.top': False, 'axes.spines.right': False,
         'pdf.fonttype': 42, 'ps.fonttype': 42})
     fig = plt.figure(figsize=(3.4, 2.55))
@@ -50,10 +47,9 @@ def draw(campaign=CAMPAIGN, out=HERE):
         rows = [r for r in rec['rows'] if 'log_negativity_nats' in r]
         t = [r['t'] for r in rows]
         y = [r['log_negativity_nats'] for r in rows]
-        marker_map={.95:'s',.99:'^',.995:'D',.999:'v',1.:'o'}
-        line, = main.plot(t, y, marker_map.get(rec['xi'],'o')+'-', color=cmap(norm(rec['xi'])),
-            lw=1.15 if rec['xi'] == 1 else .65, ms=2.8 if rec['xi'] in marker_map else 2., mew=0,
-            label=fr"$\xi={rec['xi']:g}$" if rec['xi'] in marker_map else '_nolegend_',
+        line, = main.plot(t, y, '-', color=cmap(norm(rec['xi'])),
+            lw=1.15 if rec['xi'] == 1 else .65, marker='None', ms=0, mew=0,
+            label='_nolegend_',
             zorder=3 if rec['xi'] == 1 else 2)
         assert line.get_xdata().tolist() == t, 'Altered times'
         assert line.get_ydata().tolist() == y, 'Altered saved spectra'
@@ -66,13 +62,13 @@ def draw(campaign=CAMPAIGN, out=HERE):
             'color_rgba': list(matplotlib.colors.to_rgba(line.get_color())),
             'linewidth': line.get_linewidth(), 'marker': line.get_marker(),
             'markersize': line.get_markersize(), 'linestyle': line.get_linestyle()})
-    main.legend(loc='upper right',frameon=False,fontsize=7,handlelength=1.4,
-                borderaxespad=.2,labelspacing=.25,handletextpad=.35)
+    assert all(line.get_marker() in (None, 'None', '', ' ') for line in main.lines)
+    assert main.get_legend() is None and not fig.legends, 'Unexpected curve legend'
     bar = fig.colorbar(plt.cm.ScalarMappable(norm=norm, cmap=cmap), cax=bar_ax,
         orientation='vertical')
     bar.set_ticks([-1/11, 0, .5, 1], labels=['$-1/11$', '0', '0.5', '1'])
-    bar.ax.tick_params(labelsize=7, length=2, pad=2)
-    bar.set_label(r'$\xi$', fontsize=8, labelpad=1)
+    bar.ax.tick_params(labelsize=9, length=2, pad=2)
+    bar.set_label(r'$\xi$', fontsize=9, labelpad=-2)
     main.set_xscale('symlog', linthresh=5)
     main.set_xlim(-.6, 470)
     main.xaxis.set_major_locator(FixedLocator([0, 5, 20, 100, 400]))
@@ -94,16 +90,19 @@ def draw(campaign=CAMPAIGN, out=HERE):
     audit['time_scale'] = {'type': main.get_xscale(), 'linthresh': main.xaxis.get_transform().linthresh}
     audit['colorbar'] = {'orientation': bar.orientation, 'right_of_main': True,
         'label': bar.ax.get_ylabel()}
-    audit['marker_extent_checks'] = []
+    audit['line_extent_checks'] = []
+    audit['curve_identification'] = 'Unchanged linear xi color bar only; no markers or representative legend'
+    audit['trajectory_marker_count'] = 0
+    audit['curve_legend_count'] = 0
     bounds = main.get_window_extent()
     for line in main.lines:
-        radius = .5 * line.get_markersize() * fig.dpi / 72
+        radius = .5 * line.get_linewidth() * fig.dpi / 72
         xy = main.transData.transform(np.column_stack((line.get_xdata(), line.get_ydata())))
         clearance = min(float(np.min(xy[:, 0]-bounds.x0)), float(np.min(bounds.x1-xy[:, 0])),
             float(np.min(xy[:, 1]-bounds.y0)), float(np.min(bounds.y1-xy[:, 1])))
-        assert clearance-radius >= .5*fig.dpi/72, ('Clipped marker', clearance, radius)
-        audit['marker_extent_checks'].append({'minimum_center_to_edge_px': clearance,
-            'marker_radius_px': radius, 'extra_clearance_pt': (clearance-radius)*72/fig.dpi})
+        assert clearance-radius >= .5*fig.dpi/72, ('Clipped sample/path stroke', clearance, radius)
+        audit['line_extent_checks'].append({'minimum_center_to_edge_px': clearance,
+            'stroke_halfwidth_px': radius, 'extra_clearance_pt': (clearance-radius)*72/fig.dpi})
     texts = [t for t in fig.findobj(matplotlib.text.Text) if t.get_text() and t.get_visible()]
     audit['nominal_font_sizes_pt'] = sorted({float(t.get_fontsize()) for t in texts})
     assert min(audit['nominal_font_sizes_pt']) >= 7
@@ -114,6 +113,8 @@ def draw(campaign=CAMPAIGN, out=HERE):
         assert box.x0 >= 0 and box.y0 >= 0 and box.x1 <= fig.bbox.x1 and box.y1 <= fig.bbox.y1, (
             'Text outside figure', text.get_text(), list(box.bounds))
         audit['text_extent_checks'].append({'text': text.get_text(), 'bounds_px': list(box.bounds)})
+    from typography_checks import check_ink
+    audit['actual_ink_checks']=check_ink(fig,out/'actual-ink-checks.json')
     for ext in ('pdf', 'png'):
         fig.savefig(out / f'negativity_L12_correlations.{ext}', dpi=300, facecolor='white',
             metadata={'Title': 'Twelve-spin correlation trajectories'})
@@ -139,7 +140,7 @@ def draw(campaign=CAMPAIGN, out=HERE):
     (out / 'figure_checks.json').write_text(json.dumps(audit, indent=2) + '\n')
     print(json.dumps({'status': 'pass', 'curves': len(audit['artists']), 'actual_samples': 260,
         'comparison_tolerance': 0, 'dimensions_inches': audit['figure_inches'],
-        'minimum_marker_extra_clearance_pt': min(c['extra_clearance_pt'] for c in audit['marker_extent_checks']),
+        'minimum_path_extra_clearance_pt': min(c['extra_clearance_pt'] for c in audit['line_extent_checks']),
         'pdf_sha256': audit['output_sha256']}, indent=2))
 
 

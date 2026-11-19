@@ -1,7 +1,4 @@
-"""Native two-panel heatmaps from accepted actual L12 resource records only."""
-import os
-os.environ.setdefault('MPLCONFIGDIR','/private/tmp/joe-matplotlib')
-os.environ.setdefault('XDG_CACHE_HOME','/private/tmp/joe-cache')
+"""Figure 3: conditional teleportation fidelity and heralding probability from the saved sweep."""
 from pathlib import Path
 import argparse,hashlib,importlib.util,json
 import numpy as np
@@ -16,12 +13,14 @@ HERE=Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 CAMPAIGN=ROOT / 'data/xi_sweep'
 FIGURES=ROOT/'Figures'
+DEFAULT_OUTPUT=ROOT/'build/figures/fig3'
 VALIDATOR=HERE / 'validate_l12.py'
 spec=importlib.util.spec_from_file_location('l12_completed_interface',VALIDATOR)
 validator=importlib.util.module_from_spec(spec);spec.loader.exec_module(validator)
 digest=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 
-def draw(out=FIGURES,evidence=HERE):
+def draw(out=DEFAULT_OUTPUT,evidence=DEFAULT_OUTPUT):
+    evidence.mkdir(parents=True, exist_ok=True)
     records,marker,manifest=validator.validate_campaign(CAMPAIGN)
     sources=[marker,manifest,*[p for p,_ in records]]
     protected=[*sources,*[p for p in FIGURES.iterdir() if p.is_file()
@@ -41,8 +40,8 @@ def draw(out=FIGURES,evidence=HERE):
     assert np.isfinite(f).all() and np.isfinite(probability).all()
     assert f.min()>=1/3-1e-10 and f.max()<=1+1e-10
     assert probability.min()>0 and probability.max()<=1+1e-10
-    plt.rcParams.update({'font.size':8,'axes.labelsize':8,'axes.titlesize':8.5,
-        'xtick.labelsize':7,'ytick.labelsize':7,'axes.spines.top':False,
+    plt.rcParams.update({'font.size':9,'axes.labelsize':9,'axes.titlesize':9,
+        'xtick.labelsize':9,'ytick.labelsize':9,'axes.spines.top':False,
         'axes.spines.right':False,'pdf.fonttype':42,'ps.fonttype':42})
     fig=plt.figure(figsize=(7.05,3.5))
     axs=[fig.add_axes([.105,.24,.385,.66]),fig.add_axes([.585,.24,.385,.66])]
@@ -88,7 +87,7 @@ def draw(out=FIGURES,evidence=HERE):
             bar.set_ticks([.5,2/3,.8,.95],labels=['0.5','2/3','0.8','0.95'])
         else:
             bar.set_ticks([.0005,.001,.002,.005],labels=['0.0005','0.001','0.002','0.005'])
-        bar.ax.minorticks_off();bar.ax.tick_params(labelsize=7,length=2,pad=2)
+        bar.ax.minorticks_off();bar.ax.tick_params(labelsize=9,length=2,pad=2)
         cax.set_xlim(norm.vmin,norm.vmax)
         assert np.array_equal(cax.get_xlim(),(norm.vmin,norm.vmax)),(
             'Colorbar ticks expanded normalization bounds',key,cax.get_xlim())
@@ -103,7 +102,9 @@ def draw(out=FIGURES,evidence=HERE):
             'Clipped text',text.get_text(),list(box.bounds))
         text_bounds.append({'text':text.get_text(),'bounds_px':list(box.bounds)})
     assert len(meshes)==2 and all(len(ax.lines)==0 for ax in axs)
-    evidence.mkdir(parents=True,exist_ok=True);out.mkdir(parents=True,exist_ok=True)
+    out.mkdir(parents=True,exist_ok=True)
+    from typography_checks import check_ink
+    ink=check_ink(fig,evidence/'actual-ink-checks.json')
     for ext in ('pdf','png'):
         fig.savefig(out/f'xi_resource_L12_all20.{ext}',dpi=300,facecolor='white',
                     metadata={'Title':'Twelve-spin correlation dependence of fixed-decoder resources'})
@@ -139,6 +140,6 @@ def draw(out=FIGURES,evidence=HERE):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--out',type=Path,default=FIGURES)
-    parser.add_argument('--evidence',type=Path,default=HERE)
+    parser.add_argument('--out',type=Path,default=DEFAULT_OUTPUT)
+    parser.add_argument('--evidence',type=Path,default=DEFAULT_OUTPUT)
     args=parser.parse_args();draw(args.out.resolve(),args.evidence.resolve())

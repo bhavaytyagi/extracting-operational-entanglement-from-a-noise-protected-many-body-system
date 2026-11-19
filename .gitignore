@@ -16,3 +16,6 @@ build/
 *.bbl
 *.blg
 /letter_Working_doc.pdf
+
+# Local Python environment.
+/.venv/

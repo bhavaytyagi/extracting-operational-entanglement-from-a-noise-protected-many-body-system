@@ -886,209 +886,224 @@
       "text": "Entanglement extraction",
       "x": 310,
       "y": -32,
-      "fontsize_native_pt": 16,
+      "fontsize_native_pt": 18,
       "role": "phase"
     },
     {
       "text": "Teleportation",
       "x": 100,
       "y": 285,
-      "fontsize_native_pt": 16,
+      "fontsize_native_pt": 18,
       "role": "phase"
     },
     {
       "text": "Alice",
       "x": 100,
       "y": 5,
-      "fontsize_native_pt": 15,
+      "fontsize_native_pt": 18,
       "role": "party"
     },
     {
       "text": "Bob",
       "x": 370,
       "y": 5,
-      "fontsize_native_pt": 15,
+      "fontsize_native_pt": 18,
       "role": "party"
     },
     {
-      "text": "$A_1$",
+      "text": "A1",
       "x": 14,
       "y": 35,
-      "fontsize_native_pt": 14,
+      "fontsize_native_pt": 18,
       "role": "input-qubit"
     },
     {
-      "text": "$A_2$",
+      "text": "A2",
       "x": 14,
       "y": 59,
-      "fontsize_native_pt": 14,
+      "fontsize_native_pt": 18,
       "role": "input-qubit"
     },
     {
-      "text": "$A_3$",
+      "text": "A3",
       "x": 14,
       "y": 83,
-      "fontsize_native_pt": 14,
+      "fontsize_native_pt": 18,
       "role": "input-qubit"
     },
     {
-      "text": "$A_4$",
+      "text": "A4",
       "x": 14,
       "y": 107,
-      "fontsize_native_pt": 14,
+      "fontsize_native_pt": 18,
       "role": "input-qubit"
     },
     {
-      "text": "$A_5$",
+      "text": "A5",
       "x": 14,
       "y": 131,
-      "fontsize_native_pt": 14,
+      "fontsize_native_pt": 18,
       "role": "input-qubit"
     },
     {
-      "text": "$A_6$",
+      "text": "A6",
       "x": 14,
       "y": 155,
-      "fontsize_native_pt": 14,
+      "fontsize_native_pt": 18,
       "role": "input-qubit"
     },
     {
-      "text": "$B_1$",
+      "text": "B1",
       "x": 283,
       "y": 35,
-      "fontsize_native_pt": 14,
+      "fontsize_native_pt": 18,
       "role": "input-qubit"
     },
     {
-      "text": "$B_2$",
+      "text": "B2",
       "x": 283,
       "y": 59,
-      "fontsize_native_pt": 14,
+      "fontsize_native_pt": 18,
       "role": "input-qubit"
     },
     {
-      "text": "$B_3$",
+      "text": "B3",
       "x": 283,
       "y": 83,
-      "fontsize_native_pt": 14,
+      "fontsize_native_pt": 18,
       "role": "input-qubit"
     },
     {
-      "text": "$B_4$",
+      "text": "B4",
       "x": 283,
       "y": 107,
-      "fontsize_native_pt": 14,
+      "fontsize_native_pt": 18,
       "role": "input-qubit"
     },
     {
-      "text": "$B_5$",
+      "text": "B5",
       "x": 283,
       "y": 131,
-      "fontsize_native_pt": 14,
+      "fontsize_native_pt": 18,
       "role": "input-qubit"
     },
     {
-      "text": "$B_6$",
+      "text": "B6",
       "x": 283,
       "y": 155,
-      "fontsize_native_pt": 14,
+      "fontsize_native_pt": 18,
       "role": "input-qubit"
     },
     {
       "text": "10101",
       "x": 219,
       "y": 7,
-      "fontsize_native_pt": 16,
+      "fontsize_native_pt": 18,
       "role": "fixed-record"
     },
     {
       "text": "10101",
       "x": 484,
       "y": 7,
-      "fontsize_native_pt": 16,
+      "fontsize_native_pt": 18,
       "role": "fixed-record"
     },
     {
       "text": "Herald",
       "x": 190,
       "y": 209,
-      "fontsize_native_pt": 16,
+      "fontsize_native_pt": 18,
       "role": "herald"
     },
     {
       "text": "Discard",
       "x": 327,
       "y": 170,
-      "fontsize_native_pt": 16,
+      "fontsize_native_pt": 18,
       "role": "reject"
     },
     {
       "text": "Accept",
       "x": 378,
       "y": 208,
-      "fontsize_native_pt": 16,
+      "fontsize_native_pt": 18,
       "role": "accept"
     },
     {
       "text": "$|\\psi\\rangle$",
       "x": 296,
       "y": 275,
-      "fontsize_native_pt": 16,
+      "fontsize_native_pt": 18,
       "role": "unknown-input"
     },
     {
       "text": "$A$",
       "x": 245,
       "y": 310,
-      "fontsize_native_pt": 16,
+      "fontsize_native_pt": 18,
       "role": "retained-A"
     },
     {
       "text": "$B$",
       "x": 535,
       "y": 350,
-      "fontsize_native_pt": 16,
+      "fontsize_native_pt": 18,
       "role": "retained-B"
     },
     {
       "text": "H",
       "x": 399,
-      "y": 275,
-      "fontsize_native_pt": 14,
+      "y": 277,
+      "fontsize_native_pt": 16.666666666666668,
       "role": "gate-H"
     },
     {
       "text": "X",
       "x": 575,
       "y": 372,
-      "fontsize_native_pt": 16,
+      "fontsize_native_pt": 18,
       "role": "gate-X"
     },
     {
       "text": "Z",
       "x": 605,
       "y": 372,
-      "fontsize_native_pt": 16,
+      "fontsize_native_pt": 18,
       "role": "gate-Z"
     },
     {
       "text": "$\\rho_{\\rm out}$",
-      "x": 643,
+      "x": 641,
       "y": 372,
-      "fontsize_native_pt": 16,
+      "fontsize_native_pt": 18,
       "role": "output-state"
     },
     {
       "text": "Teleported qubit",
-      "x": 565,
+      "x": 555,
       "y": 399,
-      "fontsize_native_pt": 16,
+      "fontsize_native_pt": 18,
       "role": "output-caption"
     }
   ],
   "checks": {
     "original_gate_and_path_inventory_exact": true,
-    "original_data_paths_and_gate_geometry_exact": true,
+    "original_data_paths_and_gate_geometry_exact_except_H_border": true,
+    "H_border_exception": {
+      "old_dimensions_units": [
+        18,
+        18
+      ],
+      "new_dimensions_units": [
+        20,
+        20
+      ],
+      "center_units": [
+        399,
+        275
+      ],
+      "H_ink_inside_stroked_border": true
+    },
     "arrow_endpoints_styles_mutation_sizes_exact": true,
     "classical_dashed_fragments": 38,
     "editable_svg_text_nodes": 29,
@@ -1107,18 +1122,22 @@
     ],
     "preview_scale_factor": 0.48226950354609927,
     "phase_party_qubit_preview_font_pt": {
-      "phase": 7.716312056737588,
-      "party": 7.23404255319149,
-      "qubit": 6.75177304964539
-    }
+      "phase": 8.680851063829786,
+      "party": 8.680851063829786,
+      "qubit": 8.680851063829786
+    },
+    "actual_ink_bbox_overlaps": [],
+    "min_plain_capital_numeral_final_mm": 2.0726400000000003,
+    "stroke_minimum_final_pt": 0.504,
+    "wire_label_change": "A_i/B_i replaced by plain A1..A6/B1..B6, same spin IDs"
   },
   "source": {
     "path": "scripts/figures/circuit_original/draw_full_protocol.py",
     "sha256": "8e0c6942e7e6fe651fafdb60c59b0f82202731e80cecb63a80022be6921387ee"
   },
   "output_hashes": {
-    "full_protocol_labeled.pdf": "2482675f539639233ff9a8e239cb85e9c19cac402264ffcc18e6019d8877bb69",
-    "full_protocol_labeled.svg": "e00c6addd51e9487ebe7d68aeafbb811ba69a678c0b983981b3265cdc9efe0f4",
-    "full_protocol_labeled.png": "2f798265338a813add30130a142c34eedf677a80eea693bae1c0075b134b928f"
+    "full_protocol_labeled.pdf": "0272b96f18b1ab7d57b009cabaaf871aa6eb057666ca50a5d41d3c6af60a5453",
+    "full_protocol_labeled.svg": "c8a01eb6ab3131a5b96240dfb085932b8298a90964e2914d5e9b9919fd068ee8",
+    "full_protocol_labeled.png": "d18c1b2426a4e4bc76a19c2edfafe3b6f0cf88fc489d877add34e498d4285612"
   }
 }

@@ -1,4 +1,4 @@
-\documentclass[aps,prl,reprint,amsmath,amssymb,floatfix]{revtex4-2}
+\documentclass[aps,prl,reprint,amsmath,amssymb,floatfix,superscriptaddress]{revtex4-2}
 \usepackage{graphicx,bm,amsmath,amssymb,physics}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \graphicspath{{Figures/}}
@@ -6,6 +6,7 @@
 \newcommand{\UI}{U_{\mathrm I}}
 \newcommand{\EN}{E_{\mathcal N}}
 \newcommand{\Psym}{P_{\mathrm{ring}}}
+\setlength{\textfloatsep}{6pt plus 2pt minus 2pt}
 \begin{document}
 \title{Extracting Operational Entanglement from a Noise-Protected Many-Body System}
 \author{Bhavay Tyagi}
@@ -15,23 +16,25 @@
 \affiliation{Department of Physics, University of Houston, Houston, Texas 77204, USA}
 \author{Kevin E. Bassler}
 \affiliation{Department of Physics, University of Houston, Houston, Texas 77204, USA}
+\affiliation{Department of Mathematics, University of Houston, Houston, TX}
+\affiliation{Texas Center for Superconductivity, University of Houston, Houston, TX}
 \date{\today}
 \begin{abstract}
-Can a noisy interacting system generate entanglement that remains useful at long times? We show that collective dephasing protects an entangled many-body attractor reached from an unentangled product state in a kicked Ising ring. Coherent operations within each half of the ring extract a physical pair that teleports an unknown qubit with greater than $90\%$ fidelity, heralded with an average probability of $1/192$. As a result, the surviving entanglement serves as a viable operational resource. For imperfect correlations, our finite-time simulations show correlation-dependent survival of the chosen decoder's teleportation advantage.
+Can noisy dynamics generate entanglement that stays useful at long times? Under collective dephasing, a twelve-spin kicked Ising ring evolves from a uniform product state toward an entangled stationary state that is maximally mixed in the sector fixed by the ring’s rotations and reflections. Gates and measurements within each half herald a spin pair that teleports an unknown qubit with a mean fidelity of 90.5\%. Simulations show that stronger noise correlations extend the time over which the ring yields pairs that beat the classical teleportation limit.
 \end{abstract}
 \maketitle
 
-We traditionally treat noise as the enemy of coherence, and counter it either by isolating the system better or by correcting its errors~\cite{Acharya2023}. A complementary route asks what the environment can actually \emph{see}. Figure~\ref{fig:model} (a) illustrates this distinction. Independent noise channels resolve the coupled spin component at each site, whereas a collective field couples only to their sum. Spatial correlations in the environment therefore determine how well it can distinguish different spin configurations. Decoherence-free subspaces and noiseless subsystems exploit collective coupling to preserve quantum information~\cite{Zanardi1997,Lidar1998,Knill2000}. Correlated dephasing has also been measured in trapped-ion, superconducting and silicon-spin devices~\cite{Monz2011,vonLupke2020,Yoneda2023}. Our earlier work showed that a shared correlated environment can synchronize two coupled spins~\cite{Tyagi2024} and coupled quantum oscillators~\cite{Bittner2025jcp}. These studies explored how environmental correlations can organize collective quantum dynamics. We now carry this question into an interacting many-body system. Can a correlated environment protect entanglement that the system generates intrinsically, starting from an unentangled state? What fixes its surviving amount, and can it be used to perform a quantum task?
+We traditionally treat noise as the enemy of coherence, and counter it either by isolating the system better or by correcting its errors~\cite{Acharya2023}. A complementary route asks what the environment can actually \emph{see}. Figure~\ref{fig:model} (a) illustrates this distinction. Independent noise channels resolve the coupled spin component at each site, whereas a collective field couples only to their sum. Spatial correlations in the environment therefore determine how well it can distinguish different spin configurations. Decoherence-free subspaces and noiseless subsystems exploit collective coupling to preserve quantum information~\cite{Zanardi1997,Lidar1998,Knill2000}. Correlated dephasing has also been measured in trapped-ion, superconducting and silicon-spin devices~\cite{Monz2011,vonLupke2020,Yoneda2023}. Our earlier work showed how correlated environments organize collective quantum dynamics~\cite{Tyagi2024,Bittner2025jcp,Bittner2026graph}. We now carry this question into an interacting many-body system. Can a correlated environment protect entanglement that the system generates intrinsically, starting from an unentangled state? What fixes its surviving amount, and can it be used to perform a quantum task?
 
-Strong symmetries also organize dissipative dynamics into invariant sectors~\cite{BucaProsen2012}. For unital channels with non-Abelian on-site symmetries, maximally mixed invariant-sector states can be entangled and have distillable entanglement~\cite{Moharramipour2024}. These results motivate a concrete question for spatial symmetries: can a driven ring prepare such a mixed resource from a product state, and can operations on physical spins expose its usefulness? The extraction question is related to localizable entanglement, which studies entanglement localized between spins by measurements on the others~\cite{Popp2005}. Here we allow coherent gates within each half of the ring and specify one heralded filter, without optimizing over all such operations.
+Strong symmetries also organize dissipative dynamics into invariant sectors~\cite{BucaProsen2012}. For unital channels with non-Abelian on-site symmetries, maximally mixed invariant-sector states can be entangled and have distillable entanglement~\cite{Moharramipour2024}. We ask whether spatial symmetry can protect an entangled state that a driven ring prepares from a product state. To use that entanglement, we bring it onto two physical spins with gates and measurements within each half of the ring.
 
-\begin{figure}[tbp]
+\begin{figure}[!t]
 \includegraphics[width=\linewidth]{combined_opening.pdf}
-\caption{\label{fig:model} (a) Schematic comparison of independent and collective dephasing. A collective environment cannot distinguish spin configurations with the same total magnetization. Blue spins represent the interacting ring, and red regions depict its dephasing environment. The schematic negativity curves illustrate entanglement survival as $\xi\rightarrow1$. (b) Circuit representing the full protocol. In the extraction phase, Alice and Bob apply local CNOT gates and measurements to their halves of the spin chain. They retain the resource pair ($A$ and $B$) only if each obtains the predetermined classical record $10101$. The teleportation phase uses this extracted pair to teleport an unknown input qubit $\ket{\psi}$ via Bell-state measurement and Pauli corrections to yield $\rho_{\text{out}}$. The ring-and-environment artwork in (a) was generated and edited with the built-in \texttt{image\_gen} tool; labels, schematic curves and circuit were composed separately.}
+\caption{\label{fig:model} (a) Independent and collective dephasing of the interacting ring (blue spins; red environment). Collective dephasing cannot distinguish spin configurations with the same total magnetization. Schematic negativity curves illustrate entanglement survival as $\xi\rightarrow1$. (b) Physical extraction and teleportation. Alice and Bob apply local CNOT gates and measurements within their halves, accepting the pair ($A$ and $B$) when both records are $10101$. Bell-state measurement and Pauli corrections teleport the unknown input $\ket{\psi}$ to $\rho_{\text{out}}$.}
 \end{figure}
 
 
-\emph{In this Letter} we connect spatial-symmetry-restricted noisy dynamics to a physical teleportation resource in a driven Ising ring~\cite{Bertini2018}. The protecting transformations permute ring sites, rather than acting as the on-site symmetry considered in Ref.~\cite{Moharramipour2024}. Starting from a uniform product state, interactions generate entanglement. Collective dephasing preserves the ring-symmetric sector containing that input, and the driven dynamics approaches a maximally mixed density within this sector. For twelve spins, a fixed decoder confined to the two separate halves extracts an entangled pair of physical spins and uses it for teleportation above the classical fidelity benchmark. Figure~\ref{fig:model}(b) shows the extraction and subsequent task. The contribution is this explicit preparation-to-task connection, with separately quantified accepted-pair fidelity and extraction probability; it does not require every state in the sector to be unchanged by noise.
+\emph{In this Letter} we show how a noisy driven Ising ring~\cite{Bertini2018} prepares an entangled state and supplies a physical pair for teleportation. The protecting symmetries rotate and reflect the ring, rather than act on each site as in Ref.~\cite{Moharramipour2024}. Starting from a uniform product state, interactions generate entanglement while collective dephasing keeps the state within the ring-symmetric sector. For twelve spins, the dynamics approaches the maximally mixed state within this sector. A circuit acting within each half then extracts a pair that teleports a qubit above the classical fidelity benchmark [Fig.~\ref{fig:model}(b)]. The protocol turns entanglement generated in a noisy many-body system into an accessible quantum resource.
 
 \emph{Model and preparation.}---The one-period quantum channel $\mathcal M_\xi$ applies an Ising layer, a transverse kick, and accumulated dephasing, in that order.
 \begin{align}
@@ -41,34 +44,36 @@ Strong symmetries also organize dissipative dynamics into invariant sectors~\cit
 &\equiv e^{\mathcal D_\xi}\!\left(\UK\UI\rho_t\UI^\dagger\UK^\dagger\right).
 \label{eq:map}
 \end{align}
-The boundary is periodic, $\sigma^z_{L+1}=\sigma^z_1$, and one period is the unit of time. This well-studied spin chain combines local interactions with periodic driving and supplies a direct gate decomposition. At its self-dual points, \emph{space-time} duality permits exact calculations of selected spectral and entanglement observables of the coherent dynamics~\cite{Bertini2018,Bertini2019}. We set $J=\pi/4$, $b=-\pi/4$, and $h=1$, placing the coherent evolution at a \emph{dual-unitary point}. This is the model point studied here. The stationary projector below follows from spatial symmetry and unitality; its attraction additionally uses the finite-size algebraic certificate in End matter A. We do not infer robustness away from these parameters from dual unitarity. We prepare the uniform product state $\rho_0=(\ket{+}\!\bra{+})^{\otimes L}$, where $\ket{+}=(\ket0+\ket1)/\sqrt2$.
+Here $L$ is the number of spins (the system volume), and $\sigma_j^{x,y,z}$ are local Pauli operators acting on site $j$. The boundary is periodic, $\sigma^z_{L+1}=\sigma^z_1$, and one period is the unit of time. At self-dual points, \emph{space-time} duality permits exact calculations of selected spectral and entanglement observables of the coherent dynamics~\cite{Bertini2018,Bertini2019}. We use twelve spins with $J=\pi/4$, $b=-\pi/4$, and $h=1$, at a \emph{dual-unitary point}. The initial state is the uniform product $\rho_0=(\ket{+}\!\bra{+})^{\otimes L}$, where $\ket{+}=(\ket0+\ket1)/\sqrt2$. Appendix~\ref{App:A} proves convergence to the symmetry-selected stationary state under collective dephasing at these parameters.
 
 We describe the accumulated dephasing by the Lindblad generator~\cite{Breuer2007},
 \begin{equation}
 \mathcal D_\xi[\rho]=\gamma\sum_{i,j=1}^{L}\Xi_{ij}\left(\sigma_i^z\rho\sigma_j^z-\tfrac12\{\sigma_j^z\sigma_i^z,\rho\}\right).
 \label{eq:noise}
 \end{equation}
-Here $\sigma_i^z$ are the local dephasing operators and $\Xi_{ij}=(1-\xi)\delta_{ij}+\xi$ is the noise-correlation matrix. The covariance eigenvalues give the physical range
-$-1/(L-1)\le\xi\le1$ and leave only one active collective noise mode at
-$\xi=1$ (see End matter~C). For $0\le\xi\le1$, each spin is subject to a shared noise channel and an independent local noise channel. Increasing $\xi$ increases the shared contribution while keeping the total noise strength at each spin fixed. At $\xi=0$, the noise channels are independent; at $\xi=1$, a single collective noise channel acts on all spins. The allowed negative values describe anticorrelated noise. The channel $e^{\mathcal D_\xi}$ is obtained exactly by averaging Gaussian white phase noise applied after the coherent layers. All trajectories reported here use the dephasing rate $\gamma=0.1$.
+Here $\sigma_i^z$ are the local dephasing operators and $\Xi_{ij}=(1-\xi)\delta_{ij}+\xi$ is the noise-correlation matrix. Its eigenvalues give the physical range $-1/(L-1)\le\xi\le1$ (Appendix~\ref{app:Log-neg}). For $\xi$ in the physical range, each spin experiences shared and independent noise. Increasing $\xi$ strengthens the uniform collective noise mode while keeping the total noise strength at each spin fixed. The noise is independent at $\xi=0$ and fully collective at $\xi=1$; allowed negative values describe anticorrelations. Averaging Gaussian white phase noise with $\gamma=0.1$ after the coherent layers gives $e^{\mathcal D_\xi}$ exactly.
 
 To quantify the entanglement generated during evolution, we divide the ring into two contiguous equal halves and calculate the logarithmic negativity~\cite{Vidal2002},
 \begin{equation}
 \EN(t)=\ln\|\rho_t^{T_A}\|_1.
 \label{eq:negativity}
 \end{equation}
-A positive value certifies entanglement between the two halves. We use the natural logarithm. The product input has $\EN(0)=0$.
+A positive value certifies entanglement between the two halves. The product input has $\EN(0)=0$.
 
 \begin{figure}[!t]
 \includegraphics[width=\linewidth]{negativity_L12_correlations.pdf}
-\caption{\label{fig:negativity}Correlation dependence of generated entanglement for twelve spins over the twenty correlations used in Fig.~\ref{fig:dynamics}. The initial state is the uniform product input $(\ket{+}\!\bra{+})^{\otimes12}$. Logarithmic negativity is in natural-log units. Markers give the thirteen calculated times $0,1,2,3,4,5,10,20,40,80,150,250,400$; connecting lines are visual guides. The time axis is linear through five Floquet periods and logarithmic thereafter. Representative near-collective curves are identified by marker shape and legend.}
+\caption{\label{fig:negativity}Correlation dependence of generated entanglement for twelve spins over the twenty correlations used in Fig.~\ref{fig:dynamics}. Logarithmic negativity is in natural-log units. 
+%not needed Markers give the thirteen calculated times $0,1,2,3,4,5,10,20,40,80,150,250,400$; connecting lines are visual guides. 
+The time axis is linear through five Floquet periods and logarithmic thereafter.}
 \end{figure}
 
-\emph{Results.}---Starting from $\rho_0$, interactions generate entanglement between the two halves. Figure~\ref{fig:negativity} gives logarithmic negativity at thirteen sampled times through $400$ periods. The initial buildup is followed by decay whose late-time behavior depends strongly on the noise correlations. Under collective dephasing, the twelve-spin trajectory approaches the entangled stationary state. Near the collective limit the early buildup is similar, while entanglement persists longer over the observed interval as $\xi\rightarrow1$. These finite-time comparisons concern the stated model and noise covariance. They do not establish a device preparation rate or a universal protection time for imperfect correlations.
+\emph{Results.}---Interactions generate entanglement between the two halves from the product input. Figure~\ref{fig:negativity} shows a rapid buildup followed by correlation-dependent decay. Near the collective limit, entanglement survives longer as the noise becomes more correlated. At $\xi=1$, the trajectory approaches an entangled stationary state.
 
 \begin{figure*}[t]
 \includegraphics[width=\textwidth]{xi_resource_L12_all20.pdf}
-\caption{\label{fig:dynamics}Correlation dependence of entanglement extraction and teleportation for twelve spins. The twenty equally spaced rows have nonuniform correlation spacing: $\xi=-1/11,\allowbreak -0.05,\allowbreak 0,\allowbreak 0.1,\allowbreak 0.2,\allowbreak 0.3,\allowbreak 0.4,\allowbreak 0.5,\allowbreak 0.6,\allowbreak 0.7,\allowbreak 0.8,\allowbreak 0.85,\allowbreak 0.9,\allowbreak 0.95,\allowbreak 0.97,\allowbreak 0.98,\allowbreak 0.99,\allowbreak 0.995,\allowbreak 0.999,\allowbreak 1$. (a) Fixed-decoder conditional teleportation fidelity, with color centered on the classical benchmark $2/3$, and (b) heralding probability on a logarithmic color scale. The input and parameters are those of Fig.~\ref{fig:negativity}. Each constant-color time cell represents one of the $401$ integer times from $0$ through $400$ periods; the cell boundaries are at half-integer times. Time axes are linear through five Floquet periods and logarithmic thereafter, so the displayed cell widths are unequal.}
+\caption{\label{fig:dynamics}Correlation dependence of entanglement extraction and teleportation for twelve spins. The twenty equally spaced rows have nonuniform correlation spacing.
+% not needed $\xi=-1/11,\allowbreak -0.05,\allowbreak 0,\allowbreak 0.1,\allowbreak 0.2,\allowbreak 0.3,\allowbreak 0.4,\allowbreak 0.5,\allowbreak 0.6,\allowbreak 0.7,\allowbreak 0.8,\allowbreak 0.85,\allowbreak 0.9,\allowbreak 0.95,\allowbreak 0.97,\allowbreak 0.98,\allowbreak 0.99,\allowbreak 0.995,\allowbreak 0.999,\allowbreak 1$. 
+(a) Fixed-decoder conditional teleportation fidelity, with color centered on the classical benchmark $2/3$, and (b) heralding probability on a logarithmic color scale. Each constant-color time cell represents one of the $401$ integer times from $0$ through $400$ periods; the cell boundaries are at half-integer times. Time axes are linear through five Floquet periods and logarithmic thereafter, so the displayed cell widths are unequal.}
 \end{figure*}
 
 The Lindblad generator $\mathcal D_\xi$ describes the dephasing layer, while $\mathcal M_\xi$ in Eq.~\eqref{eq:map} describes the full period. For collective dephasing, $\xi=1$, the stationary state here satisfies $\mathcal D_1[\rho_\infty]=0$ and $\mathcal M_1[\rho_\infty]=\rho_\infty$. Let $D_L$ comprise the ring's $L$ rotations and $L$ reflections, represented by spin permutations $U(g)$. Its group average gives
@@ -78,11 +83,9 @@ The Lindblad generator $\mathcal D_\xi$ describes the dephasing layer, while $\m
 \rho_\infty=\frac{\Psym}{N_L}.
 \label{eq:target}
 \end{equation}
-Here $\Psym$ is the orthogonal projector onto $\mathcal S$, the subspace of spin states unchanged by every rotation and reflection of the ring, and $N_L=\dim\mathcal S$. Thus $\rho_\infty$ is maximally mixed on $\mathcal S$, which contains the uniform product input. Both coherent layers and the collective jump $\sum_j\sigma_j^z$ preserve support in $\mathcal S$. Each layer separately leaves $\rho_\infty$ unchanged. Preservation of this sector does not imply that arbitrary supported states or coherences remain unchanged.
+Here $\Psym$ projects onto $\mathcal S$, the spin states unchanged by every rotation and reflection of the ring, and $N_L=\dim\mathcal S$. Thus $\rho_\infty$ is maximally mixed on this sector, which contains the uniform product input. Both coherent layers and collective dephasing preserve $\mathcal S$ and leave $\rho_\infty$ unchanged. Appendix~\ref{App:A} proves that every initial state supported on $\mathcal S$ converges to this density for twelve spins. For $\xi<1$, additional noise modes resolve relative spin configurations, breaking this support protection and making $\rho_\infty$ nonstationary.
 
-End matter A establishes convergence from every state supported on $\mathcal S$ at the stated parameters for $L=12$. Within that sector, the limiting density is independent of the initial supported state; it is not a globally unique attractor for arbitrary ring inputs. Departures from perfectly collective noise remove this support protection. Although the averaged channel remains covariant under the dihedral ring transformations, its individual noise operators need not preserve $\mathcal S$. The ideal target ceases to be stationary for every allowed $\xi<1$; this alone is not an assertion about the long-time usefulness of a different state.
-
-A nonzero logarithmic negativity confirms entanglement in the stationary state, but does not by itself specify how to access this resource. Here, accessing the resource means using local operations within the two halves to extract an entangled pair of physical spins suitable for a quantum task. We use this pair for quantum teleportation, whose fidelity quantifies how accurately an unknown quantum state can be transferred between the two halves. We extract the pair by probabilistic local filtering~\cite{Teleportation1999}. In each half of $m=L/2$ spins, select the alternating string $a=0101\cdots$ and its complement $\bar a$. The operator for a successful local outcome is given by
+The next step is to extract a pair of usable spins. Concentrating many-body entanglement onto selected spins is the goal of localizable-entanglement protocols~\cite{Popp2005}. Our circuit combines gates and measurements within each half to prepare a pair for teleportation~\cite{Teleportation1999}. In each half of $m=L/2$ spins, select the alternating string $a=0101\cdots$ and its complement $\bar a$. The operator for a successful local outcome is
 \begin{equation}
 K=\ket0\bra a+\ket1\bra{\bar a}.
 \label{eq:decoder}
@@ -100,24 +103,22 @@ For the twelve-spin target, the accepted pair is
 r_\infty=\frac67\ket{\Phi^+}\!\bra{\Phi^+}+\frac17\ket{\Psi^+}\!\bra{\Psi^+},\qquad p_\infty=\frac1{192},
 \label{eq:pair12}
 \end{equation}
-with $\ket{\Phi^+}=(\ket{00}+\ket{11})/\sqrt2$ and $\ket{\Psi^+}=(\ket{01}+\ket{10})/\sqrt2$. The Bell overlap $f\equiv \bra{\Phi^+}r_\infty\ket{\Phi^+}=6/7$. The overlap is the weight of the desired maximally entangled state $\ket{\Phi^+}$ in the accepted pair. For the twelve-spin steady state under collective dephasing, $\xi=1$, the standard teleportation measurement and corrections yield the fidelity $F$, averaged uniformly over all pure input qubits~\cite{Teleportation1999}
+with $\ket{\Phi^+}=(\ket{00}+\ket{11})/\sqrt2$ and $\ket{\Psi^+}=(\ket{01}+\ket{10})/\sqrt2$. The Bell overlap is $f\equiv \bra{\Phi^+}r_\infty\ket{\Phi^+}=6/7$. Standard teleportation measurement and corrections give the fidelity $F$, averaged uniformly over all pure input qubits~\cite{Teleportation1999},
 \begin{equation}
-F=\frac{2f+1}{3}=\frac{19}{21}\simeq90.48\%>\frac23.
+%F=\frac{2f+1}{3}=\frac{19}{21}\simeq90.48\%>\frac23.
+F=\frac{2f+1}{3}=\frac{19}{21}\simeq90.5\%>\frac23.
 \label{eq:fidelity}
 \end{equation}
-This fidelity measures the average overlap of Bob's output with the unknown input state. Its value exceeds the classical limit $2/3$ achievable without shared entanglement, so the accepted pair provides a useful teleportation resource. The extraction succeeds with probability $p_\infty=1/192$. Alice and Bob learn whether extraction has succeeded from their local measurement records before the unknown input is supplied. They can therefore repeat the ring preparation and extraction independently until an accepted pair is ready, requiring $192$ preparations on average. The fidelity characterizes the quality of these accepted pairs, while the success probability determines how often they are obtained. This protocol demonstrates access to the resource without optimizing its extraction yield. 
-%At sixteen spins the same target-state construction gives $F=25/27$ with $p=1/2000$.
+This mean fidelity exceeds the classical limit $2/3$ achievable without shared entanglement. Alice and Bob herald successful extraction before the unknown input is supplied. With independent resets, they can repeat the preparation until a pair is ready, requiring $192$ attempts on average. The conditional fidelity gives the quality of accepted pairs, while $p_\infty=1/192$ gives their yield. We assume ideal local gates and readout, with the driven noisy dynamics paused during extraction and teleportation.
 
-{\it Discussion and Conclusions.}---Figure~\ref{fig:negativity} tracks entanglement generation and survival, while Fig.~\ref{fig:dynamics} evaluates the specified extraction protocol at every integer period. Its useful-time set is defined by conditional fidelity $F_t>2/3$, with the corresponding probability $p_t$ determining the extraction yield. Using a numerical threshold $F_t>2/3+10^{-10}$, the sampled useful integer times are $2$ through $178$ at $\xi=0.99$, whereas at $\xi=0.999$ the advantage persists from period $2$ through the end of the run at $400$. The latter observation is right-censored; no later loss or infinite-time advantage is inferred. These examples do not assert that the useful-time set is a single interval for all parameters.
+{\it Discussion and Conclusions.}---Figure~\ref{fig:dynamics} shows how noise correlations control the survival of the accepted pairs' teleportation advantage. For sufficiently strong correlations, their mean fidelity rises above the classical benchmark after entanglement builds up. As correlations approach the collective limit, the fidelity stays above this benchmark for longer. For the strongest correlations, it survives to the end of the $400$-period run. Panel (b) gives the corresponding extraction probability. Ring entanglement can outlast the teleportation advantage of this decoder, distinguishing entanglement survival from its usefulness for the chosen task. Our simple, unoptimized filter serves as a proof of principle: despite its small success probability, it converts noise-protected many-body entanglement into a pair for high-fidelity teleportation. We focus on twelve spins to keep full density-matrix evolution and entanglement calculations tractable.
 
-For imperfect correlations, the chosen pair can lose its teleportation advantage while the ring remains entangled. For example, at $\xi=0.995$ and period $400$, the saved data give $\EN\simeq0.00989$ but $F\simeq0.6426<2/3$, with $p\simeq0.00148$. This concerns the fixed decoder and does not rule out other uses of the remaining entanglement. The observed correlation dependence is a finite-time result; we make no asymptotic claim here for imperfect noise, including the singular anticorrelated endpoint.
+The trend follows what the environment can resolve. For $\xi<1$, additional noise channels distinguish differences between the spins. Their strength is proportional to $1-\xi$ (Appendix~\ref{app:Log-neg}), so this source of dephasing weakens as $\xi\rightarrow1$. At the collective endpoint, the environment couples only to the sum of all spins' $z$ components, the total magnetization, and ring symmetry protects the entangled stationary state.
 
-Note that the extraction requires local controlled-NOT gates and measurements within each half, followed by communication of their outcomes. During these operations, we assume that the driven and noisy ring evolution is suppressed and that the gates and measurements are ideal. In an implementation, gate and readout errors can change both the fidelity and success probability, while the durations of preparation, gates, readout and communication determine how long each attempt takes. Together with the small success probability, these durations set how often an accepted pair can be prepared; that rate requires a specified implementation and is not determined here. Repeated attempts assume independent resets. After a successful extraction, holding the pair until the input arrives is also idealized: the ring-symmetry argument does not automatically protect the extracted two-spin state against subsequent uncontrolled noise.
-
-We show that collective dephasing protects entanglement generated by interactions from an initially unentangled product state. In the twelve-spin ring, collective noise preserves the ring-symmetric sector, within which the driven dynamics approaches an entangled stationary density. This density is unchanged by each coherent layer and by collective dephasing; preservation of the sector does not imply invariance of every supported state. A fixed decoder acting separately within the two halves extracts a physical pair that implements teleportation with uniform-input average fidelity $19/21$ and heralding probability $1/192$. The fidelity characterizes the quality of the accepted pairs, while the probability determines their extraction yield; their physical production rate depends on the implementation. The example connects a symmetry-protected many-body stationary state to a concrete quantum-information task and distinguishes persistent entanglement from the yield of an accessible resource.
+We show how interactions and collective noise prepare entanglement that can be used for teleportation. The twelve-spin dynamics approaches an entangled stationary state within the ring-symmetric sector. A circuit acting within the two halves extracts a physical pair with uniform-input average fidelity $19/21$ and heralding probability $1/192$. Superconducting circuits already realize kicked-Ising dynamics~\cite{Mi2022edge} and engineered correlated dephasing~\cite{vonLupke2020}. Building on our shared-reservoir circuit proposal~\cite{Ayoub2026}, we are pursuing experimental tests of correlated-noise effects, with entanglement extraction as the next goal. The protocol connects a many-body state protected by collective noise to a concrete quantum-information task.
 
 \begin{acknowledgments}
-\emph{Acknowledgements.}---This work was supported by the National Science Foundation (CHE-2404788) and the Robert A. Welch Foundation (E-1337). GPT-6-Astra assisted with earlier numerical calculations and extraction-protocol suggestion. GPT-6.1 Sol assisted with the present manuscript editing. The authors take full responsibility for the content.
+\emph{Acknowledgements.}---This work was supported by the National Science Foundation (CHE-2404788) and the Robert A. Welch Foundation (E-1337). GPT-6-Astra assisted with all numerical calculations and suggested the extraction-protocol. GPT-6.1 Sol assisted with the manuscript editing. The ring-and-environment artwork in Fig.~\ref{fig:model}(a) was generated and edited using OpenAI's image generation tool. The authors take full responsibility for the content.
 \end{acknowledgments}
 
 \emph{Data availability.}---
@@ -127,87 +128,60 @@ The numerical calculations are retained in a private GitHub repository.
 \bibliography{References_revision_2}
 
 \clearpage
-\section*{End matter}
-\paragraph*{A. Symmetry-selected stationary state and attraction.}
-Here $J^\alpha=\tfrac12\sum_j\sigma_j^\alpha$, $\gamma>0$, $\sin(2b)\ne0$, and the longitudinal field is uniform. We distinguish stationarity from convergence for the map in Eq.~\eqref{eq:map}.
 
-\emph{1. Peripheral operators.} Write $\mathcal E=e^{\mathcal D_1}$ and $U_F=\UK\UI$. Suppose $\mathcal M_1X=\lambda X$ with $|\lambda|=1$, and set $Y=U_FXU_F^\dagger$. Unitary invariance and dephasing contraction give $\|X\|_2=\|\mathcal E(Y)\|_2\le\|Y\|_2=\|X\|_2$. In a total-$z$ eigenbasis, $\mathcal E$ strictly contracts every block connecting unequal magnetizations and leaves the other blocks unchanged. Equality therefore gives $\mathcal E(Y)=Y=\lambda X$, so $[J^z,Y]=[J^z,X]=0$. Conjugating the latter relation by $U_F$, and using $[\UI,J^z]=0$, gives $[\UK J^z\UK^\dagger,X]=0$. Since $\UK J^z\UK^\dagger=\cos(2b)J^z-\sin(2b)J^y$ and $\sin(2b)\ne0$, $X$ commutes with all three collective spins. It then commutes with $\UK$, leaving $\UI X\UI^\dagger=\lambda X$. Conversely, those conditions imply the peripheral relation. Thus\begin{align}
+\section*{End Matter}
+\appendix
+\newcommand{\prlappendix}[1]{\par\addvspace{4pt}\refstepcounter{section}\noindent\textit{Appendix~\thesection: #1}---}
+
+\prlappendix{Convergence under collective dephasing}
+\label{App:A}
+Every state supported on $\mathcal S$, the ring-symmetric sector defined after Eq.~\eqref{eq:target}, converges to $\rho_\infty$ under $\mathcal M_1$ at the twelve-spin parameters of Eq.~\eqref{eq:map}. The coherent layers and the collective spin operators $J^\alpha=\tfrac12\sum_j\sigma_j^\alpha$ preserve $\mathcal S$. We restrict all operators below to this sector.
+
+\emph{Which operators survive dephasing?} Consider an eigenoperator $\mathcal M_1[X]=\lambda X$ with $|\lambda|=1$. Set $U_F=\UK\UI$ and $Y=U_F X U_F^\dagger$. Collective dephasing leaves equal-magnetization blocks of $Y$ unchanged and strictly damps all other blocks ($\gamma>0$, Appendix~\ref{app:Log-neg}). Yet $\|e^{\mathcal D_1}(Y)\|_2=\|X\|_2=\|Y\|_2$ in the Hilbert--Schmidt norm. Hence $Y=\lambda X$ and $[J^z,X]=0$. Conjugating this commutator by $U_F$ shows that $X$ also commutes with $\UK J^z\UK^\dagger=\cos(2b)J^z-\sin(2b)J^y$, since $[\UI,J^z]=0$. At $b=-\pi/4$ this gives commutation with $J^y$, and then with $J^x$ by the spin commutator. Thus $X$ commutes with the kick and obeys $\UI X\UI^\dagger=\lambda X$. Conversely these conditions suffice, giving
+\begin{align}
 \operatorname{Fix}(\mathcal M_1)&=\{J^x,J^y,J^z,\UI\}',\nonumber\\
 \operatorname{Per}_\lambda(\mathcal M_1)&=\{X:[X,J^{x,y,z}]=0,\ \UI X\UI^\dagger=\lambda X\}.
 \label{eq:algebra}
 \end{align}
-A prime denotes the operators commuting with the listed generators. The highest-$J^z$ eigenspace is one dimensional, spanned by the fully polarized vector $v=\ket{0\cdots0}$. Thus $[J^z,X]=0$ implies $Xv=cv$. Since $\UI v$ is a phase times $v$, the peripheral relation forces $c=0$ whenever $\lambda\ne1$.
+Here the prime denotes the common commutant.
 
-\emph{2. Convergence within the supported sector.} The initial density obeys $\Psym\rho_0\Psym=\rho_0$. Assume the fixed algebra restricted to $\mathcal S$ is scalar; step 3 establishes this at the listed sizes. Unitality then makes $\Psym/N_L$ the unique stationary density in this sector. For a peripheral $X$, the Schwarz inequality for the restricted unital completely positive channel gives $\mathcal M_1(X^\dagger X)-\mathcal M_1(X)^\dagger\mathcal M_1(X)\succeq0$. Trace preservation and $|\lambda|=1$ make the trace of this positive difference zero, so $X^\dagger X$ is fixed. Scalarity gives $X^\dagger X=c\mathbb I_{\mathcal S}$; for nonzero $X$, $c>0$ and $X$ is invertible on $\mathcal S$. For $\lambda\ne1$, step 1 instead gives $Xv=0$, with $v\in\mathcal S$, a contradiction. Finally, the Hilbert--Schmidt contraction makes all powers of $\mathcal M_1$ bounded, excluding nontrivial Jordan blocks at unit-modulus eigenvalues. All remaining spectral components decay. Hence every supported density converges ordinarily to Eq.~\eqref{eq:target}, without time averaging.
+\emph{Uniqueness on $\mathcal S$.} The polarized vector $v=\ket{0\cdots 0}$ spans the highest-$J^z$ eigenspace. Every fixed operator $C$ therefore satisfies $Cv=cv$. To show that $C$ is scalar throughout $\mathcal S$, it suffices to span that sector with vectors $Av$ formed from the generators in Eq.~\eqref{eq:algebra}. For each such $A$, $CAv=cAv$.
 
-\emph{3. Finite-size certificate.} At $J=\pi/4$, the periodic Ising layer is $\UI=e^{-i\pi L/4}R e^{-i2hJ^z}$, where $R=(-1)^{n_{\mathrm{DW}}/2}$ and $n_{\mathrm{DW}}$ counts the even number of domain walls. The algebra generated by $J^{x,y,z}$ and $\UI$ therefore contains $R$, the spectral projectors of $J^z$, and their joint weight/$R$ projectors. In the unnormalized basis of computational-string orbits under $D_L$, these projectors and $\sum_j\sigma_j^x$ have integer entries. Their cyclic span from $v$ has full rank modulo $1000003$ for every $3\le L\le16$. The dimensions are $4,6,8,13,18,30,46,78,126,224,380,687,1224,2250$ in that order. A second prime, $1000033$, checks the even sizes and $L=13,15$. A nonzero full-rank minor modulo a prime is nonzero over the complex numbers. The polarized rank-one projector $q=\ket v\!\bra v$ is a polynomial in $J^z$. If $C$ commutes with the generated algebra, then $[C,q]=0$ gives $Cv=cv$, and $CAv=ACv=cAv$ for every generated $A$. Full cyclic span therefore forces $C=c\mathbb I_{\mathcal S}$, establishing step 2's hypothesis in these sizes. This certificate is finite; attraction at other sizes requires the same condition there. The scripts, exact ranks and basis conventions are retained with the numerical calculations.
+At $J=\pi/4$, the periodic Ising layer is $\UI=e^{-i\pi L/4}R e^{-i2hJ^z}$, where $R=(-1)^{n_{\mathrm{DW}}/2}$ and $n_{\mathrm{DW}}$ counts domain walls. Thus $R$ and the joint spectral projectors of $R$ and $J^z$ belong to the generated algebra. Take as basis vectors the unnormalized sums of computational strings in each dihedral orbit. In this basis the joint projectors are diagonal with entries zero or one, and $2J^x=\sum_j\sigma_j^x$ has integer entries that count single-spin flips. Starting with $v$, we close its span under the projectors and $2J^x$ by retaining each linearly independent vector they generate. The rank is $224=N_{12}$ modulo each of the primes $1000003$ and $1000033$. A full-rank minor nonzero modulo either prime is nonzero over $\mathbb C$. Hence the vectors $Av$ span $\mathcal S$, and the fixed operators are scalar there.
 
-\emph{4. Noise realization and numerical convention.} During the dissipative step, Gaussian phase increments obey $\mathbb E[dW_i dW_j]=\gamma\Xi_{ij}\,dt$. Averaging the stochastic Hamiltonian $\sum_j\sigma_j^z\,dW_j$ gives Eq.~\eqref{eq:noise}. For $0\le\xi\le1$ one may use
-\begin{equation}
-dW_j=\sqrt\gamma\left(\sqrt\xi\,dB_c+\sqrt{1-\xi}\,dB_j\right),
-\end{equation}
-with independent unit Wiener increments. For negative allowed $\xi$, a positive-semidefinite covariance factorization supplies the increments. This is an accumulated-noise model, with the ordering fixed by Eq.~\eqref{eq:map}. Numerical site zero is the most significant computational bit, and the partial transpose acts on the first half. The twelve-spin sweep evolves the full density matrix for every $\xi$, including $\xi=1$. Trace and Hermiticity residuals are checked against $10^{-10}$ at every period. At the thirteen times sampled in Fig.~\ref{fig:negativity}, complete density and partial-transpose spectra are evaluated: density positivity is checked to $10^{-10}$ and both spectral traces to $10^{-10}$. Small negative roundoff is retained rather than clipped. The saved sweep contains observables and diagnostics, not the terminal density or complete eigenvalue arrays.
+\emph{Convergence.} For any eigenoperator in Eq.~\eqref{eq:algebra}, $X^\dagger X$ commutes with all three collective spin components and with $\UI$, since $|\lambda|=1$. Hence $X^\dagger X$ is scalar, and a nonzero $X$ is invertible on $\mathcal S$. Commutation with $J^z$ gives $Xv=cv$. Evaluating $\UI X\UI^\dagger=\lambda X$ on the Ising eigenvector $v$ gives $c=\lambda c$. Invertibility forces $c\ne0$, so $\lambda=1$. The Hilbert--Schmidt contraction bounds all powers of $\mathcal M_1$, excluding nontrivial Jordan blocks on the unit circle. All other modes decay, and trace preservation fixes the limiting density to Eq.~\eqref{eq:target}.
 
-An independently implemented dense four-spin reference agrees with the map/resource calculation to $6.95\times10^{-16}$ in the recorded comparisons. The ideal twelve-spin observables also agree with a separately frozen symmetry-sector calculation; at period $400$ that separate calculation has Frobenius distance $4.80\times10^{-15}$ from $\rho_\infty$. This is a residual of the ideal-sector calculation, not an archived terminal-state residual of the full-density sweep. The target pair, probability and fidelity have the exact orbit checks in End matter B.
-
-% GPT-6-Astra assisted with numerical calculations and extraction-protocol suggestions. In the present revision, GPT-6.1 Sol assisted with review of the derivations and numerical evidence in separate contexts; Codex (GPT-6) coordinated these checks and their integration. Checks of the calculations include the independent map/resource comparisons described above, exact orbit arithmetic for the selected pair, and separate implementations of the finite cyclic-rank certificate. These checks distinguish numerical and algebraic evidence; they do not extend the finite-size or finite-time claims.
-
-\paragraph*{B. Physical extraction and teleportation.}
-For twelve spins each half has $a=010101$ and $\bar a=101010$. Five controlled bit flips from its first spin send these states to $\ket0\ket{10101}$ and $\ket1\ket{10101}$. Measuring the remaining five spins and accepting the record $10101$ realizes Eq.~\eqref{eq:decoder} coherently. Both halves announce success by classical communication. No unknown input has yet been supplied.
-
-\emph{1. Exact projected block.} Let $\mathcal O_x$ be the orbit of a binary string under $D_L$. The group average in Eq.~\eqref{eq:target} gives
+\prlappendix{Heralded pair from the stationary state}
+\label{App:B}
+The decoder in Eq.~\eqref{eq:decoder} selects four computational strings. Their orbits determine the accepted pair without constructing the full density matrix. If $\mathcal O_y$ is the dihedral orbit of $y$, each string in that orbit occurs equally often in the group average of Eq.~\eqref{eq:target}. Thus
 \begin{equation}
 \bra x\Psym\ket y=\begin{cases}1/|\mathcal O_y|,&x\in\mathcal O_y,\\0,&x\notin\mathcal O_y.\end{cases}
 \label{eq:orbits}
 \end{equation}
-For $L=12$, the strings $aa$ and $\bar a\bar a$ share the alternating orbit of size $2$, while $a\bar a$ and $\bar a a$ share a distinct orbit of size $12$. With $N_{12}=224$, the output basis $00,01,10,11$ gives
+For $a=010101$, $aa$ and $\bar a\bar a$ are the two translates of the alternating string. The string $a\bar a=010101101010$ has a single $11$ bond, so its twelve translates are distinct. Reversing the string leaves it unchanged and translating by six sites gives $\bar a a$. The decoder maps the selected strings from the first orbit to $00,11$ and those from the second to $01,10$. Within each selected block all entries of $\Psym$ are equal, $1/2$ in the first and $1/12$ in the second. As $N_{12}=224$, Eq.~\eqref{eq:pair} gives
 \begin{equation}
-\sigma_\infty=\frac1{224}\begin{pmatrix}
-1/2&0&0&1/2\\
-0&1/12&1/12&0\\
-0&1/12&1/12&0\\
-1/2&0&0&1/2
-\end{pmatrix}.
+\sigma_\infty=\frac{1}{224}\left(\ket{\Phi^+}\!\bra{\Phi^+}
++\frac{1}{6}\ket{\Psi^+}\!\bra{\Psi^+}\right).
 \end{equation}
-Its trace is $p_\infty=(1+1/6)/224=1/192$; normalization yields Eq.~\eqref{eq:pair12}. The pair's partial transpose has eigenvalues $1/2,1/2,5/14,-5/14$, certifying entanglement independently of the ring negativity.
+Its trace gives $p_\infty=(1+1/6)/224=1/192$. Dividing by this probability gives the Bell weights $6/7$ and $1/7$ in Eq.~\eqref{eq:pair12}. With $\Phi^+$ as the reference and all teleportation outcomes retained, the first weight gives the conditional mean fidelity $19/21$ through Eq.~\eqref{eq:fidelity}.
 
-\emph{2. Operational benchmark and yield.} Standard Bell measurement on Alice's unknown input and retained spin, followed by Bob's outcome-dependent Pauli correction, retains all teleportation measurement outcomes. The reference Bell state is $\Phi^+$ for $L$ divisible by four. For $L=2\pmod4$, including ten spins, it is $\Psi^+$: Bob first applies a fixed bit flip to his extracted spin, then uses the standard $\Phi^+$ corrections. This choice is fixed throughout each trajectory. The uniform pure-qubit input average satisfies $F=(2f+1)/3$ for the specified Bell overlap~\cite{Teleportation1999}. The twelve-spin target has $f=6/7$, giving Eq.~\eqref{eq:fidelity}. All local gates and measurements are ideal.
-
-With classical fallback on a failed preparation, the one-attempt average is $\overline F=2/3+p(F-2/3)=2/3+5/4032$. Repeating independent preparations until success instead retains $F$ and costs $1/p=192$ preparations on average.
-\paragraph*{C. Noise-correlation modes and physical range.}
-The noise-correlation matrix acts on the coefficients of the local
-operators $\sigma_j^z$. Write
+\prlappendix{Noise modes and correlation range}
+\label{app:Log-neg}
+For the generator in Eq.~\eqref{eq:noise}, write the covariance of the Gaussian phase increments as $\mathbb E[dW_i\,dW_j]=\gamma\Xi_{ij}\,dt$, with
 \begin{equation}
 \bm\Xi=(1-\xi)\mathbb I+\xi\bm e\bm e^{\mathsf T},
 \qquad \bm e=(1,\ldots,1)^{\mathsf T}.
 \label{eq:noise_covariance}
 \end{equation}
-The normalized uniform vector $\bm v_0=\bm e/\sqrt L$ has eigenvalue
-$\lambda_0=1+(L-1)\xi$. Every vector orthogonal to $\bm e$ has zero
-component sum and eigenvalue $\lambda_\perp=1-\xi$. These subspaces
-have dimensions one and $L-1$ and exhaust the coefficient space.
-Consequently, for $L\ge2$,
+The normalized uniform mode $\bm v_0=\bm e/\sqrt L$ has eigenvalue $\lambda_0=1+(L-1)\xi$. The $L-1$ orthogonal modes have zero component sum and eigenvalue $\lambda_\perp=1-\xi$. Nonnegativity of both mode strengths gives
 \begin{equation}
-\begin{aligned}
-\bm\Xi\succeq0
-&\quad\Longleftrightarrow\quad
-\begin{cases}
-1+(L-1)\xi\ge0,\\
-1-\xi\ge0,
-\end{cases}\\
-&\quad\Longleftrightarrow\quad
+\bm\Xi\succeq0\quad\Longleftrightarrow\quad
 -\frac{1}{L-1}\le\xi\le1.
-\end{aligned}
 \label{eq:noise_range}
 \end{equation}
-This is the physical covariance range of the dephasing model in
-Eq.~\eqref{eq:noise}. At its lower endpoint the uniform eigenvalue
-vanishes; at $\xi=0$ all eigenvalues equal one.
+This includes anticorrelations down to $\xi=-1/11$ for twelve spins, where the uniform mode vanishes. Throughout the interval the variance at each site stays fixed because $\Xi_{jj}=1$.
 
-To identify the surviving channel at the collective endpoint, choose a
-real orthonormal eigenbasis $\bm v_\alpha$ of $\bm\Xi$. With
-$\mathfrak{D}[A]\rho=A\rho A^\dagger-\tfrac12\{A^\dagger A,\rho\}$,
-the generator in Eq.~\eqref{eq:noise} is
+Write $\mathfrak D[A]\rho=A\rho A^\dagger-\tfrac12\{A^\dagger A,\rho\}$. For a real orthonormal eigenbasis $\bm v_\alpha$, averaging the phase rotations generated by $\sum_j\sigma_j^z dW_j$ gives Eq.~\eqref{eq:noise} in terms of the jump operators $L_\alpha$,
 \begin{align}
 \mathcal D_\xi[\rho]&=\sum_{\alpha=0}^{L-1}\mathfrak{D}[L_\alpha]\rho,
 \nonumber\\
@@ -215,26 +189,16 @@ L_\alpha&=\sqrt{\gamma\lambda_\alpha}
 \sum_j v_\alpha(j)\sigma_j^z.
 \label{eq:noise_jumps}
 \end{align}
-Indeed, expanding these dissipators recovers
-$\Xi_{ij}=\sum_\alpha\lambda_\alpha v_\alpha(i)v_\alpha(j)$ in every
-bilinear coefficient. At $\xi=1$, $\lambda_0=L$ and the $L-1$
-transverse eigenvalues vanish. The only active, or bright, noise
-channel therefore has jump
-\begin{align}
-L_0&=\sqrt{\gamma L}\,\frac{1}{\sqrt L}\sum_j\sigma_j^z
-\nonumber\\
-&=\sqrt\gamma\sum_j\sigma_j^z,
-\nonumber\\
-\mathcal D_1[\rho]&=\gamma\mathfrak{D}\!\left[\sum_j\sigma_j^z\right]\rho.
+Each differential mode therefore enters the dissipator with strength $\gamma(1-\xi)$. At $\xi=1$ only the uniform mode remains. Its eigenvalue $L$ cancels the squared normalization of $\bm v_0$, giving
+\begin{equation}
+L_0=\sqrt\gamma\sum_j\sigma_j^z=2\sqrt\gamma J^z,
+\qquad \mathcal D_1[\rho]=\mathfrak D[L_0]\rho.
 \label{eq:collective_jump}
-\end{align}
-The normalized uniform vector cancels the apparent extra factor of
-$L$ in the covariance eigenvalue. The transverse noise directions
-are dark because their strengths are zero; these directions are not
-Hamiltonian excitations. Nor does their disappearance eliminate
-dephasing: coherences between different eigenvalues of
-$\sum_j\sigma_j^z$ still decay. Thus a single collective channel does
-not make every state in the ring-symmetric sector decoherence free;
-preservation of that sector and invariance of its stationary density
-are distinct from preservation of arbitrary coherences within it.
+\end{equation}
+{\widowpenalty=10000 Coherences within a magnetization eigenspace then survive the dephasing step, as used in Appendix~\ref{App:A}. For example, the two alternating strings in Appendix~\ref{App:B} have the same total magnetization but opposite local spins. Their coherence in $\rho_\infty$ is damped whenever $\xi<1$, because their spin difference lies entirely in the differential subspace. The coherent layers preserve $\rho_\infty$, so this damping makes it nonstationary.\par}
+
+\prlappendix{Finite-time observables}
+The trajectories in Figs.~\ref{fig:negativity} and~\ref{fig:dynamics} use the full twelve-spin density at every correlation, including $\xi=1$. At all $401$ integer times we check trace and Hermiticity to $10^{-10}$ and obtain the extraction probability and conditional fidelity from the four strings in Appendix~\ref{App:B}.
+
+For the logarithmic negativity in Eq.~\eqref{eq:negativity}, we take the partial transpose on the first six spins and evaluate its full spectrum at periods $0,1,2,3,4,5,10,20,40,80,150,250,400$. At these times we also check density positivity and both spectral traces to $10^{-10}$, using the computed eigenvalues without clipping.
 \end{document}

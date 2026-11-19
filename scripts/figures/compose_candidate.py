@@ -1,12 +1,16 @@
-"""Native Figure1(b) replacement; preserve Figure1(a) and old panel labels."""
+"""Compose Figure 1 using the frozen reservoir artwork and vector circuit."""
 from pathlib import Path
+import argparse
 import hashlib,json,re
 import numpy as np
 import pymupdf
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
-FIG=ROOT/'Figures'
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--out', type=Path, default=ROOT/'build/figures/fig1')
+output = parser.parse_args().out
+output.mkdir(parents=True, exist_ok=True)
 SOURCE=HERE/'circuit_candidate/full_protocol_labeled.pdf'
 BASELINE=ROOT/'provenance/fig1/combined-before.pdf'
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
@@ -28,9 +32,9 @@ divider=re.findall(rb'q 0 0 245 308 re W n 2 J 1 j 0\.6 w[^q]*?7 134 m\n238 134 
 assert len(divider)==1,len(divider)
 # Minimal unchanged primitives. Original source artwork remains in its own Form.
 replacement=(b'/DeviceRGB CS\n/DeviceRGB cs\n1 j\n'+divider[0]+
-    b'\n0.1254901961 0.2039215686 0.2823529412 rg\n'+b'\n'.join(labels)+b'\n')
+    b'\n0.1254901961 0.2039215686 0.2823529412 rg\n'+b'\n'.join(labels[:1])+b'\n')
 clean.update_stream(overlay[0],replacement)
-assert clean[0].get_text().count('(a)')==clean[0].get_text().count('(b)')==1
+assert clean[0].get_text().count('(a)')==1 and clean[0].get_text().count('(b)')==0
 for old in ['Product','Entangled','Extracted','Teleportation']:
     assert old not in clean[0].get_text(),old
 circuit=pymupdf.open(SOURCE)
@@ -42,7 +46,32 @@ doc=pymupdf.open();page=doc.new_page(width=W,height=H)
 page.show_pdf_page(pymupdf.Rect(0,0,245,308),clean,0,keep_proportion=True)
 circuit_xref=page.show_pdf_page(target,circuit,0,keep_proportion=True)
 assert doc.xref_stream(circuit_xref)==circuit[0].read_contents(),'Circuit source content changed'
+
+# Paint the original (b) glyph above the opaque circuit background. Preserve its
+# exact font, source bytes and position; only draw order changes.
+label_underlay=[x for x,name,invoker,box in page.get_xobjects()
+    if name=='fullpage' and doc.xref_stream(x)==replacement]
+assert len(label_underlay)==1,label_underlay
+resource_kind,font_resources=doc.xref_get_key(label_underlay[0],'Resources')
+assert resource_kind in ('xref','dict'),resource_kind
+label_form=doc.get_new_xref()
+doc.update_object(label_form,'<< /Type /XObject /Subtype /Form '
+    '/BBox [0 0 245 308] /Matrix [1 0 0 1 0 46] '
+    '/Resources '+font_resources+' >>')
+doc.update_stream(label_form,b'/DeviceRGB cs\n'
+    b'0.1254901961 0.2039215686 0.2823529412 rg\n'+labels[1]+b'\n')
+resource_kind,page_resources=doc.xref_get_key(page.xref,'Resources')
+assert resource_kind=='xref',resource_kind
+page_resource_xref=int(page_resources.split()[0])
+doc.xref_set_key(page_resource_xref,'XObject/PanelBLabel',f'{label_form} 0 R')
+painting=doc.get_new_xref()
+doc.update_object(painting,'<< >>')
+doc.update_stream(painting,b'q /PanelBLabel Do Q\n')
+doc.xref_set_key(page.xref,'Contents','[ '+' '.join(
+    f'{x} 0 R' for x in page.get_contents()+[painting])+' ]')
+
 text=page.get_text()
+assert text.count('(a)')==text.count('(b)')==1
 for label in ['Entanglement extraction','Teleportation','Alice','Bob','Herald','Accept','Discard','Teleported qubit']:
     assert label in text,label
 for old in ['Product','Entangled','Extracted']:
@@ -62,7 +91,14 @@ ref=pymupdf.open();rp=ref.new_page(width=W,height=H)
 rp.show_pdf_page(target,circuit,0)
 reference_clip=pymupdf.Rect(np.ceil(target.x0*3)/3,np.ceil(target.y0*3)/3,
     np.floor(target.x1*3)/3,np.floor(target.y1*3)/3)
-assert np.array_equal(pixels(page,reference_clip),pixels(rp,reference_clip)),'Circuit placement differs from full-page reference'
+actual,expected=pixels(page,reference_clip),pixels(rp,reference_clip)
+# The sole intentional circuit-background overpaint is the restored panel label.
+mask=np.ones(actual.shape[:2],dtype=bool)
+label_region=pymupdf.Rect(7,186,22,190)&reference_clip
+x0,y0=int(round((label_region.x0-reference_clip.x0)*3)),int(round((label_region.y0-reference_clip.y0)*3))
+x1,y1=int(round((label_region.x1-reference_clip.x0)*3)),int(round((label_region.y1-reference_clip.y0)*3))
+mask[y0:y1,x0:x1]=False
+assert np.array_equal(actual[mask],expected[mask]),'Circuit artwork differs from full-page reference'
 matrix_objects=[]
 for x,name,invoker,box in page.get_xobjects():
     obj=doc.xref_object(x)
@@ -73,10 +109,9 @@ for x,name,invoker,box in page.get_xobjects():
             assert abs(values[0]-values[3])<1e-12 and values[1:3]==[0,0]
             matrix_objects.append({'xref':x,'matrix':values,'object':obj})
 assert len(matrix_objects)==1,matrix_objects
-out=FIG/'combined_opening_candidate.pdf'
+out=output/'combined_opening.pdf'
 doc.save(out,garbage=4,deflate=True)
-page.get_pixmap(matrix=pymupdf.Matrix(3,3)).save(FIG/'combined_opening_candidate.png')
-page.get_pixmap(matrix=pymupdf.Matrix(3,3)).save(HERE/'combined-candidate-preview.png')
+page.get_pixmap(matrix=pymupdf.Matrix(3,3)).save(output/'combined_opening.png')
 receipt={'status':'pass: native composition/source-preservation checks; root build pending',
     'author':'Joe (GPT-6.1 Sol High)','baseline_sha256':sha(BASELINE),'circuit_source_sha256':sha(SOURCE),
     'combined_sha256':sha(out),'page_rect_pt':list(page.rect),
@@ -84,10 +119,10 @@ receipt={'status':'pass: native composition/source-preservation checks; root bui
     'panel_a_and_b_label_source_blocks_exact':True,'divider_source_block_exact':True,
     'circuit_source_rect_pt':list(circuit[0].rect),'circuit_destination_rect_pt':list(target),
     'circuit_uniform_scale':scale,'circuit_full_page_content_stream_exact':True,
-    'circuit_full_page_reference_pixels_exact':True,'circuit_embedding_form':matrix_objects[0],
+    'circuit_reference_pixels_exact_except_panel_label':True,'panel_b_label_painted_last':True,'circuit_embedding_form':matrix_objects[0],
     'circuit_reference_pixel_aligned_clip_pt':list(reference_clip),
     'new_rasters':0,'original_rasters_unchanged_count':1,
-    'effective_qubit_base_font_pt':14*scale,'effective_phase_font_pt':16*scale,
-    'effective_party_font_pt':15*scale,'effective_H_font_pt':14*scale}
-(HERE/'candidate-composition-checks.json').write_text(json.dumps(receipt,indent=2)+'\n')
+    'effective_qubit_base_font_pt':18*scale,'effective_phase_font_pt':18*scale,
+    'effective_party_font_pt':18*scale,'effective_H_font_pt':(50/3)*scale}
+(output/'figure-checks.json').write_text(json.dumps(receipt,indent=2)+'\n')
 print(json.dumps(receipt,indent=2))
