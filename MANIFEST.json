@@ -23,8 +23,8 @@
       "bytes": 4430
     },
     "References_revision_2.bib": {
-      "sha256": "0a72269e4bb16fbf040ad280e41c21f819b707be2540a058ea55d3ff02565dd5",
-      "bytes": 40223
+      "sha256": "7261b75625c8c4df4bd59792e95cb6dbf79d4302672d3f5e3d78890ae15cf047",
+      "bytes": 40179
     },
     "data/xi_sweep/KERNEL.md": {
       "sha256": "03aeeac6d897a614de6a1d08438cb49ed1d4ddf568d7d1d748133d65a372b68e",
@@ -199,12 +199,12 @@
       "bytes": 63
     },
     "letter_prl_revision_2.pdf": {
-      "sha256": "4d61ffa229948ce2f5bbbfd48fa2e77436adda701aa3905a56ba1c977f785f63",
-      "bytes": 774625
+      "sha256": "3793c057704d642ac3e3f9bfc106c7865e95df3a3da20ef4146368e4b9e1f0a5",
+      "bytes": 765647
     },
     "letter_prl_revision_2.tex": {
-      "sha256": "b92f988fccd5471cfb96613145deaa36bd2b770cfc83ea932ce494edf269072f",
-      "bytes": 24321
+      "sha256": "fce0f66c6e6a3d4e84e8b123739bfb2d8f18f0a15ccb11de78e6311d8f8f38ab",
+      "bytes": 24330
     },
     "provenance/fig1/art-edits.json": {
       "sha256": "68b45d3d8513b588b548334b77fdacd17590bdfe6b0dc84e41431fa7a951d2d9",

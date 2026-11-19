@@ -120,7 +120,7 @@ The trend follows what the environment can resolve. For $\xi<1$, additional nois
 We show how interactions and collective noise prepare entanglement that can be used for teleportation. The twelve-spin dynamics approaches an entangled stationary state within the ring-symmetric sector. A circuit acting within the two halves extracts a physical pair with uniform-input average fidelity $19/21$ and heralding probability $1/192$. Superconducting circuits already realize kicked-Ising dynamics~\cite{Mi2022edge} and engineered correlated dephasing~\cite{vonLupke2020}. Building on our shared-reservoir circuit proposal~\cite{Ayoub2026}, we are pursuing experimental tests of correlated-noise effects, with entanglement extraction as the next goal. The protocol connects a many-body state protected by collective noise to a concrete quantum-information task.
 
 \begin{acknowledgments}
-\emph{Acknowledgements.}---This work was supported by the National Science Foundation (CHE-2404788) and the Robert A. Welch Foundation (E-1337). GPT-6-Astra assisted with all numerical calculations and suggested the extraction-protocol. GPT-6.1 Sol assisted with the manuscript editing. The authors take full responsibility for the content.
+\emph{Acknowledgements.}---This work was supported by the National Science Foundation (CHE-2404788) and the Robert A. Welch Foundation (E-1337). GPT-6.1 Sol assisted with the manuscript editing. The authors take full responsibility for the content.
 \end{acknowledgments}
 
 \emph{Data availability.}---
@@ -199,8 +199,9 @@ L_0=\sqrt\gamma\sum_j\sigma_j^z=2\sqrt\gamma J^z,
 \end{equation}
 {\widowpenalty=10000 Coherences within a magnetization eigenspace then survive the dephasing step, as used in Appendix~\ref{App:A}. For example, the two alternating strings in Appendix~\ref{App:B} have the same total magnetization but opposite local spins. Their coherence in $\rho_\infty$ is damped whenever $\xi<1$, because their spin difference lies entirely in the differential subspace. The coherent layers preserve $\rho_\infty$, so this damping makes it nonstationary.\par}
 
+\newpage
 \prlappendix{Finite-time observables}
 The trajectories in Figs.~\ref{fig:negativity} and~\ref{fig:dynamics} use the full twelve-spin density at every correlation, including $\xi=1$. At all $401$ integer times we check trace and Hermiticity to $10^{-10}$ and obtain the extraction probability and conditional fidelity from the four strings in Appendix~\ref{App:B}.
 
-For the logarithmic negativity in Eq.~\eqref{eq:negativity}, we take the partial transpose on the first six spins and evaluate its full spectrum at periods $0,1,2,3,4,5,10,20,40,80,150,250,400$. At these times we also check density positivity and both spectral traces to $10^{-10}$, using the computed eigenvalues without clipping.
+For the logarithmic negativity in Eq.~\eqref{eq:negativity}, we take the partial transpose on the first six spins and evaluate its full spectrum at periods $0,1,2,3,4,5,10,20,40,80,150,250,400$. At these times we also check density positivity and both spectral traces to $10^{-10}$, using the computed eigenvalues without clipping. GPT-6-Astra assisted with all numerical calculations and suggested the extraction-protocol.
 \end{document}
