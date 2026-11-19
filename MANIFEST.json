@@ -199,12 +199,12 @@
       "bytes": 63
     },
     "letter_prl_revision_2.pdf": {
-      "sha256": "dfdf8a019b71a747a3e084652d73a51de0a80a1768badcef37f21fc596861105",
-      "bytes": 773171
+      "sha256": "f9d239440e5825fae771634f2bf24d68e720bce23f03d624761b1256e3f8b6dd",
+      "bytes": 774665
     },
     "letter_prl_revision_2.tex": {
-      "sha256": "b3cb28009b863111daa93b98d36e7d5294544ec653fd7f21f37e0352fce952de",
-      "bytes": 24266
+      "sha256": "b849f29bc8975aa9aa1001a4b5c7739659d655e0de55bd401cc7726e90cf16fd",
+      "bytes": 24321
     },
     "provenance/fig1/art-edits.json": {
       "sha256": "68b45d3d8513b588b548334b77fdacd17590bdfe6b0dc84e41431fa7a951d2d9",
