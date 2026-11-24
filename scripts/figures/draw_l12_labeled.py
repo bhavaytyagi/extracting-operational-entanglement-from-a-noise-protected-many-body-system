@@ -1,152 +1,131 @@
-"""Figure 2: logarithmic negativity for the 20 correlations, using the saved spectra."""
-from pathlib import Path
+"""Replot selected trajectories from the frozen twelve-spin sweep."""
+
 import argparse
 import hashlib
-import importlib.util
-import json
-import numpy as np
+from pathlib import Path
+
 import matplotlib
-matplotlib.use('Agg')
+
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.colors import Normalize
-from matplotlib.ticker import FixedLocator, FixedFormatter
-import pymupdf as fitz
 
-HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[1]
-CAMPAIGN = ROOT / 'data/xi_sweep'
-VALIDATOR = HERE / 'validate_l12.py'
-spec = importlib.util.spec_from_file_location('immutable_l12_validator', VALIDATOR)
-validator = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(validator)
+from validate_l12 import SAMPLES, validate_campaign
+
+PROJECT = Path(__file__).resolve().parents[2]
+CAMPAIGN = PROJECT / "data" / "xi_sweep"
+DEFAULT_OUTPUT = PROJECT / "build" / "figures" / "fig2"
+
+TRAJECTORIES = {
+    0.0: ("o", "#222222"),
+    0.2: ("s", "#9e3d07"),
+    0.4: ("v", "#64762d"),
+    0.6: ("D", "#ba5377"),
+    0.8: ("^", "#007a75"),
+    0.9: ("P", "#975e14"),
+    0.95: ("X", "#6950a1"),
+    0.99: (">", "#366798"),
+    0.999: ("h", "#1a85ac"),
+    1.0: ("*", "#152d58"),
+}
 
 
-def digest(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+def hashes(paths):
+    return {path: hashlib.sha256(path.read_bytes()).hexdigest() for path in paths}
 
 
-def draw(campaign=CAMPAIGN, out=HERE):
-    records, marker, manifest = validator.validate_campaign(campaign)
-    snapshot = {path: digest(path) for path in [marker, manifest, *[p for p, _ in records]]}
-    out.mkdir(parents=True, exist_ok=True)
-    plt.rcParams.update({'font.size': 9, 'axes.labelsize': 9,
-        'xtick.labelsize': 9, 'ytick.labelsize': 9,
-        'axes.spines.top': False, 'axes.spines.right': False,
-        'pdf.fonttype': 42, 'ps.fonttype': 42})
+def draw(campaign, output):
+    records, marker, manifest = validate_campaign(campaign)
+    inputs = [marker, manifest, *(path for path, _ in records)]
+    before = hashes(inputs)
+    by_xi = {record["xi"]: record["rows"] for _, record in records}
+
+    plt.rcParams.update({
+        "font.size": 9,
+        "axes.spines.top": False,
+        "axes.spines.right": False,
+        "pdf.fonttype": 42,
+    })
     fig = plt.figure(figsize=(3.4, 2.55))
-    main = fig.add_axes([.16, .18, .60, .775])
-    bar_ax = fig.add_axes([.795, .18, .030, .775])
-    cmap = plt.colormaps['viridis_r']
-    norm = Normalize(vmin=-1/11, vmax=1.)
-    audit = {'status': 'visualization checks only; independent final review pending',
-        'L': 12, 'inputs': [], 'artists': [],
-        'data_policy': 'Exact calculated samples; connecting segments are visual guides only.',
-        'main_color_normalization': {'type': 'linear', 'vmin': norm.vmin, 'vmax': norm.vmax},
-        'physical_interval': [-1/11, 1.], 'titles': [], 'trajectory_panels': 1}
-    for path, rec in records:
-        rows = [r for r in rec['rows'] if 'log_negativity_nats' in r]
-        t = [r['t'] for r in rows]
-        y = [r['log_negativity_nats'] for r in rows]
-        line, = main.plot(t, y, '-', color=cmap(norm(rec['xi'])),
-            lw=1.15 if rec['xi'] == 1 else .65, marker='None', ms=0, mew=0,
-            label='_nolegend_',
-            zorder=3 if rec['xi'] == 1 else 2)
-        assert line.get_xdata().tolist() == t, 'Altered times'
-        assert line.get_ydata().tolist() == y, 'Altered saved spectra'
-        assert np.array_equal(matplotlib.colors.to_rgba(line.get_color()), cmap(norm(rec['xi'])))
-        audit['inputs'].append({'path': str(path.relative_to(ROOT)),
-            'sha256': digest(path), 'xi': rec['xi']})
-        audit['artists'].append({'panel': 'main', 'kind': 'trajectory',
-            'xi': rec['xi'], 't': line.get_xdata().tolist(),
-            'log_negativity_nats': line.get_ydata().tolist(),
-            'color_rgba': list(matplotlib.colors.to_rgba(line.get_color())),
-            'linewidth': line.get_linewidth(), 'marker': line.get_marker(),
-            'markersize': line.get_markersize(), 'linestyle': line.get_linestyle()})
-    assert all(line.get_marker() in (None, 'None', '', ' ') for line in main.lines)
-    assert main.get_legend() is None and not fig.legends, 'Unexpected curve legend'
-    bar = fig.colorbar(plt.cm.ScalarMappable(norm=norm, cmap=cmap), cax=bar_ax,
-        orientation='vertical')
-    bar.set_ticks([-1/11, 0, .5, 1], labels=['$-1/11$', '0', '0.5', '1'])
-    bar.ax.tick_params(labelsize=9, length=2, pad=2)
-    bar.set_label(r'$\xi$', fontsize=9, labelpad=-2)
-    main.set_xscale('symlog', linthresh=5)
-    main.set_xlim(-.6, 470)
-    main.xaxis.set_major_locator(FixedLocator([0, 5, 20, 100, 400]))
-    main.xaxis.set_major_formatter(FixedFormatter(['0', '5', '20', '100', '400']))
-    values = [y for artist in audit['artists'] for y in artist['log_negativity_nats']]
-    main.set_ylim(min(-.08, min(values)-.02), max(values)*1.10)
-    main.set_ylabel('Logarithmic negativity (nats)', labelpad=3)
-    main.set_xlabel('Periods', labelpad=2)
-    main.grid(alpha=.14, lw=.45)
-    main.tick_params(pad=2, length=3)
-    main.minorticks_off()
+    ax = fig.add_axes([0.15, 0.18, 0.82, 0.77])
+    inset = ax.inset_axes([0.59, 0.51, 0.38, 0.49])
+    main_times = [t for t in SAMPLES if t >= 5]
+    early_times = [t for t in SAMPLES if t <= 5]
+    for xi, (symbol, color) in TRAJECTORIES.items():
+        for panel, times in ((ax, main_times), (inset, early_times)):
+            values = [by_xi[xi][t]["log_negativity_nats"] for t in times]
+            panel.plot(
+                times, values, color=color, lw=1 if xi == 1 else 0.65,
+                marker=symbol, ms=(5 if xi == 1 else 3.7) if panel is ax else 2.5,
+                mfc="white", mew=0.85 if panel is ax else 0.65, label=f"{xi:g}",
+            )
+
+    ax.set_xscale("log")
+    ax.set_xlim(4.6, 465)
+    ax.set_ylim(-0.095, 2.85)
+    ax.set_yticks([0, 0.5, 1, 1.5, 2])
+    ticks = [5, 10, 20, 50, 100, 400]
+    ax.set_xticks(ticks, labels=[str(t) for t in ticks])
+    ax.minorticks_off()
+    ax.set_xlabel("Floquet periods", labelpad=2)
+    ax.set_ylabel(r"$E_{\mathcal{N}}(t)$", labelpad=2)
+    ax.tick_params(pad=2, length=3)
+    ax.grid(alpha=0.18, lw=0.45)
+
+    inset.set_xlim(-0.27, 5.27)
+    inset.set_ylim(-0.14, 2.88)
+    inset.set_xticks(early_times)
+    inset.set_yticks([0, 1, 2])
+    inset.tick_params(labelsize=7, pad=1.5, length=2)
+    inset.grid(alpha=0.18, lw=0.38)
+    for spine in inset.spines.values():
+        spine.set_visible(True)
+        spine.set_color("#777777")
+        spine.set_linewidth(0.5)
+
+    legend = ax.legend(
+        title=r"Noise correlation $\xi$", title_fontsize=8,
+        loc="upper left", bbox_to_anchor=(0.07, 1.035),
+        ncols=2, alignment="left", fontsize=8,
+        frameon=True, fancybox=False, framealpha=1, facecolor="white",
+        edgecolor="#c4c8ce", handlelength=0.8, handletextpad=0.45,
+        columnspacing=1.05, labelspacing=0.24, borderaxespad=0.65,
+        borderpad=0.55,
+    )
+    legend.get_frame().set_linewidth(0.55)
+    for handle in legend.get_lines():
+        handle.set_linestyle("None")
     fig.canvas.draw()
-    assert main.get_title() == '' and not fig.texts, 'Unexpected title/subtitle'
-    assert len(fig.axes) == 2 and len(main.lines) == 20, 'Wrong panel or curve count'
-    assert sum(len(a['t']) for a in audit['artists']) == 260, 'Wrong actual sample count'
-    assert bar.orientation == 'vertical' and bar_ax.get_position().x0 > main.get_position().x1
-    audit['figure_inches'] = fig.get_size_inches().tolist()
-    audit['axis_limits'] = {'main': {'x': list(main.get_xlim()), 'y': list(main.get_ylim())}}
-    audit['time_scale'] = {'type': main.get_xscale(), 'linthresh': main.xaxis.get_transform().linthresh}
-    audit['colorbar'] = {'orientation': bar.orientation, 'right_of_main': True,
-        'label': bar.ax.get_ylabel()}
-    audit['line_extent_checks'] = []
-    audit['curve_identification'] = 'Unchanged linear xi color bar only; no markers or representative legend'
-    audit['trajectory_marker_count'] = 0
-    audit['curve_legend_count'] = 0
-    bounds = main.get_window_extent()
-    for line in main.lines:
-        radius = .5 * line.get_linewidth() * fig.dpi / 72
-        xy = main.transData.transform(np.column_stack((line.get_xdata(), line.get_ydata())))
-        clearance = min(float(np.min(xy[:, 0]-bounds.x0)), float(np.min(bounds.x1-xy[:, 0])),
-            float(np.min(xy[:, 1]-bounds.y0)), float(np.min(bounds.y1-xy[:, 1])))
-        assert clearance-radius >= .5*fig.dpi/72, ('Clipped sample/path stroke', clearance, radius)
-        audit['line_extent_checks'].append({'minimum_center_to_edge_px': clearance,
-            'stroke_halfwidth_px': radius, 'extra_clearance_pt': (clearance-radius)*72/fig.dpi})
-    texts = [t for t in fig.findobj(matplotlib.text.Text) if t.get_text() and t.get_visible()]
-    audit['nominal_font_sizes_pt'] = sorted({float(t.get_fontsize()) for t in texts})
-    assert min(audit['nominal_font_sizes_pt']) >= 7
+
+    assert ax.get_xscale() == "log" and inset.get_xscale() == "linear"
+    assert set(main_times) | set(early_times) == set(SAMPLES)
+    assert set(main_times) & set(early_times) == {5}
+    assert [item.get_text() for item in legend.texts] == [f"{xi:g}" for xi in TRAJECTORIES]
+    for panel, times in ((ax, main_times), (inset, early_times)):
+        assert [line.get_marker() for line in panel.lines] == [v[0] for v in TRAJECTORIES.values()]
+        for line, xi in zip(panel.lines, TRAJECTORIES):
+            assert line.get_xdata().tolist() == times
+            assert line.get_ydata().tolist() == [by_xi[xi][t]["log_negativity_nats"] for t in times]
+    assert all(abs(line.get_ydata()[0]) <= 1e-10 for line in inset.lines)
     renderer = fig.canvas.get_renderer()
-    audit['text_extent_checks'] = []
-    for text in texts:
-        box = text.get_window_extent(renderer)
-        assert box.x0 >= 0 and box.y0 >= 0 and box.x1 <= fig.bbox.x1 and box.y1 <= fig.bbox.y1, (
-            'Text outside figure', text.get_text(), list(box.bounds))
-        audit['text_extent_checks'].append({'text': text.get_text(), 'bounds_px': list(box.bounds)})
-    from typography_checks import check_ink
-    audit['actual_ink_checks']=check_ink(fig,out/'actual-ink-checks.json')
-    for ext in ('pdf', 'png'):
-        fig.savefig(out / f'negativity_L12_correlations.{ext}', dpi=300, facecolor='white',
-            metadata={'Title': 'Twelve-spin correlation trajectories'})
-    plt.close(fig)
-    with fitz.open(out / 'negativity_L12_correlations.pdf') as pdf:
-        assert len(pdf) == 1
-        page = pdf[0]
-        assert abs(page.rect.width-3.4*72) < .001 and abs(page.rect.height-2.55*72) < .001
-        spans = [s for b in page.get_text('dict')['blocks'] if 'lines' in b
-                 for line in b['lines'] for s in line['spans']]
-        assert min(s['size'] for s in spans) >= 6.999, 'PDF fonts smaller than 7pt'
-        audit['pdf_font_sizes_pt'] = sorted({s['size'] for s in spans})
-        audit['pdf_page_points'] = [page.rect.width, page.rect.height]
-        audit['pdf_text'] = page.get_text()
-        page.get_pixmap(matrix=fitz.Matrix(3, 3)).save(out / 'negativity_L12_correlations_pdf_raster.png')
-    validator.validate_campaign(campaign)
-    assert all(digest(path) == value for path, value in snapshot.items()), 'Campaign mutated'
-    audit['comparison_tolerance'] = 0
-    audit['input_hashes_unchanged'] = True
-    audit['campaign_metadata'] = [{'path': str(p.relative_to(ROOT)), 'sha256': digest(p)} for p in (marker, manifest)]
-    audit['sources'] = [{'path': str(p.relative_to(ROOT)), 'sha256': digest(p)} for p in (Path(__file__).resolve(), VALIDATOR)]
-    audit['output_sha256'] = digest(out / 'negativity_L12_correlations.pdf')
-    (out / 'figure_checks.json').write_text(json.dumps(audit, indent=2) + '\n')
-    print(json.dumps({'status': 'pass', 'curves': len(audit['artists']), 'actual_samples': 260,
-        'comparison_tolerance': 0, 'dimensions_inches': audit['figure_inches'],
-        'minimum_path_extra_clearance_pt': min(c['extra_clearance_pt'] for c in audit['line_extent_checks']),
-        'pdf_sha256': audit['output_sha256']}, indent=2))
+    legend_bounds = legend.get_window_extent(renderer)
+    inset_bounds = inset.get_tightbbox(renderer)
+    assert not legend_bounds.overlaps(inset_bounds), (legend_bounds, inset_bounds)
+    for line in ax.lines:
+        path = ax.transData.transform_path(line.get_path())
+        assert not path.intersects_bbox(legend_bounds, filled=False), "Legend obscures data"
+        assert not path.intersects_bbox(inset_bounds, filled=False), "Inset obscures data"
+    assert hashes(inputs) == before, "Frozen campaign changed during plotting"
+
+    output.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(
+        output, metadata={"Title": "Logarithmic negativity of the twelve-spin ring", "CreationDate": None}
+    )
+    print(f"Verified {len(ax.lines)} trajectories, {len(ax.lines) * len(SAMPLES)} exact sample coordinates, and {len(before)} input hashes.")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--campaign', type=Path, default=CAMPAIGN)
-    parser.add_argument('--out', type=Path, default=HERE)
+    parser.add_argument("--campaign", type=Path, default=CAMPAIGN)
+    parser.add_argument("--out", type=Path, default=DEFAULT_OUTPUT)
     args = parser.parse_args()
-    draw(args.campaign.resolve(), args.out.resolve())
+    draw(args.campaign.resolve(), args.out.resolve() / "negativity_L12_correlations.pdf")

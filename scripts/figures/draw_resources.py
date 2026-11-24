@@ -1,145 +1,260 @@
-"""Figure 3: conditional teleportation fidelity and heralding probability from the saved sweep."""
+"""Draw the coauthor resource heatmaps from the frozen twelve-spin sweep."""
+
+import argparse
+import hashlib
+import json
 from pathlib import Path
-import argparse,hashlib,importlib.util,json
-import numpy as np
+
 import matplotlib
-matplotlib.use('Agg')
+
+matplotlib.use("Agg")
+import matplotlib.patheffects as effects
 import matplotlib.pyplot as plt
-from matplotlib.colors import LogNorm,TwoSlopeNorm
-from matplotlib.ticker import FixedLocator,FixedFormatter
+import numpy as np
 import pymupdf
+from matplotlib.collections import LineCollection
+from matplotlib.colors import LogNorm, Normalize
 
-HERE=Path(__file__).resolve().parent
-ROOT = HERE.parents[1]
-CAMPAIGN=ROOT / 'data/xi_sweep'
-FIGURES=ROOT/'Figures'
-DEFAULT_OUTPUT=ROOT/'build/figures/fig3'
-VALIDATOR=HERE / 'validate_l12.py'
-spec=importlib.util.spec_from_file_location('l12_completed_interface',VALIDATOR)
-validator=importlib.util.module_from_spec(spec);spec.loader.exec_module(validator)
-digest=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+from validate_l12 import validate_campaign
+from typography_checks import check_ink
 
-def draw(out=DEFAULT_OUTPUT,evidence=DEFAULT_OUTPUT):
-    evidence.mkdir(parents=True, exist_ok=True)
-    records,marker,manifest=validator.validate_campaign(CAMPAIGN)
-    sources=[marker,manifest,*[p for p,_ in records]]
-    protected=[*sources,*[p for p in FIGURES.iterdir() if p.is_file()
-        and p.stem!='xi_resource_L12_all20']]
-    before={str(p.relative_to(ROOT)):digest(p) for p in protected}
-    frozen=evidence/'preserved-figure-input-hashes.json'
-    if frozen.exists():
-        prior=json.loads(frozen.read_text())
-        assert all(digest(ROOT/p)==sha for p,sha in prior.items()),'Frozen input changed'
-    else:
-        frozen.write_text(json.dumps(before,indent=2)+'\n')
-    xi=np.array([r['xi'] for _,r in records])
-    times=np.arange(401)
-    f=np.array([[row['teleportation_fidelity'] for row in r['rows']] for _,r in records])
-    probability=np.array([[row['probability'] for row in r['rows']] for _,r in records])
-    assert f.shape==probability.shape==(20,401)
-    assert np.isfinite(f).all() and np.isfinite(probability).all()
-    assert f.min()>=1/3-1e-10 and f.max()<=1+1e-10
-    assert probability.min()>0 and probability.max()<=1+1e-10
-    plt.rcParams.update({'font.size':9,'axes.labelsize':9,'axes.titlesize':9,
-        'xtick.labelsize':9,'ytick.labelsize':9,'axes.spines.top':False,
-        'axes.spines.right':False,'pdf.fonttype':42,'ps.fonttype':42})
-    fig=plt.figure(figsize=(7.05,3.5))
-    axs=[fig.add_axes([.105,.24,.385,.66]),fig.add_axes([.585,.24,.385,.66])]
-    caxs=[fig.add_axes([.105,.105,.385,.028]),fig.add_axes([.585,.105,.385,.028])]
-    xedges=np.arange(402)-.5;yedges=np.arange(21)-.5
-    norms=[TwoSlopeNorm(vmin=float(f.min()),vcenter=2/3,vmax=float(f.max())),
-           LogNorm(vmin=float(probability.min()),vmax=float(probability.max()))]
-    titles=['(a) Teleportation fidelity','(b) Extraction probability']
-    labels=['-1/11' if x==-1/11 else f'{x:g}' for x in xi]
-    meshes=[]
-    text_bounds=[]
-    artist_arrays={}
-    for ax,cax,values,norm,cmap,title,key in zip(axs,caxs,[f,probability],norms,
-            ['RdYlBu_r','viridis'],titles,['teleportation_fidelity','probability']):
-        mesh=ax.pcolormesh(xedges,yedges,values,shading='flat',cmap=cmap,norm=norm,
-                          rasterized=False,edgecolors='face',linewidth=.1,antialiased=False)
-        meshes.append(mesh)
-        # Audit the actual Matplotlib collection, not only its source array.
-        actual=np.asarray(mesh.get_array())
-        assert actual.shape==values.shape and np.array_equal(actual,values),key
-        coordinates=mesh.get_coordinates()
-        assert np.array_equal(coordinates[0,:,0],xedges)
-        assert np.array_equal(coordinates[:,0,1],yedges)
-        artist_arrays[key]={'shape':list(actual.shape),'values':actual.tolist(),
-            'sha256_float64_C':hashlib.sha256(np.ascontiguousarray(actual).tobytes()).hexdigest(),
-            'comparison_tolerance':0,'normalization':{'type':type(norm).__name__,
-            'vmin':norm.vmin,'vmax':norm.vmax,
-            **({'vcenter':norm.vcenter} if hasattr(norm,'vcenter') else {})}}
-        ax.set_xscale('symlog',linthresh=5)
-        ax.set_xlim(-.6,400.5);ax.set_ylim(-.5,19.5)
-        ax.xaxis.set_major_locator(FixedLocator([0,5,20,100,400]))
-        ax.xaxis.set_major_formatter(FixedFormatter(['0','5','20','100','400']))
-        ax.set_xlabel('Floquet periods',labelpad=3)
-        ax.set_title(title,loc='left',pad=6)
-        ax.set_yticks(np.arange(20),labels=labels if ax is axs[0] else ['']*20)
-        ax.tick_params(length=3,pad=2)
-        ax.minorticks_off()
-        bar=fig.colorbar(mesh,cax=cax,orientation='horizontal')
-        # Colorbar has an independent auto-rasterization threshold.
-        bar.solids.set_rasterized(False)
-        bar.solids.set_edgecolor('face');bar.solids.set_linewidth(.1)
-        if key=='teleportation_fidelity':
-            bar.set_ticks([.5,2/3,.8,.95],labels=['0.5','2/3','0.8','0.95'])
+PROJECT = Path(__file__).resolve().parents[2]
+CAMPAIGN = PROJECT / "data" / "xi_sweep"
+DEFAULT_OUTPUT = PROJECT / "build" / "figures" / "fig3"
+
+BENCHMARK = 2 / 3
+BENCHMARK_TOLERANCE = 1e-10
+COLOR_LAYER_DPI = 1200
+
+
+def hashes(paths):
+    return {path: hashlib.sha256(path.read_bytes()).hexdigest() for path in paths}
+
+
+def true_runs(mask):
+    transitions = np.flatnonzero(np.diff(mask.astype(int), prepend=0, append=0))
+    return transitions.reshape(-1, 2)
+
+
+def threshold_segments(mask, xedges, yedges):
+    """Merge adjoining internal edges along each stripe of the cell grid."""
+    segments = []
+    for col, different in enumerate((mask[:, :-1] != mask[:, 1:]).T, start=1):
+        x = xedges[col]
+        segments.extend(((x, yedges[lo]), (x, yedges[hi]))
+                        for lo, hi in true_runs(different))
+    for row, different in enumerate(mask[:-1] != mask[1:], start=1):
+        y = yedges[row]
+        segments.extend(((xedges[lo], y), (xedges[hi], y))
+                        for lo, hi in true_runs(different))
+    return segments
+
+
+def verify_boundary(segments, mask, xedges, yedges):
+    """Compare the artist's edges to the four neighbors of every above cell."""
+    nrows, ncols = mask.shape
+    expected = set()
+    for row, col in np.argwhere(mask):
+        if col and not mask[row, col - 1]:
+            expected.add(("vertical", col, row))
+        if col + 1 < ncols and not mask[row, col + 1]:
+            expected.add(("vertical", col + 1, row))
+        if row and not mask[row - 1, col]:
+            expected.add(("horizontal", row, col))
+        if row + 1 < nrows and not mask[row + 1, col]:
+            expected.add(("horizontal", row + 1, col))
+
+    xindex = {value: i for i, value in enumerate(xedges)}
+    yindex = {value: i for i, value in enumerate(yedges)}
+    actual = []
+    for (x0, y0), (x1, y1) in segments:
+        if x0 == x1:
+            actual.extend(("vertical", xindex[x0], row)
+                          for row in range(yindex[y0], yindex[y1]))
         else:
-            bar.set_ticks([.0005,.001,.002,.005],labels=['0.0005','0.001','0.002','0.005'])
-        bar.ax.minorticks_off();bar.ax.tick_params(labelsize=9,length=2,pad=2)
-        cax.set_xlim(norm.vmin,norm.vmax)
-        assert np.array_equal(cax.get_xlim(),(norm.vmin,norm.vmax)),(
-            'Colorbar ticks expanded normalization bounds',key,cax.get_xlim())
-    axs[0].set_ylabel('Correlation ξ (sampled rows)',labelpad=4)
-    fig.canvas.draw()
-    texts=[t for t in fig.findobj(matplotlib.text.Text) if t.get_text() and t.get_visible()]
-    assert min(t.get_fontsize() for t in texts)>=7
-    renderer=fig.canvas.get_renderer()
-    for text in texts:
-        box=text.get_window_extent(renderer)
-        assert box.x0>=0 and box.y0>=0 and box.x1<=fig.bbox.x1 and box.y1<=fig.bbox.y1,(
-            'Clipped text',text.get_text(),list(box.bounds))
-        text_bounds.append({'text':text.get_text(),'bounds_px':list(box.bounds)})
-    assert len(meshes)==2 and all(len(ax.lines)==0 for ax in axs)
-    out.mkdir(parents=True,exist_ok=True)
-    from typography_checks import check_ink
-    ink=check_ink(fig,evidence/'actual-ink-checks.json')
-    for ext in ('pdf','png'):
-        fig.savefig(out/f'xi_resource_L12_all20.{ext}',dpi=300,facecolor='white',
-                    metadata={'Title':'Twelve-spin correlation dependence of fixed-decoder resources'})
-    pdf=pymupdf.open(out/'xi_resource_L12_all20.pdf');page=pdf[0]
-    assert abs(page.rect.width-507.6)<1e-3 and abs(page.rect.height-252)<1e-3
-    assert not page.get_images(),'Unexpected rasterized heatmap'
-    spans=[s for b in page.get_text('dict')['blocks'] if b['type']==0
-        for line in b['lines'] for s in line['spans'] if s['text'].strip()]
-    assert min(s['size'] for s in spans)>=6.999,'PDF text smaller than 7pt'
-    assert 'negativity' not in page.get_text().lower()
-    page.get_pixmap(matrix=pymupdf.Matrix(3,3)).save(evidence/'xi_resource_L12_all20_pdf_raster.png')
-    arrays={'L':12,'xi':xi.tolist(),'t':times.tolist(),'x_cell_edges':xedges.tolist(),
-        'y_cell_edges':yedges.tolist(),'artists':artist_arrays}
-    (evidence/'artist-arrays.json').write_text(json.dumps(arrays,indent=2)+'\n')
-    validator.validate_campaign(CAMPAIGN)
-    assert all(digest(ROOT/p)==sha for p,sha in before.items()),'Protected input or old figure changed'
-    receipt={'status':'pass: figure/data checks; fresh independent review pending',
-        'author':'Joe (GPT-6.1 Sol High)','L':12,'resource_rows_per_observable':8020,
-        'panels':titles,'physical_interval':[-1/11,1.],
-        'xscale':'symlog','linthresh':5,'row_spacing':'categorical, equally spaced',
-        'comparison_tolerance':0,'native_vector':True,'old_assets_unchanged':True,
-        'inputs':[{'path':str(p.relative_to(ROOT)),'sha256':digest(p)} for p in sources],
-        'sources':[{'path':str(p.relative_to(ROOT)),'sha256':digest(p)} for p in [Path(__file__),VALIDATOR]],
-        'array_evidence_sha256':digest(evidence/'artist-arrays.json'),
-        'text_bounds':text_bounds,'minimum_nominal_font_pt':min(t.get_fontsize() for t in texts),
-        'pdf_fonts_pt':sorted(set(s['size'] for s in spans)),'dimensions_pt':list(page.rect),
-        'pdf_sha256':digest(out/'xi_resource_L12_all20.pdf')}
-    (evidence/'figure-checks.json').write_text(json.dumps(receipt,indent=2)+'\n')
-    plt.close(fig)
-    print(json.dumps({k:receipt[k] for k in ['status','L','resource_rows_per_observable',
-        'native_vector','comparison_tolerance','minimum_nominal_font_pt','pdf_sha256']},indent=2))
+            assert y0 == y1, "A benchmark segment is not a cell edge"
+            actual.extend(("horizontal", yindex[y0], col)
+                          for col in range(xindex[x0], xindex[x1]))
+    assert len(actual) == len(expected) and set(actual) == expected, \
+        "Benchmark stroke does not match the discrete cell boundary"
+    return len(actual)
+
+
+def draw_cells(ax, values, xedges, yedges, cmap, norm, *, benchmark):
+    mesh = ax.pcolormesh(
+        xedges, yedges, values, shading="flat", cmap=cmap, norm=norm,
+        linewidth=0, antialiased=False, rasterized=True, snap=True,
+    )
+    assert mesh.norm is norm and mesh.cmap is cmap, "Heatmap colors were renormalized"
+    assert np.array_equal(np.asarray(mesh.get_array()), values), "Altered saved cells"
+    xy = mesh.get_coordinates()
+    assert np.array_equal(xy[0, :, 0], xedges), "Altered time edges"
+    assert np.array_equal(xy[:, 0, 1], yedges), "Altered correlation edges"
+
+    receipt = {"saved_cells": int(values.size), "benchmark_edges": 0}
+    if benchmark:
+        mask = values > BENCHMARK + BENCHMARK_TOLERANCE
+        segments = threshold_segments(mask, xedges, yedges)
+        receipt["above_benchmark_cells"] = int(mask.sum())
+        stroke = LineCollection(
+            segments, colors="#151515", linewidths=0.8, linestyles=(0, (3, 2)),
+            zorder=3, path_effects=[effects.Stroke(linewidth=1.5, foreground="white"),
+                                    effects.Normal()],
+        )
+        ax.add_collection(stroke)
+        receipt["benchmark_edges"] = verify_boundary(
+            stroke.get_segments(), mask, xedges, yedges,
+        )
     return receipt
 
-if __name__=='__main__':
-    parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--out',type=Path,default=DEFAULT_OUTPUT)
-    parser.add_argument('--evidence',type=Path,default=DEFAULT_OUTPUT)
-    args=parser.parse_args();draw(args.out.resolve(),args.evidence.resolve())
+
+def draw(output, evidence):
+    records, marker, manifest = validate_campaign(CAMPAIGN)
+    before = hashes([marker, manifest, *(path for path, _ in records)])
+    records = [record for _, record in records if record["xi"] >= 0]
+    xi = np.array([record["xi"] for record in records])
+    assert len(xi) == 18 and xi[0] == 0 and xi[-1] == 1
+    source = {
+        key: np.array([[row[key] for row in record["rows"]] for record in records])
+        for key in ("teleportation_fidelity", "probability")
+    }
+    assert all(values.shape == (18, 401) for values in source.values())
+    fidelity = source["teleportation_fidelity"]
+    assert np.all(fidelity[:, 0] == BENCHMARK)
+    assert np.array_equal(fidelity > BENCHMARK, fidelity > BENCHMARK + BENCHMARK_TOLERANCE)
+    assert np.all(fidelity[-2:, 5:] > BENCHMARK + BENCHMARK_TOLERANCE)
+
+    centers = -np.log10(1 - xi[:-1])
+    yedges = np.r_[
+        centers[0] - (centers[1] - centers[0]) / 2,
+        (centers[1:] + centers[:-1]) / 2,
+        centers[-1] + (centers[-1] - centers[-2]) / 2,
+    ]
+    endpoint = np.array([yedges[-1] + 0.12, yedges[-1] + 0.36])
+    ycenters = dict(zip(xi, np.r_[centers, endpoint.mean()]))
+    tick_xi = [0, .4, .7, .85, .9, .95, .98, .99, .995, .999, 1]
+
+    plt.rcParams.update({
+        "font.size": 9, "axes.labelsize": 9, "axes.titlesize": 9,
+        "xtick.labelsize": 9, "ytick.labelsize": 9,
+        "axes.spines.top": False, "axes.spines.right": False, "pdf.fonttype": 42,
+    })
+    fig = plt.figure(figsize=(7.05, 3.5))
+    cmap = plt.colormaps["YlOrRd"]
+    plot_bottom, plot_height = .15, .70
+    norm_types = [Normalize, LogNorm]
+    titles = ["(a) Teleportation fidelity", "(b) Heralding probability"]
+    bar_names = ["$F$", "$p$"]
+    bar_ticks = [[.5, BENCHMARK, .8, .95], [.0005, .001, .002, .005]]
+    bar_labels = [["0.5", "2/3", "0.8", "0.95"], ["0.0005", "0.001", "0.002", "0.005"]]
+    sections = [
+        ("early", 0, 6, "linear", "Linear time", [0, 1, 2, 3, 4, 5], 0, .106),
+        ("main", 5, 401, "log", "Log time", [5, 20, 100, 400], .125, .211),
+    ]
+    audit = {
+        "xi": xi.tolist(),
+        "finite_xi_centers": centers.tolist(),
+        "finite_xi_edges": yedges.tolist(),
+        "xi_eq_one_edges": endpoint.tolist(),
+        "benchmark": BENCHMARK,
+        "benchmark_tolerance": BENCHMARK_TOLERANCE,
+        "panels": {},
+    }
+    for panel, ((key, values), xleft, norm_type) in enumerate(zip(
+        source.items(), [.105, .555], norm_types,
+    )):
+        norm = norm_type(vmin=float(values.min()), vmax=float(values.max()))
+        fig.text(xleft, .956, titles[panel], fontsize=10, ha="left", va="top")
+        fig.text(xleft + .168, .056, "Floquet periods", ha="center", va="bottom")
+        panel_audit = {
+            "palette": cmap.name, "norm": type(norm).__name__,
+            "limits": [norm.vmin, norm.vmax], "sections": {},
+        }
+        audit["panels"][key] = panel_audit
+        for name, start, stop, scale, label, ticks, offset, width in sections:
+            ax = fig.add_axes([xleft + offset, plot_bottom, width, plot_height])
+            ax.set_xscale(scale)
+            xedges = np.arange(start, stop + 1) - 0.5
+            ax.set_xlim(xedges[0], xedges[-1])
+            ax.set_ylim(yedges[0], endpoint[-1])
+            regular = draw_cells(ax, values[:-1, start:stop], xedges, yedges, cmap, norm,
+                                 benchmark=panel == 0)
+            collective = draw_cells(ax, values[-1:, start:stop], xedges, endpoint, cmap, norm,
+                                    benchmark=panel == 0)
+            panel_audit["sections"][name] = {
+                "time_scale": ax.get_xscale(), "periods": [start, stop - 1],
+                "finite_xi": regular, "xi_eq_one": collective,
+            }
+            ax.set_title(label, pad=4)
+            ax.set_xticks(ticks, labels=[str(tick) for tick in ticks])
+            ax.minorticks_off()
+            if panel == 0 and name == "early":
+                ax.set_yticks([ycenters[tick] for tick in tick_xi],
+                              labels=[f"{tick:g}" for tick in tick_xi])
+                ax.set_ylabel(r"Noise correlation $\xi$", labelpad=5)
+            else:
+                ax.set_yticks([])
+            ax.tick_params(pad=2, length=2.5)
+
+        cax = fig.add_axes([xleft + .350, plot_bottom, .015, plot_height])
+        colorbar = fig.colorbar(plt.cm.ScalarMappable(norm=norm, cmap=cmap), cax=cax)
+        cax.set_title(bar_names[panel], pad=4)
+        colorbar.set_ticks(bar_ticks[panel], labels=bar_labels[panel])
+        cax.minorticks_off()
+        cax.tick_params(length=2, pad=2)
+        cax.set_ylim(norm.vmin, norm.vmax)
+        colorbar.solids.set_rasterized(True)
+        assert np.array_equal(cax.get_ylim(), [norm.vmin, norm.vmax])
+
+    assert len(fig.axes) == 6, "Each observable requires an early axis, a main axis, and a bar"
+    assert sum(a["saved_cells"] for panel in audit["panels"].values()
+               for group in panel["sections"].values()
+               for a in (group["finite_xi"], group["xi_eq_one"])) == 2 * 18 * 402
+    fig.canvas.draw()
+    renderer = fig.canvas.get_renderer()
+    for artist in fig.findobj(matplotlib.text.Text):
+        if artist.get_visible() and artist.get_text():
+            assert fig.bbox.contains(*artist.get_window_extent(renderer).min), artist.get_text()
+            assert fig.bbox.contains(*artist.get_window_extent(renderer).max), artist.get_text()
+    output.parent.mkdir(parents=True, exist_ok=True)
+    evidence.mkdir(parents=True, exist_ok=True)
+    ink = check_ink(fig, evidence / "figure3-ink.json")
+    audit["minimum_plain_capital_numeral_height_mm"] = ink["minimum_plain_capital_numeral_height_mm"]
+    # A high-resolution color layer prevents hairline gaps between PDF polygons.
+    # Axes, text and the benchmark strokes retain their vector representation.
+    fig.savefig(output, dpi=COLOR_LAYER_DPI,
+                metadata={"Title": "Twelve-spin teleportation resources", "CreationDate": None})
+    plt.close(fig)
+
+    with pymupdf.open(output) as pdf:
+        assert len(pdf) == 1
+        page = pdf[0]
+        assert np.allclose([page.rect.width, page.rect.height], [507.6, 252], atol=1e-4, rtol=0)
+        images = page.get_image_info()
+        assert images and all(
+            min(image["width"] * 72 / pymupdf.Rect(image["bbox"]).width,
+                image["height"] * 72 / pymupdf.Rect(image["bbox"]).height)
+            >= COLOR_LAYER_DPI - 1 for image in images
+        ), "Heatmap layer has insufficient resolution"
+        assert page.get_drawings(), "Axes and benchmark strokes must remain vector"
+        spans = [span for block in page.get_text("dict")["blocks"] if "lines" in block
+                 for line in block["lines"] for span in line["spans"]]
+        assert min(span["size"] for span in spans) >= 8.999
+        page.get_pixmap(matrix=pymupdf.Matrix(2, 2)).save(output.with_suffix(".png"))
+        audit["pdf_dimensions_pt"] = [page.rect.width, page.rect.height]
+        audit["minimum_font_pt"] = min(span["size"] for span in spans)
+        audit["color_layer_dpi"] = COLOR_LAYER_DPI
+    assert hashes(before) == before, "Frozen campaign changed during plotting"
+    audit["input_sha256"] = {str(path.relative_to(PROJECT)): digest for path, digest in before.items()}
+    audit["output_sha256"] = hashes([output])[output]
+    (evidence / output.with_suffix(".json").name).write_text(json.dumps(audit, indent=2) + "\n")
+    print("Verified 18 correlations, 401 unique periods per observable, the discrete benchmark edges, and 22 input hashes.")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--out", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--evidence", type=Path)
+    args = parser.parse_args()
+    output = args.out.resolve()
+    draw(output / "xi_resource_L12_all20.pdf", (args.evidence or output).resolve())

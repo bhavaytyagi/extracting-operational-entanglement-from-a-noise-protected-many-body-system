@@ -294,87 +294,6 @@
     "patch": null
   },
   {
-    "source": "checks/figure3-L12-resources-2026-11-04/joe/draw_resources.py",
-    "package": "scripts/figures/draw_resources.py",
-    "sha256": "27270512c616ccd73b7d56fb3d0d686633e2649a7861ccf79bfb3adca02d08fa",
-    "bytes": 8683,
-    "patch": [
-      {
-        "old": "ROOT=HERE.parents[2]",
-        "new": "ROOT = HERE.parents[1]"
-      },
-      {
-        "old": "ROOT/'numerical_campaigns/xi-sweep-L12-2026-11-03'",
-        "new": "ROOT / 'data/xi_sweep'"
-      },
-      {
-        "old": "ROOT/'notebook/projects/correlated-noise/l12-overnight-2026-11-03/joe/plot_l12.py'",
-        "new": "HERE / 'validate_l12.py'"
-      },
-      {
-        "old": "ROOT/'Working_paper/prl-revision-2026-10-30/Figures'",
-        "new": "ROOT/'Figures'"
-      }
-    ]
-  },
-  {
-    "source": "notebook/projects/correlated-noise/l12-overnight-2026-11-03/joe/plot_l12.py",
-    "package": "scripts/figures/validate_l12.py",
-    "sha256": "f54590463f1b7e7d543582a33ef16773f3bc1275c25f9b84245882903ebbacfc",
-    "bytes": 10083,
-    "patch": [
-      {
-        "old": "ROOT = HERE.parents[4]",
-        "new": "ROOT = HERE.parents[1]"
-      },
-      {
-        "old": "ROOT / 'numerical_campaigns/xi-sweep-L12-2026-11-03'",
-        "new": "ROOT / 'data/xi_sweep'"
-      },
-      {
-        "old": "ROOT / 'notebook/projects/correlated-noise/physics-results-2026-11-03/joe/draw_xi_negativity.py'",
-        "new": "HERE / 'draw_xi_negativity.py'"
-      }
-    ]
-  },
-  {
-    "source": "notebook/projects/correlated-noise/physics-results-2026-11-03/joe/draw_xi_negativity.py",
-    "package": "scripts/figures/draw_xi_negativity.py",
-    "sha256": "688224c27e2315b43f10e5cebd5bf0108121925953b3ebbe2dbb2ee9c8f58136",
-    "bytes": 7215,
-    "patch": [
-      {
-        "old": "ROOT = HERE.parents[4]",
-        "new": "ROOT = HERE.parents[1]"
-      },
-      {
-        "old": "ROOT / 'numerical_campaigns/xi-sweep-2026-10-30/data'",
-        "new": "ROOT / 'data/xi_sweep/data'"
-      }
-    ]
-  },
-  {
-    "source": "Working_paper/prl-revision-2026-10-30/Figures/combined_opening.pdf",
-    "package": "Figures/combined_opening.pdf",
-    "sha256": "d31294a536295fd45b68507dfbad05680fd0b576c7bf3f5d03028309c2387790",
-    "bytes": 102194,
-    "patch": null
-  },
-  {
-    "source": "Working_paper/prl-revision-2026-10-30/Figures/negativity_L12_correlations.pdf",
-    "package": "Figures/negativity_L12_correlations.pdf",
-    "sha256": "c106587b28da616008e7338e895c11016334992184288599a97c2c802790d10e",
-    "bytes": 25235,
-    "patch": null
-  },
-  {
-    "source": "Working_paper/prl-revision-2026-10-30/Figures/xi_resource_L12_all20.pdf",
-    "package": "Figures/xi_resource_L12_all20.pdf",
-    "sha256": "6ae75d56e473e3794afbda28869d4ed46ae711fb07caeb493346cfddffaf6940",
-    "bytes": 352176,
-    "patch": null
-  },
-  {
     "source": "notebook/projects/correlated-noise/figure1-circuit-install-2026-11-06/joe/combined-before.pdf",
     "package": "provenance/fig1/combined-before.pdf",
     "sha256": "991e5afd3ddcd2ba157ce1881c8c940bba16c0d786b018b313a3201466060fc2",
@@ -424,22 +343,63 @@
     "patch": null
   },
   {
-    "source": "notebook/projects/correlated-noise/figure1-installation-2026-09-27/compose.py",
-    "package": "scripts/figures/rebuild_schematic.py",
-    "sha256": "3e5abef487f964f2f53a3765fc922179b8c7170e6eeb16e6e0d7ad8d27bc2ada",
-    "bytes": 3758,
+    "source": "PRL_submission/Figures/combined_opening.pdf",
+    "package": "Figures/combined_opening.pdf",
+    "sha256": "3b11ef4b76ed309aa167304972ed17baebb0e0357fec3d3474dfd05cdfe2b638",
+    "bytes": 105095,
+    "patch": null
+  },
+  {
+    "source": "PRL_submission/Figures/negativity_L12_correlations.pdf",
+    "package": "Figures/negativity_L12_correlations.pdf",
+    "sha256": "0644858f7da35635040983572b893156e2a7e6d3513239d6bf32fab54c4bf7e9",
+    "bytes": 24348,
+    "patch": null
+  },
+  {
+    "source": "PRL_submission/Figures/xi_resource_L12_all20.pdf",
+    "package": "Figures/xi_resource_L12_all20.pdf",
+    "sha256": "7143653fc2ec11264a3c0854fdffa33281f0ed74ecc90c37532cd0bf15b9ab50",
+    "bytes": 199434,
+    "patch": null
+  },
+  {
+    "source": "PRL_submission/letter_prl_revision_2.tex",
+    "package": "letter_prl_revision_2.tex",
+    "sha256": "6a8b58c8df3ae074f429ea35dfa58d69d4e57074aa27be85e190d9f2afd0e46e",
+    "bytes": 24604,
     "patch": [
-      "output directory and input PNG path only"
+      "Retain the online dynamic date."
     ]
   },
   {
-    "source": "notebook/projects/correlated-noise/figure1-repair-2026-11-03/draw_combined.py",
-    "package": "scripts/figures/rebuild_foundation.py",
-    "sha256": "1dcc1123e13dd317047f8e3bd228d167e32bb779519d29a80a17447dab7190c0",
-    "bytes": 4181,
+    "source": "reviews/coauthor-negativity-2026-11-24/draw_negativity.py",
+    "package": "scripts/figures/draw_l12_labeled.py",
+    "sha256": "fb215b1b148eb2b1726376f4f78afe6adff6f7051a29cec9115b31ee867dbd69",
+    "bytes": 5122,
     "patch": [
-      "portable paths only",
-      "exact two bare-label text substitutions reproduced from archived Nov4 source"
+      "Resolve package-local data and validator.",
+      "Retain the package directory-style --out and --campaign arguments."
+    ]
+  },
+  {
+    "source": "reviews/coauthor-negativity-2026-11-24/draw_resources.py",
+    "package": "scripts/figures/draw_resources.py",
+    "sha256": "89869dbc2c357e6fa30db8f2f8f3056c6aa031fbd9c9deec2eff60f68432d966",
+    "bytes": 12038,
+    "patch": [
+      "Resolve package-local data, validator and typography checks.",
+      "Retain the package --out and --evidence directory arguments."
+    ]
+  },
+  {
+    "source": "Working_paper/coauthor-review-2026-11-11/scripts/figures/validate_l12.py",
+    "package": "scripts/figures/validate_l12.py",
+    "sha256": "5327459d673dd760578b908da1bb6aee0b0b5e7115e02b0e0e73698416bb9961",
+    "bytes": 9987,
+    "patch": [
+      "Use package-local input paths.",
+      "Remove the superseded plot while preserving all campaign validation functions."
     ]
   }
 ]

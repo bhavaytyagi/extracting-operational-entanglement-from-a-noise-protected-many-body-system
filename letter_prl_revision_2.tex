@@ -1,3 +1,4 @@
+\pdfminorversion=7
 \documentclass[aps,prl,reprint,amsmath,amssymb,floatfix,superscriptaddress]{revtex4-2}
 \usepackage{graphicx,bm,amsmath,amssymb,physics}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
@@ -53,7 +54,7 @@ We describe the accumulated dephasing by the Lindblad generator~\cite{Breuer2007
 \mathcal D_\xi[\rho]=\gamma\sum_{i,j=1}^{L}\Xi_{ij}\left(\sigma_i^z\rho\sigma_j^z-\tfrac12\{\sigma_j^z\sigma_i^z,\rho\}\right).
 \label{eq:noise}
 \end{equation}
-Here $\sigma_i^z$ are the local dephasing operators and $\Xi_{ij}=(1-\xi)\delta_{ij}+\xi$ is the noise-correlation matrix. Its eigenvalues give the physical range $-1/(L-1)\le\xi\le1$ (Appendix~\ref{app:Log-neg}). For $\xi$ in the physical range, each spin experiences shared and independent noise. Increasing $\xi$ strengthens the uniform collective noise mode while keeping the total noise strength at each spin fixed. The noise is independent at $\xi=0$ and fully collective at $\xi=1$; allowed negative values describe anticorrelations. Averaging Gaussian white phase noise with $\gamma=0.1$ after the coherent layers gives $e^{\mathcal D_\xi}$ exactly.
+Here $\sigma_i^z$ are the local dephasing operators and $\Xi_{ij}=(1-\xi)\delta_{ij}+\xi$ is the noise-correlation matrix. Its eigenvalues give the physical range $-1/(L-1)\le\xi\le1$ (Appendix~\ref{app:Log-neg}). Increasing $\xi$ strengthens the uniform collective noise mode while keeping the noise variance at each spin fixed. The noise is independent at $\xi=0$ and fully collective at $\xi=1$. Negative $\xi$ describes anticorrelated phase fluctuations on distinct sites. Averaging Gaussian white phase noise with $\gamma=0.1$ after the coherent layers gives $e^{\mathcal D_\xi}$ exactly.
 
 To quantify the entanglement generated during evolution, we divide the ring into two contiguous equal halves and calculate the logarithmic negativity~\cite{Vidal2002},
 \begin{equation}
@@ -64,18 +65,14 @@ A positive value certifies entanglement between the two halves. The product inpu
 
 \begin{figure}[!t]
 \includegraphics[width=\linewidth]{negativity_L12_correlations.pdf}
-\caption{\label{fig:negativity}Correlation dependence of generated entanglement for twelve spins over the twenty correlations used in Fig.~\ref{fig:dynamics}. Logarithmic negativity is in natural-log units. 
-%not needed Markers give the thirteen calculated times $0,1,2,3,4,5,10,20,40,80,150,250,400$; connecting lines are visual guides. 
-The time axis is linear through five Floquet periods and logarithmic thereafter.}
+\caption{\label{fig:negativity}Logarithmic negativity $\EN(t)$ across the equal bipartition of the twelve-spin ring for selected correlations from independent ($\xi=0$) to collective ($\xi=1$) dephasing. Markers indicate the periods at which $\EN(t)$ was evaluated. The inset shows periods $0$ to $5$ on a linear time axis. The main time axis is logarithmic.}
 \end{figure}
 
 \emph{Results.}---Interactions generate entanglement between the two halves from the product input. Figure~\ref{fig:negativity} shows a rapid buildup followed by correlation-dependent decay. Near the collective limit, entanglement survives longer as the noise becomes more correlated. At $\xi=1$, the trajectory approaches an entangled stationary state.
 
 \begin{figure*}[t]
 \includegraphics[width=\textwidth]{xi_resource_L12_all20.pdf}
-\caption{\label{fig:dynamics}Correlation dependence of entanglement extraction and teleportation for twelve spins. The twenty equally spaced rows have nonuniform correlation spacing.
-% not needed $\xi=-1/11,\allowbreak -0.05,\allowbreak 0,\allowbreak 0.1,\allowbreak 0.2,\allowbreak 0.3,\allowbreak 0.4,\allowbreak 0.5,\allowbreak 0.6,\allowbreak 0.7,\allowbreak 0.8,\allowbreak 0.85,\allowbreak 0.9,\allowbreak 0.95,\allowbreak 0.97,\allowbreak 0.98,\allowbreak 0.99,\allowbreak 0.995,\allowbreak 0.999,\allowbreak 1$. 
-(a) Fixed-decoder conditional teleportation fidelity, with color centered on the classical benchmark $2/3$, and (b) heralding probability on a logarithmic color scale. Each constant-color time cell represents one of the $401$ integer times from $0$ through $400$ periods; the cell boundaries are at half-integer times. Time axes are linear through five Floquet periods and logarithmic thereafter, so the displayed cell widths are unequal.}
+\caption{\label{fig:dynamics}Conditional teleportation fidelity (a) and heralding probability (b) for the twelve-spin ring. The dashed boundary in (a) marks the sampled region with fidelity above the classical benchmark $2/3$. The probability colorbar in (b) uses a logarithmic scale. Each cell represents one integer Floquet period and one sampled correlation. In each panel, the narrow plot at left shows periods $0$ to $5$ on a linear time axis. The plot at right shows periods $5$ to $400$ on a logarithmic time axis. The correlation coordinate is $-\log_{10}(1-\xi)$, with the collective endpoint $\xi=1$ in a separate top row.}
 \end{figure*}
 
 The Lindblad generator $\mathcal D_\xi$ describes the dephasing layer, while $\mathcal M_\xi$ in Eq.~\eqref{eq:map} describes the full period. For collective dephasing, $\xi=1$, the stationary state here satisfies $\mathcal D_1[\rho_\infty]=0$ and $\mathcal M_1[\rho_\infty]=\rho_\infty$. Let $D_L$ comprise the ring's $L$ rotations and $L$ reflections, represented by spin permutations $U(g)$. Its group average gives
@@ -85,7 +82,7 @@ The Lindblad generator $\mathcal D_\xi$ describes the dephasing layer, while $\m
 \rho_\infty=\frac{\Psym}{N_L}.
 \label{eq:target}
 \end{equation}
-Here $\Psym$ projects onto $\mathcal S$, the spin states unchanged by every rotation and reflection of the ring, and $N_L=\dim\mathcal S$. Thus $\rho_\infty$ is maximally mixed on this sector, which contains the uniform product input. Both coherent layers and collective dephasing preserve $\mathcal S$ and leave $\rho_\infty$ unchanged. Appendix~\ref{App:A} proves that every initial state supported on $\mathcal S$ converges to this density for twelve spins. For $\xi<1$, additional noise modes resolve relative spin configurations, breaking this support protection and making $\rho_\infty$ nonstationary.
+Here $\Psym$ projects onto $\mathcal S$, the spin states unchanged by every rotation and reflection of the ring, and $N_L=\dim\mathcal S$. Thus $\rho_\infty$ is maximally mixed on this sector, which contains the uniform product input. Both coherent layers and collective dephasing preserve $\mathcal S$ and leave $\rho_\infty$ unchanged. Appendix~\ref{App:A} proves that every initial state supported on $\mathcal S$ converges to this density for twelve spins. Evaluating Eq.~\eqref{eq:negativity} on $\rho_\infty$ gives $\EN(\infty)\simeq0.942$, the plateau in Fig.~\ref{fig:negativity}. For $\xi<1$, additional noise modes resolve relative spin configurations, breaking this support protection and making $\rho_\infty$ nonstationary.
 
 The next step is to extract a pair of usable spins. Concentrating many-body entanglement onto selected spins is the goal of localizable-entanglement protocols~\cite{Popp2005}. Our circuit combines gates and measurements within each half to prepare a pair for teleportation~\cite{Teleportation1999}. In each half of $m=L/2$ spins, select the alternating string $a=0101\cdots$ and its complement $\bar a$. The operator for a successful local outcome is
 \begin{equation}
@@ -94,26 +91,26 @@ K=\ket0\bra a+\ket1\bra{\bar a}.
 \end{equation}
 Alice and Bob each have access to one half of the spin chain, with six spins in each half for the twelve-spin system considered here. Within each half, apply five controlled-NOT gates, using the first spin as the control and each of the other five spins as a target. Measure the five target spins in the computational basis, leaving the first spin unmeasured. The selected strings, for six spins, $010101$ and $101010$ both produce the measurement record $10101$, leaving the retained spin in $0$ and $1$, respectively. Since the measurement does not distinguish these two configurations, their coherence is preserved in the retained spin. Alice and Bob communicate their measurement outcomes and keep the retained pair only if each obtains the predetermined record $10101$. All gates act within the individual halves, so the protocol extracts entanglement already present between them.
 
-For a ring state $\rho_t$, the unnormalized pair, success probability, and conditional pair are
+For a ring state $\rho_t$, let $\sigma_t$ be the unnormalized state selected by the joint measurement record. Its trace $p_t$ is the probability of obtaining that record. Conditioned on that record, the pair has state $r_t$.
 \begin{equation}
 \sigma_t=(K\otimes K)\rho_t(K^\dagger\otimes K^\dagger),\quad
 p_t=\Tr\sigma_t,\quad r_t=\sigma_t/p_t.
 \label{eq:pair}
 \end{equation}
-For the twelve-spin target, the accepted pair is
+For the stationary state at $\xi=1$, Appendix~\ref{App:B} derives the accepted pair and its heralding probability.
 \begin{equation}
 r_\infty=\frac67\ket{\Phi^+}\!\bra{\Phi^+}+\frac17\ket{\Psi^+}\!\bra{\Psi^+},\qquad p_\infty=\frac1{192},
 \label{eq:pair12}
 \end{equation}
-with $\ket{\Phi^+}=(\ket{00}+\ket{11})/\sqrt2$ and $\ket{\Psi^+}=(\ket{01}+\ket{10})/\sqrt2$. The Bell overlap is $f\equiv \bra{\Phi^+}r_\infty\ket{\Phi^+}=6/7$. Standard teleportation measurement and corrections give the fidelity $F$, averaged uniformly over all pure input qubits~\cite{Teleportation1999},
+Here $\ket{\Phi^+}=(\ket{00}+\ket{11})/\sqrt2$ and $\ket{\Psi^+}=(\ket{01}+\ket{10})/\sqrt2$. The overlap with the reference Bell state is $f\equiv \bra{\Phi^+}r_\infty\ket{\Phi^+}=6/7$. Using this pair in the standard teleportation protocol, the output fidelity averaged over uniformly distributed pure input qubits is~\cite{Teleportation1999}
 \begin{equation}
 %F=\frac{2f+1}{3}=\frac{19}{21}\simeq90.48\%>\frac23.
 F=\frac{2f+1}{3}=\frac{19}{21}\simeq90.5\%>\frac23.
 \label{eq:fidelity}
 \end{equation}
-This mean fidelity exceeds the classical limit $2/3$ achievable without shared entanglement. Alice and Bob herald successful extraction before the unknown input is supplied. With independent resets, they can repeat the preparation until a pair is ready, requiring $192$ attempts on average. The conditional fidelity gives the quality of accepted pairs, while $p_\infty=1/192$ gives their yield. We assume ideal local gates and readout, with the driven noisy dynamics paused during extraction and teleportation.
+The classical benchmark $2/3$ is the best mean fidelity when Alice measures the input and Bob prepares an output from her classical message, with no shared entanglement~\cite{Teleportation1999}. Equation~\eqref{eq:fidelity} gives the fidelity conditioned on a successful extraction. Alice and Bob herald success before receiving the unknown input. With independent resets, the steady-state yield $p_\infty=1/192$ means they need $192$ preparation attempts on average. We assume ideal local gates and readout, with the driven noisy dynamics paused during extraction and teleportation.
 
-{\it Discussion and Conclusions.}---Figure~\ref{fig:dynamics} shows how noise correlations control the survival of the accepted pairs' teleportation advantage. For sufficiently strong correlations, their mean fidelity rises above the classical benchmark after entanglement builds up. As correlations approach the collective limit, the fidelity stays above this benchmark for longer. For the strongest correlations, it survives to the end of the $400$-period run. Panel (b) gives the corresponding extraction probability. Ring entanglement can outlast the teleportation advantage of this decoder, distinguishing entanglement survival from its usefulness for the chosen task. Our simple, unoptimized filter serves as a proof of principle: despite its small success probability, it converts noise-protected many-body entanglement into a pair for high-fidelity teleportation. We focus on twelve spins to keep full density-matrix evolution and entanglement calculations tractable.
+{\it Discussion and Conclusions.}---Figure~\ref{fig:dynamics}~(a) shows how noise correlations control the survival of the accepted pairs' teleportation advantage. At period zero, before Floquet evolution, a successful extraction from the initial product state retains the pair $\ket{++}$. Its squared overlap $f=1/2$ with $\ket{\Phi^+}$ gives $F(0)=(2f+1)/3=2/3$ for every $\xi$, setting the baseline at the classical benchmark. For sufficiently strong correlations, the mean fidelity rises above the benchmark after entanglement builds up. As correlations approach the collective limit, the fidelity stays above this benchmark for longer. For the strongest correlations, it survives to the end of the $400$-period run. Figure~\ref{fig:dynamics}~(b) gives the corresponding extraction probability. Ring entanglement can outlast the teleportation advantage of this decoder, distinguishing entanglement survival from its usefulness for the chosen task. Our simple, unoptimized filter serves as a proof of principle: despite its small success probability, it converts noise-protected many-body entanglement into a pair for high-fidelity teleportation. We focus on twelve spins to keep full density-matrix evolution and entanglement calculations tractable.
 
 The trend follows what the environment can resolve. For $\xi<1$, additional noise channels distinguish differences between the spins. Their strength is proportional to $1-\xi$ (Appendix~\ref{app:Log-neg}), so this source of dephasing weakens as $\xi\rightarrow1$. At the collective endpoint, the environment couples only to the sum of all spins' $z$ components, the total magnetization, and ring symmetry protects the entangled stationary state.
 
@@ -181,7 +178,7 @@ The normalized uniform mode $\bm v_0=\bm e/\sqrt L$ has eigenvalue $\lambda_0=1+
 -\frac{1}{L-1}\le\xi\le1.
 \label{eq:noise_range}
 \end{equation}
-This includes anticorrelations down to $\xi=-1/11$ for twelve spins, where the uniform mode vanishes. Throughout the interval the variance at each site stays fixed because $\Xi_{jj}=1$.
+Relative to independent noise, $\xi<0$ weakens the uniform mode and strengthens the differential modes. At $\xi=-1/11$ for twelve spins, the phase increments sum to zero.
 
 Write $\mathfrak D[A]\rho=A\rho A^\dagger-\tfrac12\{A^\dagger A,\rho\}$. For a real orthonormal eigenbasis $\bm v_\alpha$, averaging the phase rotations generated by $\sum_j\sigma_j^z dW_j$ gives Eq.~\eqref{eq:noise} in terms of the jump operators $L_\alpha$,
 \begin{align}

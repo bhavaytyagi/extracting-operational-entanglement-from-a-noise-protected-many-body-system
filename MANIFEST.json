@@ -11,16 +11,16 @@
       "bytes": 105095
     },
     "Figures/negativity_L12_correlations.pdf": {
-      "sha256": "12d051d92037c6d0c2d9e4bde9bca60ee10e7b715b2e1aa0ad80fced2c1c064d",
-      "bytes": 17196
+      "sha256": "0644858f7da35635040983572b893156e2a7e6d3513239d6bf32fab54c4bf7e9",
+      "bytes": 24348
     },
     "Figures/xi_resource_L12_all20.pdf": {
-      "sha256": "c5e2f8bd987b152b30e0d2960e4c41f0534fe0b77bd6f540760178db3f0eed2b",
-      "bytes": 352157
+      "sha256": "7143653fc2ec11264a3c0854fdffa33281f0ed74ecc90c37532cd0bf15b9ab50",
+      "bytes": 199434
     },
     "README.md": {
-      "sha256": "19f4d7f9fd1b59874f9ae5c2dad55af586117dc76a5b83657902eb035e6e987c",
-      "bytes": 4430
+      "sha256": "0700281e83ebe56761b59f449c548de57d98a8b9efae45804d7aea5335111ad6",
+      "bytes": 4698
     },
     "References_revision_2.bib": {
       "sha256": "7261b75625c8c4df4bd59792e95cb6dbf79d4302672d3f5e3d78890ae15cf047",
@@ -199,12 +199,12 @@
       "bytes": 63
     },
     "letter_prl_revision_2.pdf": {
-      "sha256": "3793c057704d642ac3e3f9bfc106c7865e95df3a3da20ef4146368e4b9e1f0a5",
-      "bytes": 765647
+      "sha256": "2d4925b3aa9c8a8aae4f5c18785fb830bd15ba42d286491641934cc1ae0b8606",
+      "bytes": 622605
     },
     "letter_prl_revision_2.tex": {
-      "sha256": "fce0f66c6e6a3d4e84e8b123739bfb2d8f18f0a15ccb11de78e6311d8f8f38ab",
-      "bytes": 24330
+      "sha256": "280567f70e5b211b4e52bc02ae666ac592ce305b94639a78c19da2b72a48cf2c",
+      "bytes": 24593
     },
     "provenance/fig1/art-edits.json": {
       "sha256": "68b45d3d8513b588b548334b77fdacd17590bdfe6b0dc84e41431fa7a951d2d9",
@@ -287,8 +287,8 @@
       "bytes": 1228
     },
     "provenance/source-map.json": {
-      "sha256": "c8357ea6ef2f390257d6918bedbb78301cabb4cf2b7c8a15aa3dd6bae03bfaaf",
-      "bytes": 16977
+      "sha256": "8fa0c976705d08fecfee146ff197a516e76919574b21e9a6b12ad70f652cc89b",
+      "bytes": 15671
     },
     "requirements.txt": {
       "sha256": "3e121cec36ac29794481ff56747ee6bbb703dff7b7a6ba509499a2d6b953253f",
@@ -322,41 +322,25 @@
       "sha256": "20e43ad44fd20358ca8ea5c2e83abae632d21e49807a7519a9b9a495e6d82740",
       "bytes": 6916
     },
-    "scripts/figures/dimensions.json": {
-      "sha256": "802864fb6799e60b413bc6dd47783292cc5850ef6555ae030602880486e965b3",
-      "bytes": 456
-    },
     "scripts/figures/draw_l12_labeled.py": {
-      "sha256": "bf8931e99257142679f639f69d9ef8b8b1f00926752bd647af4d309903ad6063",
-      "bytes": 8723
+      "sha256": "ebf722fcf21adafb937ebc0f4120aa2f2bb11fed9e8798cf2f1f0b9f8ff6bf2e",
+      "bytes": 5224
     },
     "scripts/figures/draw_labeled_candidate.py": {
       "sha256": "01470105b256bb0990c04f4a5cafe87288a1f01d80c00de89c81fb296cd96c0b",
       "bytes": 9125
     },
     "scripts/figures/draw_resources.py": {
-      "sha256": "e3211fa7a44542a7e2ff584da9bbe8dab98ebd83b199d6997a347d5d577471f0",
-      "bytes": 8616
-    },
-    "scripts/figures/draw_xi_negativity.py": {
-      "sha256": "64973f2eec25345b0a3a31d208b1fe0f1c3d50e7161050032aaaf33ff8c43dba",
-      "bytes": 7189
-    },
-    "scripts/figures/rebuild_foundation.py": {
-      "sha256": "d88983617a060a26f8c3869e97a934a89d6c0b147f83feaeb448626d5df10457",
-      "bytes": 4737
-    },
-    "scripts/figures/rebuild_schematic.py": {
-      "sha256": "f108a194847839d7f6288a6fcb05d5d4885cd8a964b2632b14ac7fadc7bc432f",
-      "bytes": 3820
+      "sha256": "9bc91b874a187f3384721aeae9601ea1c60d0f7133218cff5c26ef464e08b1fa",
+      "bytes": 12081
     },
     "scripts/figures/typography_checks.py": {
       "sha256": "6875b3ec6baad78819459e1fc4d8694ad0294f40dee4df802e24894f16bac0df",
       "bytes": 3351
     },
     "scripts/figures/validate_l12.py": {
-      "sha256": "5327459d673dd760578b908da1bb6aee0b0b5e7115e02b0e0e73698416bb9961",
-      "bytes": 9987
+      "sha256": "d720a544647cd427f2b8cfd4f181816827d32edc0ba3c246c06ea4ea8848dfdd",
+      "bytes": 5232
     },
     "scripts/ideal_sector/README.md": {
       "sha256": "469aacf42cfb4530943ab5d5ed90739d83d9c135ae8a415bd386b2ec32f890a0",
@@ -401,6 +385,10 @@
     "verification/exact_resource/independent_checks.py": {
       "sha256": "ac426506fb1f62c5bb1b1829b4d29023210388bca43ca4d2745742f567c71868",
       "bytes": 3975
+    },
+    "verification/revision2/COAUTHOR-FIGURE-REPRODUCTION.json": {
+      "sha256": "55cf2b8279be4f06b623c797a9cd16b65e1ea3c2c1f82192f63fb6d90581e2d1",
+      "bytes": 2244
     },
     "verification/revision2/EVIDENCE_INVENTORY.md": {
       "sha256": "e87114415a7f487e09da2964414d189dbb0931773750b4cc80db61226a8e1cf0",

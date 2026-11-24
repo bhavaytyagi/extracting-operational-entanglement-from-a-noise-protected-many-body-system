@@ -24,7 +24,7 @@ The command writes PDFs, previews, and check receipts under `build/figures/`. Th
 
 Figure 1 uses the archived reservoir artwork and final vector circuit. Its default build needs no image generation or extra system font. For an editable rebuild of the vector circuit, run [draw_labeled_candidate.py](scripts/figures/draw_labeled_candidate.py) in a disposable copy with the licensed Arial Narrow font installed. This optional command overwrites its circuit inputs, and the installed font affects exact rendering. The standard reproduction command uses the supplied circuit PDF with embedded fonts. [Figure 1 provenance](provenance/fig1/)
 
-Figure 2 uses 13 saved logarithmic-negativity samples for each of 20 noise correlations. It plots lines identified by the correlation color bar. Figure 3 uses 401 integer times for each correlation. Panel (a) plots mean teleportation fidelity conditional on successful extraction and panel (b) plots the probability of that extraction. The figure scripts check plotted values against the archived arrays.
+Figure 2 shows 13 saved logarithmic-negativity samples at each of 10 selected nonnegative correlations, with a marker legend and a linear inset for periods 0–5. Figure 3 uses 401 integer times at each of the 18 nonnegative correlations. Figure 3(a) shows conditional mean teleportation fidelity and marks the boundary of the sampled region above the classical benchmark of 2/3. Figure 3(b) gives the probability of successful extraction. Both figures use a logarithmic main time axis from period 5 to 400. The figure scripts check plotted values against the archived arrays. [Current figure reproduction receipt](verification/revision2/COAUTHOR-FIGURE-REPRODUCTION.json)
 
 ## Recompute the numerical data
 
