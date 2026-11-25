@@ -40,7 +40,7 @@ def orbits(L):
 
 def EN_inf(L, NA):
     LB = L - NA
-    maskB = (1 << LB) - 1          # sites 0..LB-1 = B ; sites LB.. = A
+    maskB = (1 << LB) - 1
     orbs = orbits(L)
     NL = len(orbs)
     rows, cols, vals = [], [], []
@@ -51,13 +51,12 @@ def EN_inf(L, NA):
             sA, sB = s >> LB, s & maskB
             for t in orb:
                 tA, tB = t >> LB, t & maskB
-                rows.append((tA << LB) | sB)      # |s'_A s_B>
-                cols.append((sA << LB) | tB)      # <s_A s'_B|
+                rows.append((tA << LB) | sB)
+                cols.append((sA << LB) | tB)
                 vals.append(w)
     D = 1 << L
     M = sp.coo_matrix((vals, (rows, cols)), shape=(D, D)).tocsr()
     M.sum_duplicates()
-    # sanity: trace must be 1, matrix must be symmetric
     assert abs(M.diagonal().sum() - 1.0) < 1e-12, M.diagonal().sum()
     asym = abs(M - M.T).max()
     assert asym < 1e-14, asym

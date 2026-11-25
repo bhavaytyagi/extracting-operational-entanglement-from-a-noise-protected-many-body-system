@@ -35,7 +35,6 @@ def quantum(name,points,color):
     inventory['quantum_paths'].append({'id':name,'points':points,'color':color})
 
 def classical(name,points):
-    # White gaps at unrelated vertical quantum crossings make no connection.
     fragments=[]
     for p,q in zip(points[:-1],points[1:]):
         if p[1]==q[1]:
@@ -76,7 +75,6 @@ def meter(x,y,wire,stage):
     inventory['gate_events'].append({'kind':'measure-Z','wire':wire,'stage':stage,'x':x,'y':y})
 
 def and_gate(x,y,width,height,name):
-    # Cubic midpoint must coincide exactly with declared right-side port.
     right_control=x+width*(1-.25*.35)/.75
     verts=[(x,y-height/2),(x+width*.35,y-height/2),
            (right_control,y-height/2),(right_control,y+height/2),
@@ -85,7 +83,6 @@ def and_gate(x,y,width,height,name):
            MPath.LINETO,MPath.CLOSEPOLY]
     ax.add_patch(PathPatch(MPath(verts,codes),fc='#f5f7f9',ec=CLASSICAL,lw=.9,zorder=3))
 
-# Two local decoders acting on an existing joint twelve-spin ring state.
 for party,base,color in [('A',20,BLUE),('B',285,ORANGE)]:
     ys=[35+24*j for j in range(6)]
     retained_end=255 if party=='A' else 545
@@ -102,7 +99,6 @@ for party,base,color in [('A',20,BLUE),('B',285,ORANGE)]:
     inventory['selectors'].append({'party':party,'record_order':[f'{party}{j}' for j in range(2,7)],
         'expected_bits':[1,0,1,0,1],'symbol_x':base+197,'symbol_ys':ys[1:]})
 
-# Two local success flags are ANDed. No solid cross-half quantum connection.
 classical('A-success',[(242,107),(247,107),(247,203),(267,203)])
 classical('B-success',[(507,107),(522,107),(522,183),(237,183),(237,217),(267,217)])
 and_gate(267,210,30,30,'joint-success')
@@ -123,7 +119,6 @@ for party,x,color in [('A',255,BLUE),('B',545,ORANGE)]:
     inventory['branch_enables'].append({'party':party,'wire':party+'1','x':x,'y':245,
         'control':'g=AND(A-record==10101,B-record==10101)','g1':'identity/continue','g0':'discard'})
 
-# Unknown input exists only in the post-herald stage, not during extraction.
 quantum('Q',[(310,275),(430,275)],INK)
 ax.add_patch(FancyArrowPatch((300,275),(316,275),arrowstyle='-|>',
     mutation_scale=8,lw=1.1,color=INK,zorder=4))
@@ -158,7 +153,6 @@ assert not svg.findall('.//{http://www.w3.org/2000/svg}text')
 doc=pymupdf.open(HERE/'full_protocol_draft.pdf');page=doc[0]
 assert not page.get_text().strip() and not page.get_fonts() and not page.get_images()
 page.get_pixmap(matrix=pymupdf.Matrix(3,3)).save(HERE/'full_protocol_pdf_render.png')
-# Honest one-column fit, without changing topology or trimming any circuit part.
 preview=pymupdf.open();pp=preview.new_page(width=3.4*72,height=3.4*72*H/W)
 pp.show_pdf_page(pp.rect,doc,0)
 preview.save(HERE/'full_protocol_3p4in_preview.pdf',garbage=4,deflate=True)

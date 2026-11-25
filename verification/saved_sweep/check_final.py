@@ -162,7 +162,6 @@ for xi in [-1/3,0,.5,.99,1.]:
         a=direct_step(a,u,ch);b=runner.step(b,4,phase,mask)
         state_err=max(state_err,close(a,b))
         de,se=obs_check(b,4);decoder_err=max(decoder_err,de);spectral_err=max(spectral_err,se)
-    # Product input, J=0: correlated random local rotations preserve separability.
     phase,mask=runner.setup(4,xi,0);u0=unitary(4,0);a=np.ones((16,16),complex)/16;b=a.copy()
     for t in range(41):
         if t:a=direct_step(a,u0,ch);b=runner.step(b,4,phase,mask)
@@ -184,8 +183,6 @@ for n in [4,6]:
 announce('independent_dense_reference',dict(sizes=[4,6],generic_L4_steps=5,xi=[-1/3,0,.5,.99,1],J0_steps=40,
     max_state_error=state_err,max_decoder_error=decoder_err,max_spectral_error=spectral_err,tolerance=TOL))
 
-# Independent cheap L12 first-step resource reference: tensor single-site kick,
-# explicit Ising energy and covariance quadratic form, only decoder submatrix.
 n=12;d=4096;m=6;bits=np.array([list(map(int,format(i,'012b'))) for i in range(d)]);z=1-2*bits
 energy=np.array([sum(np.pi/4*row[j]*row[(j+1)%n]+row[j] for j in range(n)) for row in z])
 v=np.exp(-1j*energy)/np.sqrt(d);gate=expm(1j*np.pi/4*X)
@@ -206,8 +203,6 @@ for xi in GRID:
     for k in RES:first_err[k]=max(first_err[k],close(curves[xi]['rows'][1][k],expected[k]))
 announce('independent_L12_t1_all_grid',dict(curves=20,max_errors=first_err,tolerance=TOL))
 
-# One full actual imperfect L12 state and both complete spectra, independently
-# constructed from the pure kicked amplitudes and covariance quadratic form.
 xi=.99;cov=np.full((n,n),xi);np.fill_diagonal(cov,1.)
 zc=z@cov;quad=np.einsum('ij,ij->i',zc,z)
 decay=zc@z.T
@@ -216,7 +211,6 @@ decay*=(-.1/2);np.exp(decay,out=decay)
 rho=v[:,None]*v.conj()[None,:];rho*=decay
 del decay
 ev=eigvalsh(rho,check_finite=True)
-# Independently transpose the A blocks by explicit indexing (64x64 blocks).
 pt=np.empty_like(rho)
 for a in range(64):
     for c in range(64):pt[a*64:(a+1)*64,c*64:(c+1)*64]=rho[c*64:(c+1)*64,a*64:(a+1)*64]

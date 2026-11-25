@@ -81,12 +81,9 @@ def run(n):
         for rsign,(a,qbasis,reps) in enumerate(blocks):
             subblocks=[a]
             if q==0:
-                # Complement commutes with reflection, and acts as a permutation
-                # with possible signs in the odd-reflection basis. Use q=0
-                # reflection blocks directly to avoid an unneeded signed split.
                 pass
             for bmat in subblocks:
-                if bmat.shape[0]==0:  # A symmetry character may be absent.
+                if bmat.shape[0]==0:
                     rows.append(dict(charge=q,reflection_sign=1 if rsign==0 else -1,size=0,seconds=0,multiplicity=1 if q==0 else 2))
                     continue
                 size=bmat.shape[0]

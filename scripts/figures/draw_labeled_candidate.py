@@ -21,7 +21,6 @@ sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 before={str(p.relative_to(ROOT)):sha(p) for p in OLD.rglob('*') if p.is_file()}
 source=SOURCE.read_text()
 assert source.count('assert not [t for t in fig.findobj')==1
-# Execute only frozen vector construction; never execute old output operations.
 namespace={'__file__':str(SOURCE),'__name__':'frozen_vector_construction'}
 exec(compile(source.split('assert not [t for t in fig.findobj')[0],str(SOURCE),'exec'),namespace)
 fig,ax,inventory=namespace['fig'],namespace['ax'],namespace['inventory']
@@ -34,13 +33,11 @@ geometry_patches=[({'endpoints':list(p._posA_posB),'mutation_scale':p.get_mutati
     'arrowstyle':type(p.get_arrowstyle()).__name__} if isinstance(p,FancyArrowPatch)
     else {'vertices':p.get_path().vertices.copy(),'patch_transform':p.get_patch_transform().get_matrix().copy()})
     for p in old_patches]
-# Cosmetic H border enlargement is the only old shape-geometry exception.
 H_boxes=[p for p in old_patches if type(p).__name__=='Rectangle' and tuple(p.get_xy())==(390,266) and p.get_width()==18 and p.get_height()==18]
 assert len(H_boxes)==1,H_boxes
 H_box=H_boxes[0]
 H_box.set_xy((389,265));H_box.set_width(20);H_box.set_height(20)
 assert (H_box.get_x()+H_box.get_width()/2,H_box.get_y()+H_box.get_height()/2)==(399,275)
-# Source-space minimum1.05pt gives0.504pt after fixed0.48 composition.
 for artist in [*old_lines,*old_patches]:
     artist.set_linewidth(max(artist.get_linewidth(),1.05))
 plt.rcParams['svg.fonttype']='none'
@@ -109,7 +106,6 @@ overlaps=[]
 for i,(name,bbox) in enumerate(boxes):
     for other,ob in boxes[i+1:]:
         if bbox.overlaps(ob):overlaps.append([name,other])
-# Em boxes may overlap even when printed ink does not; measure actual ink.
 from typography_checks import check_ink
 ink=check_ink(fig,OUT/'actual-ink-checks.json',final_scale=.48)
 assert ink['minimum_plain_capital_numeral_height_mm']>=2.,ink

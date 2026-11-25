@@ -37,7 +37,6 @@ def rank_certificate(where, orbits, length, prime):
     n = len(orbits)
     reps = [min(o) for o in orbits]
     matrix = np.zeros((n, n), dtype=np.int64)
-    # Coefficient on a representative of the target orbit in A sum_{source} |x>.
     for i, x in enumerate(reps):
         for j in range(length):
             matrix[i, where[x ^ (1 << j)]] += 1

@@ -30,7 +30,6 @@ for coordinate in [b'294.515625',b'120.515625']:
     labels.append(matches[0])
 divider=re.findall(rb'q 0 0 245 308 re W n 2 J 1 j 0\.6 w[^q]*?7 134 m\n238 134 l\n\nS\nQ',stream,re.S)
 assert len(divider)==1,len(divider)
-# Minimal unchanged primitives. Original source artwork remains in its own Form.
 replacement=(b'/DeviceRGB CS\n/DeviceRGB cs\n1 j\n'+divider[0]+
     b'\n0.1254901961 0.2039215686 0.2823529412 rg\n'+b'\n'.join(labels[:1])+b'\n')
 clean.update_stream(overlay[0],replacement)
@@ -47,8 +46,6 @@ page.show_pdf_page(pymupdf.Rect(0,0,245,308),clean,0,keep_proportion=True)
 circuit_xref=page.show_pdf_page(target,circuit,0,keep_proportion=True)
 assert doc.xref_stream(circuit_xref)==circuit[0].read_contents(),'Circuit source content changed'
 
-# Paint the original (b) glyph above the opaque circuit background. Preserve its
-# exact font, source bytes and position; only draw order changes.
 label_underlay=[x for x,name,invoker,box in page.get_xobjects()
     if name=='fullpage' and doc.xref_stream(x)==replacement]
 assert len(label_underlay)==1,label_underlay
@@ -86,13 +83,11 @@ def pixels(p,clip,zoom=3):
 
 panel_a=pymupdf.Rect(0,0,245,174)
 assert np.array_equal(pixels(before[0],panel_a),pixels(page,panel_a)),'Panel(a) pixels changed'
-# Reference preserves the complete approved circuit with the exact placement.
 ref=pymupdf.open();rp=ref.new_page(width=W,height=H)
 rp.show_pdf_page(target,circuit,0)
 reference_clip=pymupdf.Rect(np.ceil(target.x0*3)/3,np.ceil(target.y0*3)/3,
     np.floor(target.x1*3)/3,np.floor(target.y1*3)/3)
 actual,expected=pixels(page,reference_clip),pixels(rp,reference_clip)
-# The sole intentional circuit-background overpaint is the restored panel label.
 mask=np.ones(actual.shape[:2],dtype=bool)
 label_region=pymupdf.Rect(7,186,22,190)&reference_clip
 x0,y0=int(round((label_region.x0-reference_clip.x0)*3)),int(round((label_region.y0-reference_clip.y0)*3))

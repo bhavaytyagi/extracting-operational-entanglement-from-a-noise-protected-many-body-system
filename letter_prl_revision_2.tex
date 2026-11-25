@@ -2,6 +2,7 @@
 \documentclass[aps,prl,reprint,amsmath,amssymb,floatfix,superscriptaddress]{revtex4-2}
 \usepackage{graphicx,bm,amsmath,amssymb,physics}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{orcidlink}
 \graphicspath{{Figures/}}
 \newcommand{\UK}{U_{\mathrm K}}
 \newcommand{\UI}{U_{\mathrm I}}
@@ -10,13 +11,13 @@
 \setlength{\textfloatsep}{6pt plus 2pt minus 2pt}
 \begin{document}
 \title{Extracting Operational Entanglement from a Noise-Protected Many-Body System}
-\author{Bhavay Tyagi}
+\author{Bhavay Tyagi\texorpdfstring{\,\orcidlink{0000-0001-6628-7903}}{}}
 \email{btyagi@uh.edu}
 \affiliation{Department of Physics, University of Houston, Houston, Texas 77204, USA}
-\author{Eric R. Bittner}
+\author{Eric R. Bittner\texorpdfstring{\,\orcidlink{0000-0002-0775-9664}}{}}
 \email{ebittner@central.uh.edu}
 \affiliation{Department of Physics, University of Houston, Houston, Texas 77204, USA}
-\author{Kevin E. Bassler}
+\author{Kevin E. Bassler\texorpdfstring{\,\orcidlink{0000-0001-7700-2037}}{}}
 \email{bassler@uh.edu}
 \affiliation{Department of Physics, University of Houston, Houston, Texas 77204, USA}
 \affiliation{Department of Mathematics, University of Houston, Houston, TX}
@@ -35,7 +36,6 @@ Strong symmetries also organize dissipative dynamics into invariant sectors~\cit
 \includegraphics[width=\linewidth]{combined_opening.pdf}
 \caption{\label{fig:model} (a) Independent and collective dephasing of the interacting ring (blue spins; red environment). Collective dephasing cannot distinguish spin configurations with the same total magnetization. Schematic negativity curves illustrate entanglement survival as $\xi\rightarrow1$. The ring-and-environment artwork in Fig.~\ref{fig:model}(a) was generated and edited using OpenAI's image generation tool. (b) Physical extraction and teleportation. Alice and Bob apply local CNOT gates and measurements within their halves, accepting the pair ($A$ and $B$) when both records are $10101$. Bell-state measurement and Pauli corrections teleport the unknown input $\ket{\psi}$ to $\rho_{\text{out}}$.}
 \end{figure}
-
 
 \emph{In this Letter} we show how a noisy driven Ising ring~\cite{Bertini2018} prepares an entangled state and supplies a physical pair for teleportation. The protecting symmetries rotate and reflect the ring, rather than act on each site as in Ref.~\cite{Moharramipour2024}. Starting from a uniform product state, interactions generate entanglement while collective dephasing keeps the state within the ring-symmetric sector. For twelve spins, the dynamics approaches the maximally mixed state within this sector. A circuit acting within each half then extracts a pair that teleports a qubit above the classical fidelity benchmark [Fig.~\ref{fig:model}(b)]. The protocol turns entanglement generated in a noisy many-body system into an accessible quantum resource.
 
@@ -104,11 +104,12 @@ r_\infty=\frac67\ket{\Phi^+}\!\bra{\Phi^+}+\frac17\ket{\Psi^+}\!\bra{\Psi^+},\qq
 \end{equation}
 Here $\ket{\Phi^+}=(\ket{00}+\ket{11})/\sqrt2$ and $\ket{\Psi^+}=(\ket{01}+\ket{10})/\sqrt2$. The overlap with the reference Bell state is $f\equiv \bra{\Phi^+}r_\infty\ket{\Phi^+}=6/7$. Using this pair in the standard teleportation protocol, the output fidelity averaged over uniformly distributed pure input qubits is~\cite{Teleportation1999}
 \begin{equation}
-%F=\frac{2f+1}{3}=\frac{19}{21}\simeq90.48\%>\frac23.
 F=\frac{2f+1}{3}=\frac{19}{21}\simeq90.5\%>\frac23.
 \label{eq:fidelity}
 \end{equation}
-The classical benchmark $2/3$ is the best mean fidelity when Alice measures the input and Bob prepares an output from her classical message, with no shared entanglement~\cite{Teleportation1999}. Equation~\eqref{eq:fidelity} gives the fidelity conditioned on a successful extraction. Alice and Bob herald success before receiving the unknown input. With independent resets, the steady-state yield $p_\infty=1/192$ means they need $192$ preparation attempts on average. We assume ideal local gates and readout, with the driven noisy dynamics paused during extraction and teleportation.
+For a uniformly distributed pure input qubit, the classical fidelity limit of $2/3$ is the highest mean fidelity achievable when Alice measures the input and Bob prepares an output based on her classical message, without shared entanglement~\cite{Teleportation1999}. This limit serves as a benchmark for qubit teleportation~\cite{Pirandola2015Teleportation} in trapped-ion experiments~\cite{Barrett2004Teleportation,Riebe2004Teleportation,Olmschenk2009Teleportation} and in studies of open quantum systems~\cite{Yan2025Teleportation}.
+
+Equation~\eqref{eq:fidelity} gives the fidelity conditioned on a successful extraction. Alice and Bob herald success before receiving the unknown input. With independent resets, the steady-state yield $p_\infty=1/192$ means they need $192$ preparation attempts on average. We assume ideal local gates and readout, with the driven noisy dynamics paused during extraction and teleportation.
 
 {\it Discussion and Conclusions.}---Figure~\ref{fig:dynamics}~(a) shows how noise correlations control the survival of the accepted pairs' teleportation advantage. At period zero, before Floquet evolution, a successful extraction from the initial product state retains the pair $\ket{++}$. Its squared overlap $f=1/2$ with $\ket{\Phi^+}$ gives $F(0)=(2f+1)/3=2/3$ for every $\xi$, setting the baseline at the classical benchmark. For sufficiently strong correlations, the mean fidelity rises above the benchmark after entanglement builds up. As correlations approach the collective limit, the fidelity stays above this benchmark for longer. For the strongest correlations, it survives to the end of the $400$-period run. Figure~\ref{fig:dynamics}~(b) gives the corresponding extraction probability. Ring entanglement can outlast the teleportation advantage of this decoder, distinguishing entanglement survival from its usefulness for the chosen task. Our simple, unoptimized filter serves as a proof of principle: despite its small success probability, it converts noise-protected many-body entanglement into a pair for high-fidelity teleportation. We focus on twelve spins to keep full density-matrix evolution and entanglement calculations tractable.
 

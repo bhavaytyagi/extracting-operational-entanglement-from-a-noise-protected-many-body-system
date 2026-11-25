@@ -28,9 +28,6 @@ def check_ink(fig, output, final_scale=1., require_no_overlaps=True):
         if '$' not in artist.get_text():
             for char in sorted(set(artist.get_text())):
                 if not(char.isupper() or char.isdecimal()):continue
-                # Character at the original artist location/style, retaining the
-                # same physical em size; capitalize/numeral check is separate
-                # from a whole-string bbox that might include tall punctuation.
                 t=Text(*artist.get_position(),text=char,fontproperties=artist.get_fontproperties(),
                     color=artist.get_color(),transform=artist.get_transform(),
                     horizontalalignment=artist.get_horizontalalignment(),

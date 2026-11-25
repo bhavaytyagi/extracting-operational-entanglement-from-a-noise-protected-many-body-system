@@ -305,7 +305,9 @@
     "package": "scripts/figures/circuit_original/draw_full_protocol.py",
     "sha256": "8e0c6942e7e6fe651fafdb60c59b0f82202731e80cecb63a80022be6921387ee",
     "bytes": 9269,
-    "patch": null
+    "patch": [
+      "Remove Python comments without changing the parsed code."
+    ]
   },
   {
     "source": "notebook/projects/correlated-noise/full-protocol-circuit-2026-11-05/joe/circuit_inventory.json",
@@ -369,7 +371,8 @@
     "sha256": "6a8b58c8df3ae074f429ea35dfa58d69d4e57074aa27be85e190d9f2afd0e46e",
     "bytes": 24604,
     "patch": [
-      "Retain the online dynamic date."
+      "Retain the online dynamic date.",
+      "Incorporate the approved benchmark references and author ORCIDs. Remove TeX comments."
     ]
   },
   {
@@ -389,7 +392,8 @@
     "bytes": 12038,
     "patch": [
       "Resolve package-local data, validator and typography checks.",
-      "Retain the package --out and --evidence directory arguments."
+      "Retain the package --out and --evidence directory arguments.",
+      "Remove Python comments without changing the parsed code."
     ]
   },
   {

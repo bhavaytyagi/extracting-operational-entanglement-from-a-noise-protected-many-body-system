@@ -51,7 +51,6 @@ def integer_model(n):
         weight[i] = w.pop()
         parity[i] = (walls//2) % 2
     assert np.all(owner >= 0)
-    # Coefficient at one representative of TARGET orbit i in T |SOURCE j>.
     for i, orb in enumerate(obs):
         targets = owner[[orb[0] ^ (1 << k) for k in range(n)]]
         for j, count in zip(*np.unique(targets, return_counts=True)):
@@ -115,9 +114,7 @@ def cyclic_rank(flip, weight, parity, initial, prime):
         source, vector = queue.popleft()
         for target, block in edges[source]:
             insert(target, block @ vector)
-    # Every retained block vector is independent by distinct unit pivots.
     assert accepted == sum(len(v) for v in basis.values())
-    # A separate final closure pass checks the whole computed span.
     for source, vectors in basis.items():
         for vector in vectors.values():
             for target, block in edges[source]:

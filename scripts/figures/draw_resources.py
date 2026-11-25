@@ -220,8 +220,6 @@ def draw(output, evidence):
     evidence.mkdir(parents=True, exist_ok=True)
     ink = check_ink(fig, evidence / "figure3-ink.json")
     audit["minimum_plain_capital_numeral_height_mm"] = ink["minimum_plain_capital_numeral_height_mm"]
-    # A high-resolution color layer prevents hairline gaps between PDF polygons.
-    # Axes, text and the benchmark strokes retain their vector representation.
     fig.savefig(output, dpi=COLOR_LAYER_DPI,
                 metadata={"Title": "Twelve-spin teleportation resources", "CreationDate": None})
     plt.close(fig)

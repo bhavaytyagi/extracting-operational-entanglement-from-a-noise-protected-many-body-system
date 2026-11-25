@@ -19,13 +19,10 @@ def main():
     args = parser.parse_args()
     output = ROOT / 'build' / 'figures'
     if args.figure in ('all', '1'):
-        # The frozen vector circuit is sufficient to reproduce the composition.
         run('compose_candidate.py', '--out', output / 'fig1')
     if args.figure in ('all', '2'):
-        # Logarithmic negativity at the saved spectral sample times.
         run('draw_l12_labeled.py', '--out', output / 'fig2')
     if args.figure in ('all', '3'):
-        # Conditional teleportation fidelity and heralding probability.
         target = output / 'fig3'
         run('draw_resources.py', '--out', target, '--evidence', target)
     print(f'Figure PDFs and reproduction receipts are in {output}')

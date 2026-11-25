@@ -59,7 +59,6 @@ def negativity(rho,n):
     pt=rho.reshape(half,half,half,half).transpose(2,1,0,3).reshape(d,d)
     reverse=np.array([int(f'{x:0{m}b}'[::-1],2) for x in range(half)])
     idx=np.arange(d); refl=(reverse[idx>>m]<<m)|reverse[idx&(half-1)]
-    # Physical local reflection leaves this uniform-ring trajectory invariant.
     assert np.max(abs(pt[np.ix_(refl,refl)]-pt))<TOL
     left=idx[idx<refl];fixed=idx[idx==refl]; norm=0.;trace=0.;minimum=1.
     for sign in (1,-1):

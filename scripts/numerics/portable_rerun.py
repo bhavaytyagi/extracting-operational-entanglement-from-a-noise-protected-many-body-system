@@ -71,9 +71,6 @@ def smoke(c,out):
     return dict(status='smoke-pass',scope='L4 generic dense Lindblad reference only; no L12 production',state_entry_tolerance=TOL,reference_max_errors=errors,product=r,density_file=path.name)
 
 def reproduce(c,campaign,out,xi,horizon):
-    # Use the original trajectory with unchanged physical assertions and kernels.
-    # Its manifest/environment lifecycle is deliberately not invoked: this adapter
-    # separately verifies source bytes and records a new environment/run identity.
     folder=out/c.tag(12,xi)
     result=c.trajectory(folder,12,xi,horizon,EXPECTED_MANIFEST)
     c.result_check(result,12,xi,horizon,EXPECTED_MANIFEST)

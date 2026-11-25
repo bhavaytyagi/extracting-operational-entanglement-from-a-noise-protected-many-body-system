@@ -23,8 +23,8 @@
       "bytes": 4698
     },
     "References_revision_2.bib": {
-      "sha256": "7261b75625c8c4df4bd59792e95cb6dbf79d4302672d3f5e3d78890ae15cf047",
-      "bytes": 40179
+      "sha256": "091bb27be7ef6fae68337c2e2f857077b287496fea0beba1ba41bb5bed2029f9",
+      "bytes": 25011
     },
     "data/xi_sweep/KERNEL.md": {
       "sha256": "03aeeac6d897a614de6a1d08438cb49ed1d4ddf568d7d1d748133d65a372b68e",
@@ -199,12 +199,12 @@
       "bytes": 63
     },
     "letter_prl_revision_2.pdf": {
-      "sha256": "2d4925b3aa9c8a8aae4f5c18785fb830bd15ba42d286491641934cc1ae0b8606",
-      "bytes": 622605
+      "sha256": "18189c3f1d4e685975bd605967d333cddb66b782a4e91ab7a4844675c7821c1c",
+      "bytes": 625056
     },
     "letter_prl_revision_2.tex": {
-      "sha256": "280567f70e5b211b4e52bc02ae666ac592ce305b94639a78c19da2b72a48cf2c",
-      "bytes": 24593
+      "sha256": "0680a9c4f4f3430e6e80e489abe2aceffe2b4cca3f5f270409e8a604f693f507",
+      "bytes": 25058
     },
     "provenance/fig1/art-edits.json": {
       "sha256": "68b45d3d8513b588b548334b77fdacd17590bdfe6b0dc84e41431fa7a951d2d9",
@@ -227,8 +227,8 @@
       "bytes": 1587415
     },
     "provenance/portable-adapters.json": {
-      "sha256": "46d50e55d26d8fdd464de3f58cb0de643245ec1beb414eb00d48273c2ec48f63",
-      "bytes": 463
+      "sha256": "157f7d2b36015d693081e9200800fc989adc54454942cd9f5a5bdd8e9336e3ca",
+      "bytes": 531
     },
     "provenance/scientific-evidence/numerical_campaigns/prl-2026-10-29/review/final/REPORT.md": {
       "sha256": "5f52bfbf25760fb4170d9e98390fdf2a13945d70f155fedce29845f584ac39bb",
@@ -287,8 +287,8 @@
       "bytes": 1228
     },
     "provenance/source-map.json": {
-      "sha256": "8fa0c976705d08fecfee146ff197a516e76919574b21e9a6b12ad70f652cc89b",
-      "bytes": 15671
+      "sha256": "fd584aba58ed1a9f30317b194491e4dc8eb2e826f631ea4ee698822ac57e46ce",
+      "bytes": 15900
     },
     "requirements.txt": {
       "sha256": "3e121cec36ac29794481ff56747ee6bbb703dff7b7a6ba509499a2d6b953253f",
@@ -315,28 +315,28 @@
       "bytes": 13379
     },
     "scripts/figures/circuit_original/draw_full_protocol.py": {
-      "sha256": "8e0c6942e7e6fe651fafdb60c59b0f82202731e80cecb63a80022be6921387ee",
-      "bytes": 9269
+      "sha256": "ae7c349a2e79415d2b9e52b48694275a21717f65ac4b8aa8980e6e54705c78b2",
+      "bytes": 8810
     },
     "scripts/figures/compose_candidate.py": {
-      "sha256": "20e43ad44fd20358ca8ea5c2e83abae632d21e49807a7519a9b9a495e6d82740",
-      "bytes": 6916
+      "sha256": "1c6da6ab34167d3ad25ec17b2422cb90ad169f85ae9496df62cb5da85cb97358",
+      "bytes": 6529
     },
     "scripts/figures/draw_l12_labeled.py": {
       "sha256": "ebf722fcf21adafb937ebc0f4120aa2f2bb11fed9e8798cf2f1f0b9f8ff6bf2e",
       "bytes": 5224
     },
     "scripts/figures/draw_labeled_candidate.py": {
-      "sha256": "01470105b256bb0990c04f4a5cafe87288a1f01d80c00de89c81fb296cd96c0b",
-      "bytes": 9125
+      "sha256": "48ff4f863f1acfee28979625b72c71e7c2a70fbbc30ea656f1875220f4d14ee6",
+      "bytes": 8825
     },
     "scripts/figures/draw_resources.py": {
-      "sha256": "9bc91b874a187f3384721aeae9601ea1c60d0f7133218cff5c26ef464e08b1fa",
-      "bytes": 12081
+      "sha256": "a89e2512561ece669bf96a23917b4097e36c46719dc8aedb1d9159b478722851",
+      "bytes": 11921
     },
     "scripts/figures/typography_checks.py": {
-      "sha256": "6875b3ec6baad78819459e1fc4d8694ad0294f40dee4df802e24894f16bac0df",
-      "bytes": 3351
+      "sha256": "5b19703b4a229564dca985166028ac37740c7c50c817ce098b931e808975c183",
+      "bytes": 3112
     },
     "scripts/figures/validate_l12.py": {
       "sha256": "d720a544647cd427f2b8cfd4f181816827d32edc0ba3c246c06ea4ea8848dfdd",
@@ -347,32 +347,32 @@
       "bytes": 938
     },
     "scripts/ideal_sector/dynamics.py": {
-      "sha256": "669c802ca269535ffc41ea1ded2c9c2db43f9631892c69583ce0f3c63bc1e3b6",
-      "bytes": 7543
+      "sha256": "ec50239a09c31342fb0c50785263cce666a669abaffe4eaceea132210710075e",
+      "bytes": 7464
     },
     "scripts/ideal_sector/target.py": {
-      "sha256": "445f4817b7e9b145063742239b8d3f1dd79530d9b5db12e5d86b77f79fe06ebb",
-      "bytes": 5396
+      "sha256": "f93699e27dcc414647ebb6efb1a428a83ebdee7aad22fe8aa8220129ba13992e",
+      "bytes": 5121
     },
     "scripts/numerics/portable_rerun.py": {
-      "sha256": "73ad32d10145ef9018343b8143db8a87c4e7c452173db193838ec13cd9299800",
-      "bytes": 7150
+      "sha256": "398b44fc299e956baaa4aeb62032d82a2253872f7e9be4245974107f926eadea",
+      "bytes": 6902
     },
     "scripts/rebuild_figures.py": {
-      "sha256": "0cbd59ffc46ca540ce045b3997a8bdf8f78a876e01e341c0a1ab27c76b157224",
-      "bytes": 1269
+      "sha256": "96b9a45988176295e74b32716b45e1f4b1ef2a0fb93fd85942658ee7fc279a52",
+      "bytes": 1048
     },
     "verification/certificates/verify_closed_form_independent.py": {
-      "sha256": "9d17c8e430b681eaf84f93ede35e0def7d2a4ff87aefd37842aa3a7dca55f165",
-      "bytes": 3104
+      "sha256": "caebee5d715e15d31be5bf12af752e035c760801466995ad84f0c81335c0c939",
+      "bytes": 2966
     },
     "verification/certificates/verify_cyclic_irreducibility_20260910.out": {
       "sha256": "ded8e35988f45720ca1d180fc013bb5a0f3e60702dbece9ada31f6fd3acf1e2c",
       "bytes": 1098
     },
     "verification/certificates/verify_cyclic_irreducibility_20260910.py": {
-      "sha256": "bf84b212f6308ffc9ee8ab9d9febba2eb6d3b0a50e1fc49aa1fb95e20cc359a2",
-      "bytes": 6649
+      "sha256": "b66b85af0314b6173e8bd1def7f7ecbe2df15b5e436f5814c139d0849434de4d",
+      "bytes": 6432
     },
     "verification/certificates/verify_cyclic_irreducibility_second_prime_20260911.out": {
       "sha256": "41a5d1f6377bb13012c35c9212e3446cf01f2a754cde216e5685f00e59999361",
@@ -383,8 +383,8 @@
       "bytes": 1734
     },
     "verification/exact_resource/independent_checks.py": {
-      "sha256": "ac426506fb1f62c5bb1b1829b4d29023210388bca43ca4d2745742f567c71868",
-      "bytes": 3975
+      "sha256": "93f118e83906ae9352e26269e2e42db5702c8437aee35028c6e9ff02129926d5",
+      "bytes": 3894
     },
     "verification/revision2/COAUTHOR-FIGURE-REPRODUCTION.json": {
       "sha256": "55cf2b8279be4f06b623c797a9cd16b65e1ea3c2c1f82192f63fb6d90581e2d1",
@@ -451,8 +451,8 @@
       "bytes": 2172
     },
     "verification/saved_sweep/check_final.py": {
-      "sha256": "fd008a63e5322f342688023d27a636a15181d5885a01b01ea10947162a4ed040",
-      "bytes": 14006
+      "sha256": "9ba8b597d57fbd3af9e10624a7bcfb4136b2f1cb0d4d4ebba9a78b82db249574",
+      "bytes": 13532
     }
   }
 }
